@@ -1,0 +1,968 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="referrer" content="always" />
+<meta charset='utf-8' />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/my.css">
+<script type="text/javascript">var _=function(id){return document.getElementById(id)};</script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/slide_image.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slide_image.css" />
+	<title>商品详情</title>
+
+<style type="text/css">
+    .confirm-attribute-value, .confirm-attribute-value-sel, .confirm-attribute-value-disabled
+    {
+        height: 28px;
+        line-height: 28px;
+        background-color: #fff;
+        padding: 0 13px;
+        margin: 10px 0px 0 0;
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+        color: #9b9b9b;
+	font-size: 14px;
+    }
+    .confirm-attribute-value-sel {background-color: #F4C10D;color: white;}
+    .confirm-attribute-value-disabled {
+		color: #c5c8cf;
+     }
+    .detail img {display:block;width:100%;}
+    .go-top-btn {
+        z-index: 10;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display:none;
+    }
+
+	.confirm-attribute-name-panel{
+		display: inline-block;
+		position: absolute;
+		left: 6px;
+		font-size: 14px;
+		top: 15px;
+		line-height: 28px;
+	}
+
+	.confirm-attribute-values-panel{
+		display: inline-block;
+		margin-left: 50px;
+		position: relative;
+		width: 100%;
+	}
+    .go-top-btn img{
+        width:40px;
+        height:40px;
+    }
+
+	.service-rule {
+		color:#707070;
+		line-height:18px;
+		position: relative;
+	}
+
+	.service-rule:before {
+		content:'';
+		position: absolute;
+		display: inline-block;
+		background-color:#ec726c;
+		border-radius:2.5px;
+		height:5px;
+		width:5px;
+		right: 100%;
+		margin-right:5px;
+		top: 50%;
+		transform: translate(0,-50%);
+		-webkit-transform: translate(0,-50%);
+	}
+
+	.item_title{
+		line-height: 32px;
+		font-size: 19px;
+		color: #666;
+	}
+
+	.item_price{
+		color: #ec726c;
+		font-size: 21px;
+	}
+
+	.item_price_gary{
+		color: #707070;
+		font-size: 21px;
+	}
+
+	@media only screen 
+		and (max-device-width: 325px) {
+		.item_title{
+			font-size: 15px;
+		}
+
+		.item_price{
+			font-size: 16px;
+		}
+
+		.item_price_gary{
+			font-size: 16px;
+		}
+	}
+
+	.data_comment .comment_showname{
+		text-align: left;
+		width: 60px;
+		font-size: 11px;
+		color: #707070;
+	}
+
+	.data_comment .data_comment table{
+		border: 0;
+		width: 100%;
+	}
+
+	.data_comment .comment_detail{
+		padding-left: 4px;
+		text-align: left;
+		font-style: normal;
+		color: #666666;
+		font-family: PingFangSC,Arial,Helvetica,sans-serif;
+		font-size: 13px;
+		margin-top: 7px;
+		line-height: 20px;
+	}
+
+	.data_comment .comment_userProfileImage{
+		width: 30px;
+	}
+
+	.data_comment .comment_userProfileImage img{
+		border: 1px solid gainsboro;
+		border-radius: 15px;
+		height: 30px;
+		width: 30px;
+	}
+
+	.data_comment table{
+		width: 100%;
+	}
+
+	.data_comment .comment_createtime{
+		text-align: right;
+		color: #707070;
+		font-size:11px;
+	}
+
+	body {
+		-webkit-overflow-scrolling:touch;
+	}
+
+	.footer-float-bar td {
+		border-right: 1px solid #e6e6e6;
+		border-top: 1px solid #e6e6e6;
+		font-size:15px;
+		color: #666666;
+		letter-spacing: 0.5px;
+	}
+
+	.footer-float-bar img {
+		max-height:24px;
+		max-width:40px;
+	}
+
+	.footer-float-bar .btn-add-cart {
+		background-color: #F4C10D;
+		color:white;
+		border:none;
+	}
+
+	.footer-float-bar .btn-buy {
+		border-right:none;
+	}
+
+	.footer-float-bar .btn-sale-time
+	{
+		border-right:none;
+	}
+
+	.footer-float-bar .btn-sale-time span {
+		padding:0px 3px;
+		color:#F4C10D;
+	}
+	.section {
+		display: block;
+		text-decoration: none;
+		text-align:center;
+		height: 60px;
+		line-height: 60px;
+		font-family: PingFangSC;
+		font-size: 18px;
+		color: #666666;
+	}
+
+</style>
+<script type="text/javascript">
+    if(typeof(bczAppApi) == "undefined" || !bczAppApi) bczAppApi = new BczAppApi();
+    bczAppApi.system.onShareClick(function (){
+            var url   = 'http://' + window.location.host + rndUrl('/m/item') + '?id=2000006&trace=share';
+            var title = '笔记本'; //trim'
+            var desc  = '笔记本'; //trim'
+            var img   = 'images/1500455575784.jpg';
+
+            var json  = {
+                "url" : url, "title" : title, "desc" : desc, "img" : img,
+                "stat":{product:"mall",  pageName:"item", pageId:"2000006"}
+            };
+            bczAppApi.system.share(json, function(result, channel){
+                console.log(result, channel);
+            });
+		});
+</script>
+</head>
+<body>
+	<div class="block-top">
+		<!-- 滑动头图 start -->
+		<div style="position:relative">
+			<div id="slide_img_panel"></div>
+			<!-- 活动标签显示 start -->
+			
+			<!-- 活动标签显示 end -->
+		</div>
+
+		<script type="text/javascript">
+		var images = [
+		'images/1500455575784.jpg','images/1500362243192.jpg','images/1500455575784.jpg','images/1500455575784.jpg','images/1500362243192.jpg',
+		];
+		var si = new SlideImage(_('slide_img_panel'), images, null, 414);
+		</script>
+		<!-- 滑动头图 end -->
+
+		<!-- main -->
+        <div style="padding: 7px 20px 0 20px;">
+		<div style="font-size:16px;text-align:left;padding:15px 0;">
+			<div style="line-height:18px;position:relative;">
+				<span class="item_title">笔记本，买它就对惹</span>
+			</div>
+			<div class="gap-small"></div>
+			<div>
+				<table style="padding: 0;" width="100%" border="0"><tr>
+					<td align="left">
+						<!-- 活动价格显示 start -->
+						
+						<div class="item_price" style="text-align:left;">
+							¥ 69.00 - 149.00
+						</div>
+						
+						<!-- 活动价格显示 end -->
+					</td>
+					<td>
+                        <span id="like_item_panel" style="margin-top:1px;font-size:10px;color:grey;margin-left:5px;text-align: right;" onclick="likeItem(2000006)">
+                            <img style="height:20px;vertical-align:-6px;float: right;" src="http://mall1.bczcdn.com/rc201603281546/image/items/m/uploads/1494910682057.png"" id="like_item_img">
+                        </span>
+					</td>
+				</tr></table>
+			</div>
+		</div>
+		<script type="text/javascript">
+		    var liked = false;
+		    
+		    function likeItem(itemId)
+		    {
+                new Ajax().post("/1500974378331/m/comment/like_item", {itemId:itemId}, function(){}, function(response, status){
+                    var obj = null;
+                    try {obj = JSON.parse(response);} catch (e) {}
+
+                    if (obj && obj.errorCode == 401)
+                    {
+                        if (confirm('您尚未登录，是否登录？'))
+                        {
+                            var baseUrl = obj.extra && obj.extra.baseUrl ? obj.extra.baseUrl : 'http://www.baicizhan.com/m/login?from=';
+
+                            window.location.href = baseUrl + encodeURIComponent(window.location.href);
+                        }
+                    }
+                    else
+                    {
+                        console.log(response);
+                    }
+                });
+			liked = !liked;
+		        _("like_item_img").src = liked ? "images/1495093748057.png" : "images/1494910682057.png";
+                _("like_item_img").className = 'animated bounceIn';
+                setTimeout(function () {_('like_item_img').className = '';}, 1500)
+		    }
+		</script>
+
+        <!-- 活动说明 start -->
+        
+        <!-- 活动说明 end -->
+
+		<div style="height:1px" class="block-sep"></div>
+		<div style="text-align:left;padding:15px 0;">
+			<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+				<tr><td width="60px"><div class="color-gray-light">已售：</div></td>
+					<td width="10px">&nbsp;</td>
+					<td><div class="color-gray-dark">9529件</div></td>
+					<td width="10px">&nbsp;</td>
+					<td style="text-align:right;"></td></tr>
+			</table>
+		</div>
+
+		<div style="height:1px" class="block-sep"></div>
+
+		<div style="text-align:left;padding:15px 0;" id="sub_item_select_btn" default="true">
+			<table border="0" cellpadding="0" cellspacing="0" style="width:100%;text-align:left;">
+				<tr>
+					<td width="60px"><div class="color-gray-light">选择：</div></td>
+					<td width="10px">&nbsp;</td>
+					<td>
+						<div class="color-gray-dark" id="sub_item_select_field">规格数量</div>
+					</td>
+					<td width="10px">&nbsp;</td>
+					<td><div style="text-align:right;padding-right:0px;"><img src="images/right.png" style="height:16px;vertical-align:middle"></div></td>
+				</tr>
+			</table>
+		</div>
+
+		</div>
+        <div style="background-color:#f6f6f6;height:20px"></div>
+
+            <div style="text-align:left;padding:0px 20px 0 20px;" onclick="window.location.href=rndUrl('/m/comment/list?id=2000006')">
+
+                <table border="0" cellpadding="0" cellspacing="0" style="width:100%;padding: 15px 0 13.5px 0;">
+                    <tr><td width="60px"><div class="color-gray-light">评价：</div></td>
+                        <td width="10px">&nbsp;</td>
+                        <td><div class="color-gray-dark">563人评价&nbsp;&nbsp;&nbsp;98%好评</div></td>
+                        <td width="10px">&nbsp;</td>
+                        <td><div style="text-align:right;padding-right:0px;"><img src="images/right.png" style="height:16px;vertical-align:middle"></div></td></tr>
+                </table>
+
+                
+						<div>
+							<div style="height:1px;margin-top:0px;" class="block-sep"></div>
+							<div class="data_comment" style="padding:13.5px 0 10px 0;">
+								<table style="padding-bottom: 0px;" ><tr>
+									<td class="comment_showname" style="padding-left: 2px;">元***祁</td>
+									<td class="comment_createtime">2017-05-29</td>
+								</tr></table>
+								<div class="comment_detail">物流超快的，包装也很精美结实，书没有任何损坏，书的质量也很好无偏差。拿到书的一瞬间激起我学习的欲望*^_^*吼吼吼我要开始学习了！</div>
+							</div>
+						</div>
+
+                    
+					<div style="height: 5px;"></div>
+                
+            </div>
+		
+		<div style="background-color:#f6f6f6;height:20px"></div>
+        <div>
+			<div class="section">产品详情</div>
+            <div class="detail" id="detail">
+	    	<div style="color:#999; padding:20px;">
+            简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...简介详情简介详情简介详情简介详情...
+            </div>
+        </div>
+
+	</div>
+
+	<!-- 推荐 start -->
+	
+
+	<div class="gap-small"></div>
+	<div class="gap-small"></div>
+	
+	<!-- 推荐 end -->
+
+	<!-- 底部栏 start-->
+	<div style="height:50px">&nbsp;</div>
+	<div class="footer-float-bar" style="height:52.5px;background-color:#fafafa">
+		<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr>
+			<td width="52px">
+				<a href="/1500974378334/m/?trace=item">
+						<img src="images/1494910561473.png" style="vertical-align:text-bottom"/>
+				</a>
+			</td>
+			<td width="52px">
+				<a href="/1500974378334/m/call_center/index?fromItemId=2000006">
+					<img src="images/1495245853825.png" style="vertical-align:text-bottom"/>
+				</a>
+			</td>
+			<td width="52px">
+				<a href="/1500974378334/m/cart/index?bar=0">
+						<img src="images/1494910659655.png" style="vertical-align:text-bottom"/>
+				</a>
+			</td>
+			
+            <td width="120px;" class="btn-buy">
+                <div>立即购买</div>
+            </td>
+            <td width="120px" class="btn-add-cart">
+                <div>加入购物车</div>
+            </td>
+			
+		</tr></table>
+	</div>
+	<!-- 底部栏 end-->
+
+
+<div class="modal-dialog" id="sub_item_selector">
+    <div class="modal-mask"></div>
+    <div class="modal-content">
+        <div class="modal-close">
+            <img src="images/close.png" />
+        </div>
+        <div>
+            <table border=0 width="100%"><tr>
+                <td class="modal-item-img">
+                    <img />
+                </td>
+                <td style="width: 10px;"></td>
+                <td valign="top" style="position: relative;">
+                    <div class="modal-item-title">
+
+                    </div>
+
+                    <div class="modal-item-tips">
+
+                    </div>
+
+                    <div class="modal-item-price">
+
+                    </div>
+                </td>
+            </tr></table>
+        </div>
+
+        <div style="height: 8px;"></div>
+
+        <div class="modal-attrs-panel">
+            <div class="modal-attrs-title">规格</div>
+            <div class="modal-sub-items"></div>
+        </div>
+
+        <div class="modal-count-panel">
+            <div class="modal-count-title">数量</div>
+            <div class="modal-item-stock"></div>
+            <div class="modal-item-count-op">
+                <div class="modal-item-count-decrease">
+                    <img src = "images/1495869319612.png" alt="minus mark">
+                </div>
+                <div class="modal-item-count">1</div>
+                <div class="modal-item-count-increase">
+                    <img src = "images/1495781193970.png" alt="plus mark" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-confirm">
+            <div class="modal-confirm-btn">确认</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="toast-dialog" id="toast">
+    <div>
+        <img class="toast_img" src="images/1495527096171.png"/>
+        <span class="toast_img_space">&nbsp;</span>
+        <div class="toast-content">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function escapeHtml(str){
+	/* Struts已经过滤过了 */
+    	return str;
+    	/*
+        if(!str)
+        {
+            return str;
+        }
+
+        return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g,"&lt;").replace(/>/g,"&gt;");
+	*/
+    }
+
+    function toast(msg, showImg, fadeInTime, fadeOutTime) {
+        if(fadeInTime == undefined) fadeInTime = 200;
+        if(fadeOutTime == undefined) fadeOutTime = 800;
+        if(showImg){
+            $("#toast").find(".toast_img")[0].style.display = "inline-block";
+            $("#toast").find(".toast_img_space")[0].style.display = "inline-block";
+        }
+        else{
+            $("#toast").find(".toast_img")[0].style.display = "none";
+            $("#toast").find(".toast_img_space")[0].style.display = "none";
+        }
+        $("#toast").find(".toast-content").text(msg);
+        $("#toast").fadeIn(fadeInTime,function(){
+            setTimeout(function(){$("#toast").fadeOut(fadeOutTime)}, fadeOutTime);
+        });
+    }
+
+    function Item(id, title, subItems, imgSrc){
+        this.init(id, title, subItems, imgSrc);
+    }
+    Item.prototype = {
+        init:function(id, title, subItems, imgSrc){
+            this.id = id;
+            this.title = title;
+            this.subItems = subItems;
+            this.imgSrc = imgSrc;
+        },
+        setSubItems:function(subItems){
+            this.subItems = subItems;
+        },
+        needSelect:function(){
+            return this.subItems && this.subItems.length > 1;
+        },
+        getPriceStr:function(){
+            var minPrice = 999999;
+            var maxPrice = 0;
+            for(var i = 0; i < this.subItems.length; i++)
+            {
+                var subItem = this.subItems[i];
+                if(subItem.price < minPrice) minPrice = subItem.price;
+                if(subItem.price > maxPrice) maxPrice = subItem.price;
+            }
+
+            if(minPrice == maxPrice)
+            {
+                return '￥' + minPrice/100;
+            }
+
+            return '￥' + minPrice/100 + '~' + maxPrice/100;
+        },
+        getStock:function(){
+            var stock = 0;
+            for(var i = 0; i < this.subItems.length; i++)
+            {
+                stock += this.subItems[i].stock;
+            }
+
+            return stock;
+        }
+    };
+
+    function SubItem(id, title, price, stock, imgSrc){
+        this.init(id, title, price, stock, imgSrc);
+    }
+    SubItem.prototype = {
+        init:function(id, title, price, stock, imgSrc) {
+            this.id = id;
+            this.title = title;
+            this.price = price;
+            this.stock = stock;
+            this.imgSrc = imgSrc;
+        },
+        getPriceStr:function(){
+            return '￥' + this.price/100;
+        }
+    };
+
+    function SubItemSelector(item){
+        this.init(item);
+    }
+    SubItemSelector.prototype = {
+        init:function(item){
+            this.item = item;
+            this.onConfirmCallBack = null;
+            this.selSubItem = null;
+            this.selCount = 1;
+            this.panel = $("#sub_item_selector");
+            this.initPanel();
+        },
+        initPanel:function(){
+            var self = this;
+            this.panel.find(".modal-item-img img").attr("src", this.item.imgSrc);
+            this.panel.find(".modal-item-title").text(this.item.title);
+            this.panel.find(".modal-item-price").text(this.item.getPriceStr());
+            this.panel.find(".modal-item-stock").text(this.getStockStr(this.item.getStock()));
+            this.panel.find(".modal-sub-items").children().remove();
+
+            self.panel.find(".modal-item-count-decrease").unbind("click");
+            self.panel.find(".modal-item-count-decrease").click(function(){
+                if(self.selCount <= 1) return;
+                self.panel.find(".modal-item-count").text(self.selCount-1);
+                self.setSelCount(self.selCount - 1)
+            });
+
+            self.panel.find(".modal-item-count-increase").unbind("click");
+            self.panel.find(".modal-item-count-increase").click(function(){
+                if(self.selSubItem && self.selCount >= self.selSubItem.stock) return;
+                self.panel.find(".modal-item-count").text(self.selCount+1);
+                self.setSelCount(self.selCount + 1)
+            });
+
+            self.panel.find(".modal-confirm-btn").unbind("click");
+            self.panel.find(".modal-confirm-btn").click(function(){
+                if(self.onConfirmCallBack) self.onConfirmCallBack(self.selSubItem, self.selCount);
+            });
+
+            self.panel.find(".modal-close").unbind("click");
+            self.panel.find(".modal-close").click(function(){
+                self.hide();
+            });
+
+            self.panel.find(".modal-item-tips").text(this.getTipsStr());
+
+            if(self.item.subItems.length == 1)
+            {
+                self.setSelSubItem(self.item.subItems[0]);
+                self.panel.find(".modal-attrs-panel").hide();
+            }
+            else
+            {
+                self.panel.find(".modal-attrs-panel").show();
+
+                var subItemSpans = [];
+                for(var i = 0 ; i < this.item.subItems.length; i++)
+                {
+                    var subItem = this.item.subItems[i];
+                    var subItemHtml = '<div class="modal-sub-item">' + escapeHtml(subItem.title) + '</div>';
+                    var subItemSpan = $(subItemHtml);
+                    if(subItem.stock < 1)
+                    {
+                        subItemSpan.addClass("disabled");
+                    }
+                    else
+                    {
+                        (function(curSubItem){
+                            subItemSpan.click(function(){
+                                self.setSelSubItem(curSubItem);
+                            });
+                        }(subItem));
+
+
+                        subItemSpans.push(subItemSpan);
+                    }
+
+                    self.panel.find(".modal-sub-items").append(subItemSpan);
+                }
+
+                if(subItemSpans.length > 0)
+                {
+                    subItemSpans[0].click();
+                }
+            }
+        },
+
+        show:function(){
+            this.panel.show();
+        },
+        hide:function(){
+            this.panel.hide();
+        },
+        setSelSubItem:function(subItem){
+            this.selSubItem = subItem;
+            this.panel.find(".modal-item-tips").text(this.getTipsStr());
+
+            this.panel.find(".modal-sub-item").each(function(){
+                $(this).removeClass("selected");
+                if($(this).text() == subItem.title)
+                {
+                    $(this).addClass("selected");
+                }
+            });
+
+            if(this.selCount > subItem.stock)
+            {
+                this.setSelCount(subItem.stock);
+            }
+
+            this.panel.find(".modal-item-price").text(subItem.getPriceStr());
+            this.panel.find(".modal-item-stock").text(this.getStockStr(subItem.stock));
+
+            if(this.item.needSelect() && subItem.imgSrc)
+            {
+                this.panel.find(".modal-item-img img").attr("src", subItem.imgSrc);
+            }
+            else
+            {
+                this.panel.find(".modal-item-img img").attr("src", this.item.imgSrc);
+            }
+        },
+        setSelCount:function(count){
+            this.selCount = count;
+            this.panel.find(".modal-item-tips").text(this.getTipsStr());
+            this.panel.find(".modal-item-count").text(this.selCount);
+        },
+        onConfirm:function(callBack){
+            this.onConfirmCallBack = callBack;
+        },
+        getStockStr:function(stock){
+            return "库存 " + stock + " 件";
+        },
+        getTipsStr:function(){
+	    var self = this;
+            if(this.selSubItem == null || this.selCount == 0)
+            {
+                if(self.item.subItems.length > 1)
+                {
+                    return "请选择规格数量";
+                }
+                else
+                {
+                    return "请选择数量";
+                }
+            }
+
+            if(this.item.subItems.length > 1)
+            {
+                return "已选 " + escapeHtml(this.selSubItem.title) + " x" + this.selCount;
+            }
+            else
+            {
+                return "已选数量 x" + this.selCount;
+            }
+        }
+    };
+
+</script>
+
+
+    <script type="text/javascript">
+
+        // 初始化商品信息
+        var subItems = [];
+        
+                var subItemId = 7;
+                var subItemTitle = '象形9000全套';
+                var subItemPrice = 14900;
+                var subItemStock = 42;
+                var subItemImgSrc = 'images/1500455575784.jpg';
+
+		
+
+                var subItem = new SubItem(subItemId, subItemTitle, subItemPrice, subItemStock, subItemImgSrc);
+                subItems.push(subItem);
+            
+                var subItemId = 366;
+                var subItemTitle = '象形9000①';
+                var subItemPrice = 6900;
+                var subItemStock = 219;
+                var subItemImgSrc = 'images/1500455575784.jpg';
+
+		
+
+                var subItem = new SubItem(subItemId, subItemTitle, subItemPrice, subItemStock, subItemImgSrc);
+                subItems.push(subItem);
+            
+                var subItemId = 367;
+                var subItemTitle = '象形9000②';
+                var subItemPrice = 6900;
+                var subItemStock = 441;
+                var subItemImgSrc = 'images/1500455575784.jpg';
+
+		
+
+                var subItem = new SubItem(subItemId, subItemTitle, subItemPrice, subItemStock, subItemImgSrc);
+                subItems.push(subItem);
+            
+                var subItemId = 368;
+                var subItemTitle = '象形9000③';
+                var subItemPrice = 6900;
+                var subItemStock = 263;
+                var subItemImgSrc = 'images/1500455575784.jpg';
+
+		
+
+                var subItem = new SubItem(subItemId, subItemTitle, subItemPrice, subItemStock, subItemImgSrc);
+                subItems.push(subItem);
+            
+
+        var itemId = 2000006;
+        var itemTitle = '《象形9000》学单词利器，买它就对惹';
+        var itemFormalTitle = '象形9000单词书';
+
+        if(itemFormalTitle && itemFormalTitle != 'null')
+        {
+            itemTitle = itemFormalTitle;
+        }
+
+        var itemImg = 'images/1500455575784.jpg';
+        var item = new Item(itemId, itemTitle, subItems, itemImg);
+
+        var selectorField = $("#sub_item_select_field");
+        var selectorBtn = $("#sub_item_select_btn");
+        var selSubItem = null;
+        var selCount = 0;
+        if(subItems.length > 1) {
+            selectorField.text("请选择规格数量");
+        }else {
+            selSubItem = subItems[0];
+            selectorField.text("请选择数量");
+        }
+
+        selectorBtn.click(function(){
+            var selector = new SubItemSelector(item);
+            selector.show();
+            if(selSubItem)
+            {
+                selector.setSelSubItem(selSubItem);
+            }
+
+            if(selCount > 0)
+            {
+                selector.setSelCount(selCount);
+            }
+
+            selector.onConfirm(function(subItem, count){
+                selCount = count;
+                selSubItem = subItem;
+                if(subItems.length == 1)
+                {
+                    selectorField.text("已选择数量：x" + selCount);
+                }
+                else
+                {
+                    selectorField.text("已选择：" + selSubItem.title + " x" + selCount);
+                }
+                selector.hide();
+            });
+        });
+
+        $(".btn-buy").click(function(){
+            if(selSubItem && selCount)
+            {
+                window.location.href = '/1500974378335/m/order/confirm?itemInfo=' + item.id + '_' + selSubItem.id + '_' + selCount;
+            }
+            else
+            {
+                var selector = new SubItemSelector(item);
+                selector.show();
+                selector.onConfirm(function(subItem, count){
+                    selCount = count;
+                    selSubItem = subItem;
+                    window.location.href = '/1500974378335/m/order/confirm?itemInfo=' + item.id + '_' + selSubItem.id + '_' + selCount;
+                });
+            }
+        });
+
+        $(".btn-add-cart").click(function(){
+            if(selSubItem && selCount)
+            {
+                addToCart(item.id, selSubItem.id, selCount);
+            }
+            else
+            {
+                var selector = new SubItemSelector(item);
+                selector.show();
+                selector.onConfirm(function(subItem, count){
+                    selCount = count;
+                    selSubItem = subItem;
+                    if(subItems.length == 1)
+                    {
+                        selectorField.text("已选择数量：x" + selCount);
+                    }
+                    else
+                    {
+                        selectorField.text("已选择：" + selSubItem.title + " x" + selCount);
+                    }
+                    addToCart(item.id, selSubItem.id, count);
+                    selector.hide();
+                });
+            }
+        });
+
+        function addToCart(itemId, subItemId, count)
+        {
+            var itemInfo = itemId + '_' + subItemId + '_' + count;
+            $.ajax({url:'/1500974378335/m/cart/add',
+                    type:'post',
+                    data:{itemInfo:itemInfo},
+                    dataType:'json'}
+            ).done(function(json){
+                toast("已加入购物车", true);
+            }).fail(function(jqXHR, statusText, errorThrow){
+                if(jqXHR.status == '401')
+                {
+                    if (confirm('您尚未登录，是否登录？'))
+                    {
+                        var baseUrl = '/m/login?from=';
+
+                        window.location.href = baseUrl + encodeURIComponent(window.location.href);
+                    }
+                }
+                else
+                {
+                    toast("加入购物车失败");
+                }
+            });
+        }
+    </script>
+
+    <div class="go-top-btn" onclick="goTop()" id="goTopBtn">
+        <img src="images/gotop.png">
+    </div>
+
+	<!-- 弹出确认框 end-->
+
+	<script type="text/javascript">
+        try
+        {
+            document.onscroll = function(){
+                var goTopBtn = _("goTopBtn");
+                var showGoTop = goTopBtn.style.display == 'none' ? false : true;
+                if(document.body.scrollTop > window.screen.height)
+                {
+                    if(showGoTop)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        goTopBtn.style.display = "inline-block";
+                    }
+                }
+                else
+                {
+                    if(showGoTop)
+                    {
+                        goTopBtn.style.display = "none";
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+            };
+        }
+        catch(e)
+        {
+            console.log(e);
+        }
+
+        function goTop()
+        {
+            try {
+                window.scrollTo(0,0);
+                return false;
+            }
+            catch(e)
+            {
+                console.log(e);
+            }
+        }
+	</script>
+
+    <div class="footer">
+        
+    </div>
+</body>
+</html>

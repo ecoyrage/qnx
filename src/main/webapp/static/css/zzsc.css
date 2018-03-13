@@ -1,0 +1,126 @@
+
+::-moz-selection {
+background: #F78118;
+color: #FFFFFF;
+text-shadow: none;
+}
+::selection {
+	background: #F78118;
+	color: #FFFFFF;
+	text-shadow: none;
+}
+body {
+	line-height: 1;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+em, i, dfn {
+	font-style: italic;
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #CCCCCC;
+	margin: 1em 0;
+	padding: 0;
+}
+ins {
+	background: #FFFF99;
+	color: #000000;
+	text-decoration: none;
+}
+mark {
+	background: #FFFF00;
+	color: #000000;
+	font-style: italic;
+	font-weight: bold;
+}
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+small {
+	font-size: 85%;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+button, input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+*vertical-align: middle;
+}
+button, input {
+	line-height: normal;
+*overflow: visible;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td {
+	vertical-align: top;
+}
+
+
+
+/* leftsead */
+*html #leftsead{margin-top:258px;position:absolute;top:expression(eval(document.documentElement.scrollTop));}
+#leftsead li{width:161px;height:63px; margin-bottom:15px;}
+#leftsead li img{float:right;}
+#leftsead li a{height:63px;float:right;display:block;min-width:47px;max-width:161px;}
+#leftsead li a .shows{display:block;}
+#leftsead li a .hides{margin-right:-143px;cursor:pointer;cursor:hand;}
+#leftsead li a.youhui .hides{display:none;position:absolute;right:143px;}
+#leftsead li a.youhui .2wm{display:none;position:absolute;right:143px;}
+#p2 {
+	width: 112px;
+	background-color: #f5c609;
+	height: 61px;
+	margin-left: 47px;
+	border: 1px solid #f5c609;
+	text-align: center;
+	line-height: 30px;
+}
+#p3 {
+	width: 112px;
+	background-color: #f5c609;
+	height: 61px;
+	margin-left: 47px;
+	border: 1px solid #f5c609;
+	text-align: center;
+	line-height: 30px;
+}
+#p1{width:47px;height:49px;float:left}

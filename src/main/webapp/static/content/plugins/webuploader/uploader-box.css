@@ -1,0 +1,281 @@
+/* demo样式 cailin */
+.wu-example {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0;
+    background-color: #fafafa;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+}
+.wu-example:after {
+    content:"列表";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+@media (min-width: 768px) {
+    .bs-example {
+        margin-left: 0;
+        margin-right: 0;
+        background-color: #fff;
+        border-width: 1px;
+        border-color: #ddd;
+        border-radius: 4px 4px 0 0;
+        box-shadow: none;
+    }
+}
+
+#picker {
+    display: inline-block;
+    line-height: 1.428571429;
+    vertical-align: middle;
+    margin: 0 12px 0 0;
+}
+#picker .webuploader-pick {
+    padding: 6px 12px;
+    display: block;
+}
+
+
+.uploader-box .thumbnail {
+	position: relative;
+    display: inline-block !important;
+    width: 110px;
+    height: 110px;
+    float: left;
+    margin-bottom: 0px !important;
+}
+.uploader-box .audio .thumbnail {
+    width: 80px !important;
+    height: 80px !important;
+    padding: 0px !important;
+    border: none !important;
+}
+.uploader-box .thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+.uploader-box .file-item .audio-panel {
+    /* position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 300px;
+    background-color: #141414; */
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #cbcbcb;
+}
+.uploader-box .file-item .audio-panel audio{
+    /* width: 100%;
+    margin: 25px 0px;
+    background-color: #141414; */
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    border: none;
+    border-radius: 1px;
+    background-color: #f9f9f9;
+}
+.uploader-list {
+    width: 100%;
+    overflow: hidden;
+}
+.file-item {
+    float: left;
+    position: relative;
+    margin: 0px 5px 5px 0px;
+    padding: 4px;
+}
+.file-item.audio {
+    width: 380px;
+    height: 80px;
+    padding: 0px !important;
+ 
+    background: #4c4e5a;
+    background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+    background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+    background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+    background: -ms-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+    background: linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+ 
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.file-item .error {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    background: red;
+    color: white;
+    text-align: center;
+    height: 20px;
+    font-size: 14px;
+    line-height: 23px;
+}
+.file-item .info {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    right: 4px;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow : ellipsis;
+    font-size: 12px;
+    z-index: 10;
+}
+.file-item .audio-panel .info{
+    /* left: 0px !important;
+    bottom: 0px !important;
+    right: 0px !important;
+    height: 22px !important;
+    line-height: 22px !important;
+    text-indent: 15px !important;
+    font-size: 14px !important;
+    background: rgba(100, 100, 100, 0.2); */
+    left: 0px !important;
+    right: 0px !important;
+    height: 22px !important;
+    top: 0px !important;
+    line-height: 22px !important;
+    text-indent: 15px !important;
+    font-size: 14px !important;
+    background: rgba(100, 100, 100, 0.3);
+    color: #000;
+}
+
+.file-item .remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+    z-index: 11;
+}
+.file-item.audio .remove{
+	top: 0px !important;
+    right: 0px !important;
+    background: rgba(100, 100, 100, 0.3) !important;
+}
+.thumbnail:hover > .remove{
+	display: inline;
+}
+.file-item:hover > .remove{
+	display: inline;
+}
+.file-item .remove:after {
+    content: "\f00d";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    color: #FF2300;
+    cursor:pointer;
+    z-index: 99;
+}
+.upload-state-done:after {
+    content:"\f00c";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 32px;
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+    color: #4cae4c;
+    z-index: 99;
+}
+.file-item .progress {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    height: 3px;
+    left: 4px;
+    height: 4px;
+    overflow: hidden;
+    z-index: 15;
+    margin:0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+}
+.file-item .progress span {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    background: #d14 url(./images/progress.png) repeat-x;
+    -webit-transition: width 200ms linear;
+    -moz-transition: width 200ms linear;
+    -o-transition: width 200ms linear;
+    -ms-transition: width 200ms linear;
+    transition: width 200ms linear;
+    -webkit-animation: progressmove 2s linear infinite;
+    -moz-animation: progressmove 2s linear infinite;
+    -o-animation: progressmove 2s linear infinite;
+    -ms-animation: progressmove 2s linear infinite;
+    animation: progressmove 2s linear infinite;
+    -webkit-transform: translateZ(0);
+}
+@-webkit-keyframes progressmove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 17px 0;
+    }
+}
+@-moz-keyframes progressmove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 17px 0;
+    }
+}
+@keyframes progressmove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 17px 0;
+    }
+}
+
+a.travis {
+  position: relative;
+  top: -4px;
+  right: 15px;
+}

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.sys.mapper.RoleMapper" >
+    <resultMap id="BaseResultMap" type="com.fh.sys.model.Role" >
+        <id column="id" property="id" />
+        <result column="group_id" property="groupId" />
+        <result column="name" property="name" />
+        <result column="enname" property="enname" />
+        <result column="role_type" property="roleType" />
+        <result column="remarks" property="remarks" />
+        <result column="useable" property="useable" />
+        <result column="create_by" property="createBy" />
+        <result column="create_date" property="createDate" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_date" property="updateDate" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <sql id="Example_Where_Clause" >
+        <where >
+            <foreach collection="oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Update_By_Example_Where_Clause" >
+        <where >
+            <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Base_Column_List" >
+        id,group_id,name,enname,role_type,remarks,useable,create_by,create_date,update_by,update_date,del_flag
+    </sql>
+
+    <select id="selectByExample" resultMap="BaseResultMap" >
+        select
+        <if test="distinct" >
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        from sys_role
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null" >
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from sys_role
+        where id = #{id}
+    </select>
+
+    <delete id="deleteByPrimaryKey" >
+        delete from sys_role
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteByExample" >
+        delete from sys_role
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" >
+        insert into sys_role (id,group_id,name,
+        enname,role_type,remarks,
+        useable,create_by,create_date,
+        update_by,update_date,del_flag
+        )
+        values (#{id},#{groupId},#{name},
+        #{enname},#{roleType},#{remarks},
+        #{useable},#{createBy},#{createDate},
+        #{updateBy},#{updateDate},#{delFlag}
+        )
+    </insert>
+
+    <insert id="insertSelective" >
+        insert into sys_role
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="groupId != null" >
+                group_id,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="enname != null" >
+                enname,
+            </if>
+            <if test="roleType != null" >
+                role_type,
+            </if>
+            <if test="remarks != null" >
+                remarks,
+            </if>
+            <if test="useable != null" >
+                useable,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id},
+            </if>
+            <if test="groupId != null" >
+                #{groupId},
+            </if>
+            <if test="name != null" >
+                #{name},
+            </if>
+            <if test="enname != null" >
+                #{enname},
+            </if>
+            <if test="roleType != null" >
+                #{roleType},
+            </if>
+            <if test="remarks != null" >
+                #{remarks},
+            </if>
+            <if test="useable != null" >
+                #{useable},
+            </if>
+            <if test="createBy != null" >
+                #{createBy},
+            </if>
+            <if test="createDate != null" >
+                #{createDate},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" resultType="java.lang.Integer" >
+        select count(*) from sys_role
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" >
+        update sys_role
+        <set >
+            <if test="record.id != null" >
+                id = #{record.id},
+            </if>
+            <if test="record.groupId != null" >
+                group_id = #{record.groupId},
+            </if>
+            <if test="record.name != null" >
+                name = #{record.name},
+            </if>
+            <if test="record.enname != null" >
+                enname = #{record.enname},
+            </if>
+            <if test="record.roleType != null" >
+                role_type = #{record.roleType},
+            </if>
+            <if test="record.remarks != null" >
+                remarks = #{record.remarks},
+            </if>
+            <if test="record.useable != null" >
+                useable = #{record.useable},
+            </if>
+            <if test="record.createBy != null" >
+                create_by = #{record.createBy},
+            </if>
+            <if test="record.createDate != null" >
+                create_date = #{record.createDate},
+            </if>
+            <if test="record.updateBy != null" >
+                update_by = #{record.updateBy},
+            </if>
+            <if test="record.updateDate != null" >
+                update_date = #{record.updateDate},
+            </if>
+            <if test="record.delFlag != null" >
+                del_flag = #{record.delFlag},
+            </if>
+        </set>
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" >
+        update sys_role
+        set id = #{id},
+        group_id = #{groupId},
+        name = #{name},
+        enname = #{enname},
+        role_type = #{roleType},
+        remarks = #{remarks},
+        useable = #{useable},
+        create_by = #{createBy},
+        create_date = #{createDate},
+        update_by = #{updateBy},
+        update_date = #{updateDate},
+        del_flag = #{delFlag}
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" >
+        update sys_role
+        <set >
+            <if test="groupId != null" >
+                group_id = #{groupId},
+            </if>
+            <if test="name != null" >
+                name = #{name},
+            </if>
+            <if test="enname != null" >
+                enname = #{enname},
+            </if>
+            <if test="roleType != null" >
+                role_type = #{roleType},
+            </if>
+            <if test="remarks != null" >
+                remarks = #{remarks},
+            </if>
+            <if test="useable != null" >
+                useable = #{useable},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="updateByPrimaryKey" >
+        update sys_role
+        set group_id = #{groupId},
+        name = #{name},
+        enname = #{enname},
+        role_type = #{roleType},
+        remarks = #{remarks},
+        useable = #{useable},
+        create_by = #{createBy},
+        create_date = #{createDate},
+        update_by = #{updateBy},
+        update_date = #{updateDate},
+        del_flag = #{delFlag}
+        where id = #{id}
+    </update>
+
+</mapper>

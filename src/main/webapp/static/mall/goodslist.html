@@ -1,0 +1,1012 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>保道商城</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="js/app.js?v=20170918"></script>
+</head>
+
+<body>
+<div style="position:fixed;left:0;right:0;top:0;z-index:999"> 
+<script>
+function searchValidate(form)
+{
+	if (form.q != null && form.q.value != null && form.q.value.trim() != '')
+		return true;
+
+	alert('搜索内容不能为空');
+	return false;
+}
+function submitSearchForm()
+{
+	var form = document.getElementById("search_form");
+	if (searchValidate(form)) form.submit();
+}
+</script>
+
+<form id="search_form" name="search_form" style="position:relative;box-sizing:border-box;height:51px;width:100%;padding:16px 16px 4px 16px;background-color:white;">
+	<input type="search" name="words" id="words" value="" placeholder="搜索商品" style="box-sizing:border-box;width:100%;height:100%;border:none;border-radius:6px;padding-left:10px;padding-right:10px;-webkit-appearance: none;background:#f4f4f4;color:#666666;font-size:11.5px;font-family:"PingFang SC", PingFangSC,Helvetica,sans-serif;"/>
+	<img src="images/serch.png" onclick="search()" style="position:absolute;top:21px;right:25px;border:none;width:20px" />
+</form>
+
+<script>
+var scrollBase = 0;
+window.onscroll = function() {
+	var s = window.pageYOffset;
+	var d = s - scrollBase;
+	scrollBase = s;
+
+	var form = document.getElementById("search_form");
+	if (s > 0 && d > 5)
+		form.style.display = "none";
+	else if (d < -5)
+		form.style.display = "block";
+}
+</script>
+
+		<div style="width:100%;border-bottom:solid 1px #d0d0d0;z-index:999">
+			
+
+<style>
+
+	<style>
+		* { margin: 0; padding: 0;}
+		
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		body {
+			-webkit-overflow-scrolling:touch;
+		}
+
+		.tab-container {
+			display: -moz-box;
+			display: -webkit-box;
+			display: box;
+			-webkit-box-align: center;
+			-webkit-box-pack: justify;
+			padding: 10px 20px;
+			background: #fbfbfb;
+		}
+
+		.tab {
+			font-size: 14px;
+			color: #666666;
+		}
+
+		.active-tab {
+			color: #F4C10D;
+		}
+
+.img-container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.img-container .img-dummy{
+    margin-top: 100%;
+}
+.img-container .img-content{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+.img-container .img-content img{
+    width: 100%;
+    height: 100%;
+}
+.item_flow_jsp .item .title{
+	margin-left:20px;display:inherit;
+}
+</style>
+
+<div id="catetab_jsp" class="catetab_jsp_vertical_container" style="height:5px;background:white;padding:0 20px">
+
+
+	<div class="catetab_jsp_tab_container">
+		
+			
+				<div class="catetab_jsp_indicator">
+			
+			</div>
+		
+			
+				<div id="catetab_jsp_selected_indicator" class="catetab_jsp_active_indicator">
+			
+			</div>
+		
+			
+				<div class="catetab_jsp_indicator">
+			
+			</div>
+		
+			
+				<div class="catetab_jsp_indicator">
+			
+			</div>
+		
+			
+				<div class="catetab_jsp_indicator">
+			
+			</div>
+		
+			
+				<div class="catetab_jsp_indicator">
+			
+			</div>
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+	function Swipe(targetElement, leftCallback, rightCallback) {
+		this.init(targetElement, leftCallback, rightCallback);
+	};
+	Swipe.prototype = {
+		constructor: Swipe,
+		init: function (targetElement, leftCallback, rightCallback) {
+			this.targetElement = targetElement;
+			this.onLeftCallback = leftCallback;
+			this.onRightCallback = rightCallback;
+			this.indicator = window.document.getElementById('catetab_jsp_selected_indicator');
+			this.indwidth = this.indicator.clientWidth;
+			this.bindTouchStart();
+			this.bindTouchMove();
+			this.bindTouchEnd();
+		},
+		bindTouchStart: function() {
+			var self = this;
+			self.targetElement.addEventListener("touchstart", function(e){
+				var ev = e || window.event;
+				var touch = ev.changedTouches[0];
+				self.startPosition = {
+					left: touch.clientX,
+					top: touch.clientY
+				};
+				self.changed = false;
+			});
+		},
+		bindTouchMove: function() {
+			var self = this;
+			self.targetElement.addEventListener("touchmove",  function(e){
+				if(self.changed) return;
+
+				var ev = e || window.event;
+				var touch = ev.changedTouches[0];
+				var oCurPosition = {
+					left: touch.clientX,
+					top: touch.clientY
+				};
+
+				var changeLeft = oCurPosition.left - self.startPosition.left;
+				var changeTop = oCurPosition.top - self.startPosition.top;
+
+				if(Math.abs(changeLeft)/Math.abs(changeTop) > 3)
+				{
+					ev.preventDefault();
+					if(Math.abs(changeLeft) >= self.indwidth * 1.2)
+					{
+						if(changeLeft < 0)
+						{
+							self.indicator.style.transform = 'translateX(' + self.indwidth + 'px)';
+							if(self.onRightCallback) self.onRightCallback();
+						}
+						else
+						{
+							self.indicator.style.transform = 'translateX(' + -self.indwidth + 'px)';
+							if(self.onLeftCallback) self.onLeftCallback();
+						}
+					}
+
+					if (!self.changed) {
+						self.indicator.style.transform = 'translateX(' + -changeLeft + 'px)';
+					}
+				}
+			});
+		},
+		bindTouchEnd: function() {
+			var self = this;
+			self.targetElement.addEventListener("touchend",  function(e){
+				var ev = e || window.event;
+				var touch = ev.changedTouches[0];
+				var oCurPosition = {
+					left: touch.clientX,
+					top: touch.clientY
+				};
+
+				var changeLeft = oCurPosition.left - self.startPosition.left;
+				if (!self.changed)
+					self.indicator.style.transform = 'none';
+			});
+		}
+	};
+
+	var curtab = document.getElementById("catetab_jsp_selected_tab");
+	var tabSwiper = new Swipe(document.body,
+		function(){
+			var target = curtab.previousElementSibling;
+			if(target && target.firstElementChild)
+			{
+				this.changed = true;
+				var carind = document.getElementById('catetab_jsp_selected_indicator');
+				carind.className = "catetab_jsp_indicator";
+				var tarind = carind.previousElementSibling;
+				if (tarind)
+					tarind.className = "catetab_jsp_active_indicator";
+				target.firstElementChild.click();
+			}
+		}, function(){
+			var target = curtab.nextElementSibling;
+			if(target && target.firstElementChild)
+			{
+				this.changed = true;
+				var carind = document.getElementById('catetab_jsp_selected_indicator');
+				carind.className = "catetab_jsp_indicator";
+				var tarind = carind.nextElementSibling;
+				if (tarind)
+					tarind.className = "catetab_jsp_active_indicator";
+				target.firstElementChild.click();
+			}
+		});
+</script>
+
+		</div>
+		<div class="tab-container">
+			<div class="tab active-tab"><a href="javascript:void(0);" class="orderByBtn" orderBy="">综合</a></div>
+			<div class="tab "><a href="javascript:void(0);" class="orderByBtn" orderBy="sales_num">销量</a></div>
+			<div class="tab "><a href="javascript:void(0);" class="orderByBtn" orderBy="is_new">新品</a></div>
+			<div class="tab "><a href="javascript:void(0);" class="orderByBtn" orderBy="price_up"><img src="images/1499760113136.png" style="height:12px;margin-right:10px;vertical-align:-2px"/>价格</a></div>
+		</div>
+	</div>
+
+	<div style="margin:95px 0 50px 0">
+	
+<style>
+    .modal-dialog {
+        display:none;
+        width:100%;
+        height:100%;
+        position:fixed;
+        bottom:0;
+        left:0;
+        text-align:center;
+        z-index:1000;
+    }
+
+    .modal-mask {
+        height:100%;
+        width:100%;
+        background-color:#272727;
+        filter:alpha(opacity=80);
+        -moz-opacity:0.8;
+        opacity:0.8;
+    }
+
+    .modal-content {
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0px;
+        background-color:white;
+        padding:20px 20px 0px 20px;
+        box-sizing: content-box;
+    }
+
+    .modal-close {
+        position: relative;
+        height: 20px;
+    }
+
+    .modal-close img {
+        max-width:15px;
+        max-height:15px;
+        padding:0 5px;
+        position: absolute;
+        right: 0;
+    }
+
+    .modal-item-img {
+        width:110px;
+        height:110px;
+    }
+
+    .modal-item-img img {
+        width:100%;
+    }
+
+    .modal-item-title {
+        padding:2px;
+        text-align:left;
+        font-size:18px;
+        max-height:80px;
+        text-overflow: ellipsis;
+        color:#666666;
+        overflow: hidden;
+        line-height: 25px;
+        max-height: 50px;
+    }
+
+    .modal-item-tips {
+        padding:5px 2px;
+        text-align:left;
+        font-size: 14px;
+        color:#9B9B9B;
+    }
+
+    .modal-item-price {
+	font-family: "PingFang SC", PingFangSC,Helvetica,sans-serif;
+        text-align:left;
+        font-size:20px;
+        position: absolute;
+        left: 0;bottom: 0;
+        color:#f35858;
+    }
+
+    .modal-attrs-panel {
+        color: #9b9b9b;
+        font-size: 14px;
+        position:relative;
+        text-align:left;
+        padding: 5px;
+    }
+
+    .modal-attrs-panel div {
+        display: inline-block;
+    }
+
+    .modal-attrs-title {
+        width:50px;
+    }
+
+    .modal-sub-items {
+
+    }
+
+    .modal-sub-item {
+        height: 28px;
+        line-height: 28px;
+        background-color: #fff;
+        padding: 0 13px;
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+        color: #9b9b9b;
+        font-size: 14px;
+    }
+
+    .modal-sub-item.selected {
+        background-color: #F4C10D;
+        color: white;
+    }
+
+    .modal-sub-item.disabled {
+        color: #e6e6e6;
+    }
+
+    .modal-count-panel {
+        padding:5px;
+        text-align:left;
+        font-size: 14px;
+        color:#9B9B9B;
+        position:relative;
+    }
+
+    .modal-count-panel div {
+        display:inline-block;
+    }
+
+    .modal-item-count-op {
+        float:right;
+    }
+
+    .modal-count-title {
+        width:50px;
+    }
+
+    .modal-item-stock {
+        padding-left:13px;
+    }
+
+    .modal-item-count {
+        text-align:center;
+        width:60px;
+        height:25px;
+        line-height:25px;
+        font-size: 20px;
+        color:#f35858;
+    }
+
+    .modal-item-count-decrease, .modal-item-count-increase {
+        text-align:center;
+        line-height:25px;
+    }
+
+    .modal-item-count-decrease img, .modal-item-count-increase img {
+        width:15px;
+        height:15px;
+    }
+
+    .modal-confirm {
+        position: relative;
+        margin-top: 25px;
+    }
+
+    .modal-confirm .modal-confirm-btn {
+        width: 111px;
+        height: 52px;
+        font-size: 15px;
+        background-color: #F4C10D;
+        color: white;
+        float: right;line-height: 51px;
+        margin-right: -20px;
+    }
+
+
+    .toast-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+        background-color: white;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 2px 2px 10px rgba(166, 166, 166, 0.6);
+        z-index: 1000;
+    }
+
+    .toast-content {
+        font-size: 14px;
+        vertical-align: middle;
+        display: inline-block;
+        padding-top: 1px;
+        color: #666666;
+    }
+    .toast_img{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+    }
+
+</style>
+
+<div class="modal-dialog" id="sub_item_selector">
+    <div class="modal-mask"></div>
+    <div class="modal-content">
+        <div class="modal-close">
+            <img src="images/close.png" />
+        </div>
+        <div>
+            <table border=0 width="100%"><tr>
+                <td class="modal-item-img">
+                    <img />
+                </td>
+                <td style="width: 10px;"></td>
+                <td valign="top" style="position: relative;">
+                    <div class="modal-item-title">
+
+                    </div>
+
+                    <div class="modal-item-tips">
+
+                    </div>
+
+                    <div class="modal-item-price">
+
+                    </div>
+                </td>
+            </tr></table>
+        </div>
+
+        <div style="height: 8px;"></div>
+
+        <div class="modal-attrs-panel">
+            <div class="modal-attrs-title">规格</div>
+            <div class="modal-sub-items"></div>
+        </div>
+
+        <div class="modal-count-panel">
+            <div class="modal-count-title">数量</div>
+            <div class="modal-item-stock"></div>
+            <div class="modal-item-count-op">
+                <div class="modal-item-count-decrease">
+                    <img src = "images/1495869319612.png" alt="minus mark">
+                </div>
+                <div class="modal-item-count">1</div>
+                <div class="modal-item-count-increase">
+                    <img src = "images/1495781193970.png" alt="plus mark" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-confirm">
+            <div class="modal-confirm-btn">确认</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="toast-dialog" id="toast">
+    <div>
+        <img class="toast_img" src="images/1495527096171.png"/>
+        <span class="toast_img_space">&nbsp;</span>
+        <div class="toast-content">
+        </div>
+    </div>
+</div>
+    <script type="text/javascript">
+
+    function escapeHtml(str){
+	/* Struts已经过滤过了 */
+    	return str;
+    	/*
+        if(!str)
+        {
+            return str;
+        }
+
+        return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g,"&lt;").replace(/>/g,"&gt;");
+	*/
+    }
+
+    function toast(msg, showImg, fadeInTime, fadeOutTime) {
+        if(fadeInTime == undefined) fadeInTime = 200;
+        if(fadeOutTime == undefined) fadeOutTime = 800;
+        if(showImg){
+            $("#toast").find(".toast_img")[0].style.display = "inline-block";
+            $("#toast").find(".toast_img_space")[0].style.display = "inline-block";
+        }
+        else{
+            $("#toast").find(".toast_img")[0].style.display = "none";
+            $("#toast").find(".toast_img_space")[0].style.display = "none";
+        }
+        $("#toast").find(".toast-content").text(msg);
+        $("#toast").fadeIn(fadeInTime,function(){
+            setTimeout(function(){$("#toast").fadeOut(fadeOutTime)}, fadeOutTime);
+        });
+    }
+
+    function Item(id, title, subItems, imgSrc){
+        this.init(id, title, subItems, imgSrc);
+    }
+    Item.prototype = {
+        init:function(id, title, subItems, imgSrc){
+            this.id = id;
+            this.title = title;
+            this.subItems = subItems;
+            this.imgSrc = imgSrc;
+        },
+        setSubItems:function(subItems){
+            this.subItems = subItems;
+        },
+        needSelect:function(){
+            return this.subItems && this.subItems.length > 1;
+        },
+        getPriceStr:function(){
+            var minPrice = 999999;
+            var maxPrice = 0;
+            for(var i = 0; i < this.subItems.length; i++)
+            {
+                var subItem = this.subItems[i];
+                if(subItem.price < minPrice) minPrice = subItem.price;
+                if(subItem.price > maxPrice) maxPrice = subItem.price;
+            }
+
+            if(minPrice == maxPrice)
+            {
+                return '￥' + minPrice/100;
+            }
+
+            return '￥' + minPrice/100 + '~' + maxPrice/100;
+        },
+        getStock:function(){
+            var stock = 0;
+            for(var i = 0; i < this.subItems.length; i++)
+            {
+                stock += this.subItems[i].stock;
+            }
+
+            return stock;
+        }
+    };
+
+    function SubItem(id, title, price, stock, imgSrc){
+        this.init(id, title, price, stock, imgSrc);
+    }
+    SubItem.prototype = {
+        init:function(id, title, price, stock, imgSrc) {
+            this.id = id;
+            this.title = title;
+            this.price = price;
+            this.stock = stock;
+            this.imgSrc = imgSrc;
+        },
+        getPriceStr:function(){
+            return '￥' + this.price/100;
+        }
+    };
+
+    function SubItemSelector(item){
+        this.init(item);
+    }
+    SubItemSelector.prototype = {
+        init:function(item){
+            this.item = item;
+            this.onConfirmCallBack = null;
+            this.selSubItem = null;
+            this.selCount = 1;
+            this.panel = $("#sub_item_selector");
+            this.initPanel();
+        },
+        initPanel:function(){
+            var self = this;
+            this.panel.find(".modal-item-img img").attr("src", this.item.imgSrc);
+            this.panel.find(".modal-item-title").text(this.item.title);
+            this.panel.find(".modal-item-price").text(this.item.getPriceStr());
+            this.panel.find(".modal-item-stock").text(this.getStockStr(this.item.getStock()));
+            this.panel.find(".modal-sub-items").children().remove();
+
+            self.panel.find(".modal-item-count-decrease").unbind("click");
+            self.panel.find(".modal-item-count-decrease").click(function(){
+                if(self.selCount <= 1) return;
+                self.panel.find(".modal-item-count").text(self.selCount-1);
+                self.setSelCount(self.selCount - 1)
+            });
+
+            self.panel.find(".modal-item-count-increase").unbind("click");
+            self.panel.find(".modal-item-count-increase").click(function(){
+                if(self.selSubItem && self.selCount >= self.selSubItem.stock) return;
+                self.panel.find(".modal-item-count").text(self.selCount+1);
+                self.setSelCount(self.selCount + 1)
+            });
+
+            self.panel.find(".modal-confirm-btn").unbind("click");
+            self.panel.find(".modal-confirm-btn").click(function(){
+                if(self.onConfirmCallBack) self.onConfirmCallBack(self.selSubItem, self.selCount);
+            });
+
+            self.panel.find(".modal-close").unbind("click");
+            self.panel.find(".modal-close").click(function(){
+                self.hide();
+            });
+
+            self.panel.find(".modal-item-tips").text(this.getTipsStr());
+
+            if(self.item.subItems.length == 1)
+            {
+                self.setSelSubItem(self.item.subItems[0]);
+                self.panel.find(".modal-attrs-panel").hide();
+            }
+            else
+            {
+                self.panel.find(".modal-attrs-panel").show();
+
+                var subItemSpans = [];
+                for(var i = 0 ; i < this.item.subItems.length; i++)
+                {
+                    var subItem = this.item.subItems[i];
+                    var subItemHtml = '<div class="modal-sub-item">' + escapeHtml(subItem.title) + '</div>';
+                    var subItemSpan = $(subItemHtml);
+                    if(subItem.stock < 1)
+                    {
+                        subItemSpan.addClass("disabled");
+                    }
+                    else
+                    {
+                        (function(curSubItem){
+                            subItemSpan.click(function(){
+                                self.setSelSubItem(curSubItem);
+                            });
+                        }(subItem));
+
+
+                        subItemSpans.push(subItemSpan);
+                    }
+
+                    self.panel.find(".modal-sub-items").append(subItemSpan);
+                }
+
+                if(subItemSpans.length > 0)
+                {
+                    subItemSpans[0].click();
+                }
+            }
+        },
+
+        show:function(){
+            this.panel.show();
+        },
+        hide:function(){
+            this.panel.hide();
+        },
+        setSelSubItem:function(subItem){
+            this.selSubItem = subItem;
+            this.panel.find(".modal-item-tips").text(this.getTipsStr());
+
+            this.panel.find(".modal-sub-item").each(function(){
+                $(this).removeClass("selected");
+                if($(this).text() == subItem.title)
+                {
+                    $(this).addClass("selected");
+                }
+            });
+
+            if(this.selCount > subItem.stock)
+            {
+                this.setSelCount(subItem.stock);
+            }
+
+            this.panel.find(".modal-item-price").text(subItem.getPriceStr());
+            this.panel.find(".modal-item-stock").text(this.getStockStr(subItem.stock));
+
+            if(this.item.needSelect() && subItem.imgSrc)
+            {
+                this.panel.find(".modal-item-img img").attr("src", subItem.imgSrc);
+            }
+            else
+            {
+                this.panel.find(".modal-item-img img").attr("src", this.item.imgSrc);
+            }
+        },
+        setSelCount:function(count){
+            this.selCount = count;
+            this.panel.find(".modal-item-tips").text(this.getTipsStr());
+            this.panel.find(".modal-item-count").text(this.selCount);
+        },
+        onConfirm:function(callBack){
+            this.onConfirmCallBack = callBack;
+        },
+        getStockStr:function(stock){
+            return "库存 " + stock + " 件";
+        },
+        getTipsStr:function(){
+	    var self = this;
+            if(this.selSubItem == null || this.selCount == 0)
+            {
+                if(self.item.subItems.length > 1)
+                {
+                    return "请选择规格数量";
+                }
+                else
+                {
+                    return "请选择数量";
+                }
+            }
+
+            if(this.item.subItems.length > 1)
+            {
+                return "已选 " + escapeHtml(this.selSubItem.title) + " x" + this.selCount;
+            }
+            else
+            {
+                return "已选数量 x" + this.selCount;
+            }
+        }
+    };
+
+</script>
+<script>
+var item_flow_item;
+(function() {
+	if (typeof(item_flow_item) == 'undefined') item_flow_item = [];
+	var si;
+
+	
+		si = [];
+		
+		
+			si.push(new SubItem(7, "象形9000全套", 14900, 136, "images/1500455575784.jpg"));
+		
+		
+			si.push(new SubItem(366, "象形9000①", 6900, 239, "images/1500455575784.jpg"));
+		
+		
+			si.push(new SubItem(367, "象形9000②", 6900, 448, "images/1500455575784.jpg"));
+		
+		
+			si.push(new SubItem(368, "象形9000③", 6900, 274, "images/1500455575784.jpg"));
+		
+
+		item_flow_item[2000006] = new Item(2000006, "象形9000单词书", si, "images/1500455575784.jpg");
+	
+		si = [];
+		
+		
+			si.push(new SubItem(36, "康奈尔", 2900, 2277, "images/1500455575784.jpg"));
+		
+		
+			si.push(new SubItem(357, "藏青康奈尔", 2900, 3172, "images/1500455575784.jpg"));
+		
+		
+			si.push(new SubItem(359, "墨绿康奈尔", 2900, 4391, "images/1500455575784.jpg"));
+		
+
+		item_flow_item[2000035] = new Item(2000035, "康奈尔5R记忆法笔记本", si, "images/1500455575784.jpg");
+	
+		si = [];
+		
+		
+			si.push(new SubItem(197, "default", 18900, 249, "#"));
+		
+
+		item_flow_item[2000169] = new Item(2000169, "福尔摩斯系列6本套装 赠送专属胸章", si, "images/1500455575784.jpg");
+	
+		si = [];
+		
+		
+			si.push(new SubItem(156, "灰色书包", 14900, 0, "images/1500455575784.jpg"));
+		
+		
+			si.push(new SubItem(499, "红色书包", 14900, 191, "images/1500455575784.jpg"));
+		
+		
+			si.push(new SubItem(500, "蓝色书包", 14900, 202, "images/1500455575784.jpg"));
+
+		
+
+		item_flow_item[2000130] = new Item(2000130, "Why wait 书包", si, "images/1500455575784.jpg");
+	
+		si = [];
+		
+		
+			si.push(new SubItem(129, "default", 2400, 1085, "#"));
+		
+
+		item_flow_item[2000103] = new Item(2000103, "易于复习的错题本", si, "images/1500455575784.jpg");
+	
+		si = [];
+		
+		
+			si.push(new SubItem(85, "default", 2900, 4688, "#"));
+		
+
+		item_flow_item[2000059] = new Item(2000059, "小王子 6级读物", si, "images/1500455575784.jpg");
+	
+})();
+
+function item_flow_cart(item)
+{
+	var selector = new SubItemSelector(item_flow_item[item]);
+	selector.show();
+	selector.setSelCount(1);
+	selector.onConfirm(function(subItem, count){
+		selector.hide();
+		var itemInfo = item + '_' + subItem.id + '_' + count;
+		$.ajax({url:'/m/cart/add',
+		    type:'post',
+		    data:{itemInfo:itemInfo},
+		    dataType:'json'}
+		).done(function(json){
+			toast("已加入购物车", true);
+			
+		}).fail(function(jqXHR, statusText, errorThrow){
+			if(jqXHR.status == '401')
+			{
+			    if (confirm('您尚未登录，是否登录？'))
+			    {
+				var baseUrl = '/login?from=';
+
+				window.location.href = baseUrl + encodeURIComponent(window.location.href);
+			    }
+			}
+			else
+			{
+			    alert("加入购物车失败");
+			}
+		});
+	});
+}
+</script>
+<div class="item_flow_jsp" style="overflow:hidden" id="goodsDiv">
+    	<!-- <div class="item" style="padding-right:.5px">
+        <div style="height:0;padding-bottom:100%;overflow:hidden;margin-bottom:5px"> <a href="#"> <img src="images/1500455575784.jpg" /> </a> </div>
+        <div class="price">¥69.00</div>
+        <span style="margin-left:20px;">商品名称</span>
+        </div> -->
+</div>
+</div>
+
+<div style="position:fixed;right:15px;bottom:15px"> <a id="foot_tab_image_0" href="#" style="display:block;overflow:hidden;width:50px;height:50px;margin-top:5px;"> <img src="images/1495093688470.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+    <div id="reddot-cart" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px"> </div>
+  </div>
+  </a> <a id="foot_tab_image_1" href="my.html" style="display:block;overflow:hidden;width:50px;height:50px;margin-top:5px;"> <img src="images/1495093725773.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+    <div id="reddot-mine" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px"> </div>
+  </div>
+  </a>
+</div>
+<div style="font-size:10px;padding:5px;margin-bottom:15px;text-align:center;line-height:15px;
+    color:gray;background-color:#ffffff;color:#7B7B7B;">
+      <div> 增值电信业务经营许可证 </div>
+      <div>保道商城&nbsp;© 2017 - 2018 baodao.com</div>
+    </div>
+</body>
+<script type="text/javascript">
+var param = {};
+param.pages = 1;
+param.pageNum = 1;
+param.pageSize = 20;
+param.ishot = getQueryString("ishot");
+param.cgykey = getQueryString("cgykey");
+param.words = getQueryString("words");
+if(!isEmpty(param.words)){
+	$("#words").val(param.words);
+}
+function search() {
+	var words = $("#words").val();
+	if(param.words!=words){
+		param.words = words;
+		param.orderBy="";
+		param.pages = 1;
+		param.pageNum = 1;
+	}
+	app.showLoading();
+	$.postApi("mall.goods.search", param, function(res){
+		app.hideLoading();
+		//console.log(JSON.stringify(res));
+		if(res.errno==0){
+			var html = getHtml(res.data);
+			$("#goodsDiv").html(html);
+		}
+	});
+}
+search();
+function loadMore() {
+	if(param.pageNum < param.pages){
+		app.showLoading();
+		param.pageNum++;
+		$.postApi("mall.goods.search", param, function(res){
+			app.hideLoading();
+			//console.log(JSON.stringify(res));
+			if(res.errno==0){
+				var html = getHtml(res.data);
+				$("#goodsDiv").append(html);
+			}
+		});
+	}
+}
+function getHtml(data){
+	var html = '';
+	var list = data.list;
+	if(list && list.length>0) {
+		param.pages = data.pages;
+		param.pageNum = data.pageNum;
+		param.pageSize = data.pageSize;
+		for (var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var href = "course_detail.html?id="+item.id;
+			if(item.isReal==1){
+				href = "goods_detail.html?id="+item.id;
+			}
+        	html += '<a href="'+href+'"><div class="item" style="padding-right:.5px">'
+    		+'<div class="img-container"><p class="img-dummy"></p><p class="img-content"><img src="'+app.imgHost+item.goodsImg+'" /></p></div>'
+    		+'<div class="price">¥'+toAmtStr(item.goodsPrice)+'</div>'
+    		+'<span class="title">'+item.goodsTitle+'</span>'
+    		+'</div></a>';
+		}
+	}
+	return html;
+}
+$(".orderByBtn").on("click",function(){
+	var orderBy = $(this).attr("orderBy");
+	param.orderBy = orderBy;
+	search();
+	if(orderBy == "price_up"){
+		$(this).attr("orderBy", "price_down");
+	}else if(orderBy == "price_down"){
+		$(this).attr("orderBy", "price_up");
+	}
+});
+</script>
+</html>

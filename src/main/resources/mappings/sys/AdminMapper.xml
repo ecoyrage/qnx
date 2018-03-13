@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.sys.mapper.AdminMapper" >
+    <resultMap id="BaseResultMap" type="com.fh.sys.model.Admin" >
+        <id column="id" property="id" />
+        <result column="user_code" property="userCode" />
+        <result column="group_id" property="groupId" />
+        <result column="role_ids" property="roleIds" />
+        <result column="loginname" property="loginname" />
+        <result column="password" property="password" />
+        <result column="jobno" property="jobno" />
+        <result column="name" property="name" />
+        <result column="sex" property="sex" />
+        <result column="email" property="email" />
+        <result column="mobile" property="mobile" />
+        <result column="phone" property="phone" />
+        <result column="user_type" property="userType" />
+        <result column="photo" property="photo" />
+        <result column="login_ip" property="loginIp" />
+        <result column="login_date" property="loginDate" />
+        <result column="useable" property="useable" />
+        <result column="remarks" property="remarks" />
+        <result column="create_by" property="createBy" />
+        <result column="create_date" property="createDate" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_date" property="updateDate" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <sql id="Example_Where_Clause" >
+        <where >
+            <foreach collection="oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Update_By_Example_Where_Clause" >
+        <where >
+            <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Base_Column_List" >
+        id,user_code,group_id,role_ids,loginname,password,jobno,name,sex,email,mobile,phone,user_type,photo,login_ip,login_date,useable,remarks,create_by,create_date,update_by,update_date,del_flag
+    </sql>
+
+    <select id="selectByExample" resultMap="BaseResultMap" >
+        select
+        <if test="distinct" >
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        from sys_admin
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null" >
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from sys_admin
+        where id = #{id}
+    </select>
+
+    <delete id="deleteByPrimaryKey" >
+        delete from sys_admin
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteByExample" >
+        delete from sys_admin
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" >
+        insert into sys_admin (id,user_code,group_id,
+        role_ids,loginname,password,
+        jobno,name,sex,
+        email,mobile,phone,
+        user_type,photo,login_ip,
+        login_date,useable,remarks,
+        create_by,create_date,update_by,
+        update_date,del_flag
+        )
+        values (#{id},#{userCode},#{groupId},
+        #{roleIds},#{loginname},#{password},
+        #{jobno},#{name},#{sex},
+        #{email},#{mobile},#{phone},
+        #{userType},#{photo},#{loginIp},
+        #{loginDate},#{useable},#{remarks},
+        #{createBy},#{createDate},#{updateBy},
+        #{updateDate},#{delFlag}
+        )
+    </insert>
+
+    <insert id="insertSelective" >
+        insert into sys_admin
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="userCode != null" >
+                user_code,
+            </if>
+            <if test="groupId != null" >
+                group_id,
+            </if>
+            <if test="roleIds != null" >
+                role_ids,
+            </if>
+            <if test="loginname != null" >
+                loginname,
+            </if>
+            <if test="password != null" >
+                password,
+            </if>
+            <if test="jobno != null" >
+                jobno,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="sex != null" >
+                sex,
+            </if>
+            <if test="email != null" >
+                email,
+            </if>
+            <if test="mobile != null" >
+                mobile,
+            </if>
+            <if test="phone != null" >
+                phone,
+            </if>
+            <if test="userType != null" >
+                user_type,
+            </if>
+            <if test="photo != null" >
+                photo,
+            </if>
+            <if test="loginIp != null" >
+                login_ip,
+            </if>
+            <if test="loginDate != null" >
+                login_date,
+            </if>
+            <if test="useable != null" >
+                useable,
+            </if>
+            <if test="remarks != null" >
+                remarks,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id},
+            </if>
+            <if test="userCode != null" >
+                #{userCode},
+            </if>
+            <if test="groupId != null" >
+                #{groupId},
+            </if>
+            <if test="roleIds != null" >
+                #{roleIds},
+            </if>
+            <if test="loginname != null" >
+                #{loginname},
+            </if>
+            <if test="password != null" >
+                #{password},
+            </if>
+            <if test="jobno != null" >
+                #{jobno},
+            </if>
+            <if test="name != null" >
+                #{name},
+            </if>
+            <if test="sex != null" >
+                #{sex},
+            </if>
+            <if test="email != null" >
+                #{email},
+            </if>
+            <if test="mobile != null" >
+                #{mobile},
+            </if>
+            <if test="phone != null" >
+                #{phone},
+            </if>
+            <if test="userType != null" >
+                #{userType},
+            </if>
+            <if test="photo != null" >
+                #{photo},
+            </if>
+            <if test="loginIp != null" >
+                #{loginIp},
+            </if>
+            <if test="loginDate != null" >
+                #{loginDate},
+            </if>
+            <if test="useable != null" >
+                #{useable},
+            </if>
+            <if test="remarks != null" >
+                #{remarks},
+            </if>
+            <if test="createBy != null" >
+                #{createBy},
+            </if>
+            <if test="createDate != null" >
+                #{createDate},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" resultType="java.lang.Integer" >
+        select count(*) from sys_admin
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" >
+        update sys_admin
+        <set >
+            <if test="record.id != null" >
+                id = #{record.id},
+            </if>
+            <if test="record.userCode != null" >
+                user_code = #{record.userCode},
+            </if>
+            <if test="record.groupId != null" >
+                group_id = #{record.groupId},
+            </if>
+            <if test="record.roleIds != null" >
+                role_ids = #{record.roleIds},
+            </if>
+            <if test="record.loginname != null" >
+                loginname = #{record.loginname},
+            </if>
+            <if test="record.password != null" >
+                password = #{record.password},
+            </if>
+            <if test="record.jobno != null" >
+                jobno = #{record.jobno},
+            </if>
+            <if test="record.name != null" >
+                name = #{record.name},
+            </if>
+            <if test="record.sex != null" >
+                sex = #{record.sex},
+            </if>
+            <if test="record.email != null" >
+                email = #{record.email},
+            </if>
+            <if test="record.mobile != null" >
+                mobile = #{record.mobile},
+            </if>
+            <if test="record.phone != null" >
+                phone = #{record.phone},
+            </if>
+            <if test="record.userType != null" >
+                user_type = #{record.userType},
+            </if>
+            <if test="record.photo != null" >
+                photo = #{record.photo},
+            </if>
+            <if test="record.loginIp != null" >
+                login_ip = #{record.loginIp},
+            </if>
+            <if test="record.loginDate != null" >
+                login_date = #{record.loginDate},
+            </if>
+            <if test="record.useable != null" >
+                useable = #{record.useable},
+            </if>
+            <if test="record.remarks != null" >
+                remarks = #{record.remarks},
+            </if>
+            <if test="record.createBy != null" >
+                create_by = #{record.createBy},
+            </if>
+            <if test="record.createDate != null" >
+                create_date = #{record.createDate},
+            </if>
+            <if test="record.updateBy != null" >
+                update_by = #{record.updateBy},
+            </if>
+            <if test="record.updateDate != null" >
+                update_date = #{record.updateDate},
+            </if>
+            <if test="record.delFlag != null" >
+                del_flag = #{record.delFlag},
+            </if>
+        </set>
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" >
+        update sys_admin
+        set id = #{id},
+        user_code = #{userCode},
+        group_id = #{groupId},
+        role_ids = #{roleIds},
+        loginname = #{loginname},
+        password = #{password},
+        jobno = #{jobno},
+        name = #{name},
+        sex = #{sex},
+        email = #{email},
+        mobile = #{mobile},
+        phone = #{phone},
+        user_type = #{userType},
+        photo = #{photo},
+        login_ip = #{loginIp},
+        login_date = #{loginDate},
+        useable = #{useable},
+        remarks = #{remarks},
+        create_by = #{createBy},
+        create_date = #{createDate},
+        update_by = #{updateBy},
+        update_date = #{updateDate},
+        del_flag = #{delFlag}
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" >
+        update sys_admin
+        <set >
+            <if test="userCode != null" >
+                user_code = #{userCode},
+            </if>
+            <if test="groupId != null" >
+                group_id = #{groupId},
+            </if>
+            <if test="roleIds != null" >
+                role_ids = #{roleIds},
+            </if>
+            <if test="loginname != null" >
+                loginname = #{loginname},
+            </if>
+            <if test="password != null" >
+                password = #{password},
+            </if>
+            <if test="jobno != null" >
+                jobno = #{jobno},
+            </if>
+            <if test="name != null" >
+                name = #{name},
+            </if>
+            <if test="sex != null" >
+                sex = #{sex},
+            </if>
+            <if test="email != null" >
+                email = #{email},
+            </if>
+            <if test="mobile != null" >
+                mobile = #{mobile},
+            </if>
+            <if test="phone != null" >
+                phone = #{phone},
+            </if>
+            <if test="userType != null" >
+                user_type = #{userType},
+            </if>
+            <if test="photo != null" >
+                photo = #{photo},
+            </if>
+            <if test="loginIp != null" >
+                login_ip = #{loginIp},
+            </if>
+            <if test="loginDate != null" >
+                login_date = #{loginDate},
+            </if>
+            <if test="useable != null" >
+                useable = #{useable},
+            </if>
+            <if test="remarks != null" >
+                remarks = #{remarks},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="updateByPrimaryKey" >
+        update sys_admin
+        set user_code = #{userCode},
+        group_id = #{groupId},
+        role_ids = #{roleIds},
+        loginname = #{loginname},
+        password = #{password},
+        jobno = #{jobno},
+        name = #{name},
+        sex = #{sex},
+        email = #{email},
+        mobile = #{mobile},
+        phone = #{phone},
+        user_type = #{userType},
+        photo = #{photo},
+        login_ip = #{loginIp},
+        login_date = #{loginDate},
+        useable = #{useable},
+        remarks = #{remarks},
+        create_by = #{createBy},
+        create_date = #{createDate},
+        update_by = #{updateBy},
+        update_date = #{updateDate},
+        del_flag = #{delFlag}
+        where id = #{id}
+    </update>
+
+</mapper>

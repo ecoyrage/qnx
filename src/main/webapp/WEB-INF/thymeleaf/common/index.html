@@ -1,0 +1,246 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>去哪儿学-首页</title>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta http-equiv="Cache-Control" content="no-transform">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="../../css/wstyle.css" type="text/css" rel="stylesheet" th:href="@{/static/css/zzsc.css}">
+	<link href="../../css/ionicons.min.css" type="text/css" rel="stylesheet" th:href="@{/static/css/ionicons.min.css}" >
+	<link href="../../css/wstyle.css" type="text/css" rel="stylesheet" th:href="@{/static/css/wstyle.css}" >
+	<link href="${path }/base/images/bitbug_favicon.ico" th:href="@{/static/images/bitbug_favicon.ico}" rel="Shortcut Icon">
+	<script type="text/javascript" src="../../js/jquery-1.11.3.min.js" th:src="@{/static/js/jquery-1.11.3.min.js}"></script>
+	<script type="text/javascript" src="../../js/header-footer.min.js" th:src="@{/static/js/header-footer.min.js}"></script>
+	<script type="text/javascript" src="../../js/common.js" th:src="@{/static/js/common.js}"></script>
+	<script type="text/javascript" src="../../js/jquery.cookie.js" th:src="@{/static/js/jquery.cookie.js}"></script>
+	<script type="text/javascript" src="../../js/home.min.js" th:src="@{/static/js/home.min.js}"></script>
+</head>
+
+<body style="position:relative;">
+<!--页面顶部header 开始-->
+
+<div th:include="header::header"></div>
+<script th:replace="fragscript :: outerJs01"></script>
+<script th:replace="fragscript :: outerJs05"></script>
+
+<!-- 头部导航 开始 -->
+<div id="top_nav">
+	<div class="main-nav">
+		<div class="inner-con0">
+			<div class="inner-con1">
+				<div class="inner-con2 clear">
+					<a th:href="@{/common/course.th}"  target="_blank">培训课程<em class="hot-label"></em></a>
+					<a th:href="@{/common/school.th}"  target="_blank">培训学校<em class="new-label"></em></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="category-con">
+		<div class="category-inner-con clear">
+			<div class="category-type">
+				<div class="text">全部分类</div>
+			</div>
+			<div id="nav_top_menu" class='nav-list' style='display:block;'>
+				<div class="nav-con" id='category-nav'>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 头部导航 完成 -->
+
+<!-- banner 开始 -->
+<div class="circle-wrap">
+	<a rel="nofollow" class="circle-li-a" href="#">
+		<img class="circle-li-img" th:src="@{${banner1.imgUrl}}"  src="images/M_02.png" width="100%" height="505" alt="">
+	</a>
+</div>
+<!-- banner 结束 -->
+
+<div class="container">
+	<!-- 教育专栏 开始 -->
+	<div class="x-floor floor bgW mt_pass">
+		<div class="w1200 auto mt_pass" style="text-align:center;">
+			<div style="font-size:32px; color:#363635;">教育专栏</div>
+			<p style="font-size:14px;color:#abaaaa;border-bottom: solid 1px #eee;padding-bottom:10px;">我们提供最优质的信息</p>
+	</div>
+	</div>
+	<!-- 教育专栏 结束 -->
+
+	<!-- 推荐 开始 -->
+	<div class="x-floor bgG mt_pass">
+		<div class="w1200 auto mt_pass">
+			<div class="line-title mt_pass">
+			</div>
+			<div class="clear">
+				<div class="rec-left fl">
+					<img src="images/1621_l.jpg"  th:src="@{${banner2.imgUrl}}" width="320" height="364">
+					<!--<div class="rec-year"><span class="rec-year-txt inlineB">艺术专栏</span></div>-->
+					<div class="rec-link-wrap"></div>
+				</div>
+				<div class="rec-right fl">
+					<ul class="rec-right-ul clear">
+						<li class="rec-right-li fl" th:each="course : ${courseList1}">
+							<a href="javascript:void(0);"th:href="@{/common/courseDetail.th(courseId=${course.courseId})}"  style="display:block;">
+								<div class="rec-right-li-inner">
+									<div class="rec-right-img-wrap">
+										<img class="rec-right-img lazy" th:src="@{${course.logo}}" width="215px" height="133px" data-original="" alt="" src="images/1595_l.jpg" style="display: block;">
+									</div>
+									<div class="mess-con">
+										<h5 class="tit-link font14 mt10 c3 ellip"  th:text="@{${course.courseName}}"></h5>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 厚学推荐 结束 -->
+
+	<!-- 厚学推荐 开始 -->
+	<div class="x-floor floor bgG mt_pass">
+		<div class="w1200 auto mt_pass">
+			<div class="line-title mt_pass">
+			</div>
+			<div class="clear">
+				<div class="rec-left fl">
+					<img src="images/1621_l.jpg"  th:src="@{${banner3.imgUrl}}" width="320" height="364">
+					<!--<div class="rec-year"><span class="rec-year-txt inlineB">2017</span></div>-->
+					<div class="rec-link-wrap"></div>
+				</div>
+				<div class="rec-right fl">
+					<ul class="rec-right-ul clear">
+						<li class="rec-right-li fl" th:each="course : ${courseList2}">
+							<a href="javascript:void(0);"th:href="@{/common/courseDetail.th(courseId=${course.courseId})}" target="_blank" style="display:block;">
+								<div class="rec-right-li-inner">
+									<div class="rec-right-img-wrap">
+										<img class="rec-right-img lazy" width="215px" height="133px" data-original="" alt="" th:src="@{${course.logo}}"  src="images/3786.jpg" style="display: block;">
+									</div>
+									<div class="mess-con">
+										<h5 class="tit-link font14 mt10 c3 ellip" th:text="${course.courseName}"></h5>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 厚学推荐 结束 -->
+
+	<!--入驻机构 开始-->
+	<div class="floor rz-floor bgW mt_pass">
+		<div class="w1200 auto clear">
+			<div class="entry-lf">
+				<p class="entry-lf-txt" style="margin-top:20px;">入驻机构</p>
+			</div>
+			<div class="entry-ri">
+				<div class="entry-wrap">
+					<div id="marquee1" class="marqueeleft">
+						<div style="width:8000px;">
+							<ul id="marquee1_1">
+								<li th:each="franchisee : ${franchiseeList}">
+									<img height="50" src="images/4960_l.jpg"  th:src="@{${franchisee.logo}}">
+								</li>
+							</ul>
+							<ul id="marquee1_2"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--入驻机构 结束-->
+
+
+		<script type="text/javascript">
+            function marquee(i, direction){
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+                if (direction == "up"){
+                    if (obj2.offsetTop - obj.scrollTop <= 0){
+                        obj.scrollTop -= (obj1.offsetHeight + 20);
+                    }else{
+                        var tmp = obj.scrollTop;
+                        obj.scrollTop++;
+                        if (obj.scrollTop == tmp){
+                            obj.scrollTop = 1;
+                        }
+                    }
+                }else{
+                    if (obj2.offsetWidth - obj.scrollLeft <= 0){
+                        obj.scrollLeft -= obj1.offsetWidth;
+                    }else{
+                        obj.scrollLeft++;
+                    }
+                }
+            }
+
+            function marqueeStart(i, direction){
+                var obj = document.getElementById("marquee" + i);
+                var obj1 = document.getElementById("marquee" + i + "_1");
+                var obj2 = document.getElementById("marquee" + i + "_2");
+
+                obj2.innerHTML = obj1.innerHTML;
+                var marqueeVar = window.setInterval("marquee("+ i +", '"+ direction +"')", 20);
+                obj.onmouseover = function(){
+                    window.clearInterval(marqueeVar);
+                }
+                obj.onmouseout = function(){
+                    marqueeVar = window.setInterval("marquee("+ i +", '"+ direction +"')", 20);
+                }
+            }
+		</script>
+		<script type="text/javascript">marqueeStart(1, "left");</script>
+		<style>
+			/* marqueeleft */
+			.marqueeleft{height:50px;width:1200px;overflow:hidden;margin:0px auto;}
+			.marqueeleft ul{float:left;}
+			.marqueeleft li{float:left;margin:0 5px;display:inline;width:150px;height:50px;overflow:hidden;}
+		</style>
+
+</div>
+
+
+
+<!-- 底部 开始 -->
+<div th:include="footer::footer"></div>
+<!-- 侧边栏代码 开始 -->
+<div th:include="sidebar::sidebar"></div>
+<script th:replace="fragscript :: outerJs03"></script>
+<!--行业分类-->
+<script th:replace="fragscript :: outerJs01"></script>
+<script th:replace="fragscript :: outerJs04"></script>
+
+<script type="text/javascript">
+    //导航目录的显示和隐藏（首页）
+    show_hide_nav();
+</script>
+<!--<script type="text/javascript">
+    $(function(){
+        $("#nav_top_menu").find(".nav-item").mouseenter(function(){var a=$(this).index();showLevel2(this,a)});$("#nav_top_menu").mouseleave(function(){$("#nav_top_menu").find(".nav-item").removeClass("selected");$(".pannel-con").hide()})
+    })
+    var u = false;
+    function showLevel2(the , number){
+        $("#nav_top_menu").find(".nav-item").removeClass("selected");
+        $(the).addClass("selected");
+        $(".pannel-con").hide(0);
+        if(u){
+            $(".pannel-con").eq(number).fadeIn();
+            u = false;
+        }else{
+            $(".pannel-con").eq(number).show();
+        }
+    }
+</script>-->
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="referrer" content="always" />
+<meta charset='utf-8' />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/my.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="js/app.js?v=20170918"></script>
+
+<style type="text/css">
+    .confirm-attribute-value, .confirm-attribute-value-sel, .confirm-attribute-value-disabled
+    {
+        height: 28px;
+        line-height: 28px;
+        background-color: #fff;
+        padding: 0 13px;
+        margin: 10px 0px 0 0;
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+        color: #9b9b9b;
+	font-size: 14px;
+    }
+    .confirm-attribute-value-sel {background-color: #F4C10D;color: white;}
+    .confirm-attribute-value-disabled {
+		color: #c5c8cf;
+     }
+    .detail img {display:block;width:100%;}
+    .go-top-btn {
+        z-index: 10;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display:none;
+    }
+
+	.confirm-attribute-name-panel{
+		display: inline-block;
+		position: absolute;
+		left: 6px;
+		font-size: 14px;
+		top: 15px;
+		line-height: 28px;
+	}
+
+	.confirm-attribute-values-panel{
+		display: inline-block;
+		margin-left: 50px;
+		position: relative;
+		width: 100%;
+	}
+    .go-top-btn img{
+        width:40px;
+        height:40px;
+    }
+
+	.service-rule {
+		color:#707070;
+		line-height:18px;
+		position: relative;
+	}
+
+	.service-rule:before {
+		content:'';
+		position: absolute;
+		display: inline-block;
+		background-color:#ec726c;
+		border-radius:2.5px;
+		height:5px;
+		width:5px;
+		right: 100%;
+		margin-right:5px;
+		top: 50%;
+		transform: translate(0,-50%);
+		-webkit-transform: translate(0,-50%);
+	}
+
+	.item_title{
+		line-height: 32px;
+		font-size: 19px;
+		color: #666;
+	}
+
+	.item_price{
+		color: #ec726c;
+		font-size: 21px;
+	}
+
+	.item_price_gary{
+		color: #707070;
+		font-size: 21px;
+	}
+
+	@media only screen 
+		and (max-device-width: 325px) {
+		.item_title{
+			font-size: 15px;
+		}
+
+		.item_price{
+			font-size: 16px;
+		}
+
+		.item_price_gary{
+			font-size: 16px;
+		}
+	}
+
+	.data_comment .comment_showname{
+		text-align: left;
+		width: 60px;
+		font-size: 11px;
+		color: #707070;
+	}
+
+	.data_comment .data_comment table{
+		border: 0;
+		width: 100%;
+	}
+
+	.data_comment .comment_detail{
+		padding-left: 4px;
+		text-align: left;
+		font-style: normal;
+		color: #666666;
+		font-family: PingFangSC,Arial,Helvetica,sans-serif;
+		font-size: 13px;
+		margin-top: 7px;
+		line-height: 20px;
+	}
+
+	.data_comment .comment_userProfileImage{
+		width: 30px;
+	}
+
+	.data_comment .comment_userProfileImage img{
+		border: 1px solid gainsboro;
+		border-radius: 15px;
+		height: 30px;
+		width: 30px;
+	}
+
+	.data_comment table{
+		width: 100%;
+	}
+
+	.data_comment .comment_createtime{
+		text-align: right;
+		color: #707070;
+		font-size:11px;
+	}
+
+	body {
+		-webkit-overflow-scrolling:touch;
+	}
+
+	.footer-float-bar td {
+		border-right: 1px solid #e6e6e6;
+		border-top: 1px solid #e6e6e6;
+		font-size:15px;
+		color: #666666;
+		letter-spacing: 0.5px;
+	}
+
+	.footer-float-bar img {
+		max-height:24px;
+		max-width:40px;
+	}
+
+	.footer-float-bar .btn-add-cart {
+		background-color: #F4C10D;
+		color:white;
+		border:none;
+	}
+
+	.footer-float-bar .btn-buy {
+		border-right:none;
+	}
+
+	.footer-float-bar .btn-sale-time
+	{
+		border-right:none;
+	}
+
+	.footer-float-bar .btn-sale-time span {
+		padding:0px 3px;
+		color:#F4C10D;
+	}
+	.section {
+		display: block;
+		text-decoration: none;
+		text-align:left;
+		height: 60px;
+		line-height: 60px;
+		font-family: PingFangSC;
+		font-size: 18px;
+		color: #666666;
+	}
+
+</style>
+</head>
+<body>
+	<div class="block-top">
+		<div style="height:30px;">
+           <table border="0" cellpadding="0" cellspacing="0" style="width:100%;padding: 20px 0 13.5px 10px;">
+                    <tr><td width="45"><div class="color-gray-light">
+                       <div style="text-align:right;padding-right:0px;"><img src="images/back.png" style="height:16px;vertical-align:middle"></div></div></td>
+                        <td width="35">&nbsp;</td>
+                        <td width="1460"><div class="color-gray-dark" style="width:100%;text-align:center; color:#777">课程详情</div></td>
+                        <td width="17">&nbsp;</td>
+                        <td width="58"><div style="text-align:right;padding-right:20px;"><img src="images/shar.png" style="height:16px;vertical-align:middle"></div></td></tr>
+          </table>
+		</div>
+        <div style="margin-top:20px;"><img src="images/banner3.jpg" style="width:100%;"/></div>
+		<!-- main -->
+        <div style="padding: 7px 20px 0 20px;">    
+
+		<div style="text-align:left;padding:15px 0;">
+			<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+				<tr><td width="60px"><div class="color-gray-light">讲课人：</div></td>
+					<td width="10px">&nbsp;</td>
+					<td><div class="color-gray-dark" id="authorName"></div></td>
+					<td width="10px">&nbsp;</td>
+					<td style="text-align:right;padding-right:0px; color:#ccc" id="dateStr"></td></tr>
+			</table>
+		</div>
+
+		</div>
+        <div style="background-color:#f6f6f6;height:2px; margin-bottom:20px;"></div>
+
+            <div style="text-align:left;padding:0px 20px 0 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" style="width:100%;padding: 15px 0 13.5px 0; background-color:#efefef;">
+                    <tr>
+                        <td width="10px">&nbsp;</td>
+                        <td><div class="color-gray-light"><img src="images/play.png" style="width:50px;"/></div></td>
+                        <td width="10px">&nbsp;</td>
+                        <td>
+                            <div class="color-gray-light" id="goodsTitle"></div>
+                            <div style="color:#ccc; font-size:10px;">时长：<span id="fileTime">0:00</span> &nbsp;<span id="fileSize">0</span>MB</div>
+                        </td>
+                        <td width="35%">
+                            <div style="color:#ccc">
+                              <audio id="tryAudio" src=""></audio>
+                              <span id="tryAudioBtn" onclick="playPause()" style="border:1px solid #f4c10d;border-radius:3px; color:#f4c10d;"> &nbsp;试听 &nbsp;</span> &nbsp;
+                              <span style="border:1px solid #f4c10d;border-radius:3px; color:#f4c10d;"> &nbsp;下载 &nbsp;</span>
+                             </div>
+                        </td>
+                     </tr>
+                </table>
+				<div style="height:5px;"></div>
+            </div>
+        
+		<div style="background-color:#f6f6f6;height:2px; margin-top:20px;"></div>
+        <div>
+			<div class="section">音频简介</div>
+            <div class="detail" id="detail">
+	    	<div style="color:#999; padding:20px;" id="goodsContent">
+            </div>
+            </div>
+        </div>
+
+	</div>
+
+	<!-- 推荐 start -->
+	
+
+	<div class="gap-small"></div>
+	
+	<!-- 推荐 end -->
+
+	<!-- 底部栏 start-->
+	<!-- 
+		<div style="height:50px">&nbsp;</div>
+		<div class="footer-float-bar" style="height:52.5px;background-color:#fafafa">
+			<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr>			
+	            <td class="btn-buy">
+	                <div>VIP ¥ 59.00</div>
+	            </td>
+	            <td  class="btn-add-cart">
+	                <div>购买 ¥ 69.00</div>
+	            </td>
+				
+			</tr></table>
+		</div>
+	 -->
+	<!-- 底部栏 end-->
+
+</body>
+<script type="text/javascript">
+app.showLoading();
+window.readTime = window.readTime || {};
+window.onbeforeunload = function() {
+	window.readTime.closeTime = new Date().getTime();
+	localStorage.readTime = JSON.stringify(window.readTime);
+};
+if(window.initFlag && window.initFlag==1) {
+	//refresh page
+	if(window.readTime) {
+		window.readTime.closeTime = 0;
+		localStorage.readTime = JSON.stringify(window.readTime);
+	}
+}else{
+	window.initFlag = 1;
+}
+
+var id = getQueryString("id");
+$.postApi("ins.goods.detail",{"id":id},function(res){
+   	if(res.errno==0 && res.data){
+   		app.hideLoading();
+   		var data = res.data;
+   		readTime.itemType = "course";
+   		readTime.itemId = data.id;
+   		readTime.itemTitle = data.goodsTitle;
+   		readTime.openTime = new Date().getTime();
+   		$("#goodsContent").html(data.goodsContent);
+   		$("#goodsPrice").html(toAmtStr(data.goodsPrice));
+   		$("#goodsImg").attr("src",app.imgHost+data.goodsImg);
+   		$("#fileTime").html(formatFileTime(data.fileTime));
+   		$("#fileSize").html(formatFileSize(data.fileSize));
+   		$("#goodsTitle").html(data.goodsTitle);
+   		$("#authorName").html(data.authorName);
+   		$("#tryAudio").attr("src", data.tryAudio);
+   		if(data.createTime){
+   			var dateStr = data.createTime.substring(0,10).replace(/-/g,'.');//2017-09-18
+   			$("#dateStr").html(dateStr);
+   		}
+   		//alert(JSON.stringify(data));
+   	}
+});
+function playPause() {
+    var tryAudio = document.getElementById('tryAudio');
+    var tryAudioBtn = document.getElementById('tryAudioBtn');
+    if (tryAudio.paused){
+    	tryAudio.play();
+    	//tryAudioBtn.src = 'play.gif';
+    }else{
+    	tryAudio.pause();
+    	//tryAudioBtn.src = 'pause.gif';
+    }
+}
+</script>
+</html>

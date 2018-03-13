@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="referrer" content="always" />
+<meta charset='utf-8' />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/my.css" />
+<link rel="stylesheet" type="text/css" href="css/address.css" />
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">var _=function(id){return document.getElementById(id)};</script>
+<title>地址管理</title>
+</head>
+
+<body>
+    <div style="background-image:url(images/post_addr_line.png);background-size:contain;height:5px"></div>
+	<div>
+    <!-- begin of 地址选择相关模板 -->
+
+        <!--  编辑地址  -->
+        <div class="an-panel">
+            <div class="an-input-panel">
+                <input id="ae_panel_name" class="an-input" type="text" placeholder="姓名" />
+            </div>
+            <div class="an-input-panel">
+                <input id="ae_panel_mobile" class="an-input" type="text" placeholder="手机号码" />
+            </div>
+
+            <div class="an-input-panel">
+                <div class="an-input" id="ae_panel_city">
+                    <div class="an-input-tips">选择省份、城市、区县</div>
+                </div>
+                <div class="an-input-arrow"><img src="http://mall1.bczcdn.com/rc201603281546/image/m/3/right.png"></div>
+            </div>
+
+            <div class="an-input-panel">
+                <textarea id="ae_panel_detail" class="an-input" rows="4" placeholder="详细地址"></textarea>
+            </div>
+
+            <div class="an-select-panel">
+                <span>设为默认地址 </span>
+                <img  id="ae_panel_default"  src="http://mall1.bczcdn.com/rc201603281546/image/items/m/uploads/1495527096171.png"/>
+                <img  id="ae_panel_not_default" style="display: none;" src="http://mall1.bczcdn.com/rc201603281546/image/m/3/unselected.png" />
+            </div>
+
+            <!-- 底部栏 start-->
+            <div class="an-footer-padding">&nbsp;</div>
+            <div class="an-footer-bar">
+                <div  class="an-large-btn" id="ae_panel_save">保存</div>
+            </div>
+            <!-- 底部栏 end-->
+        </div>
+
+       
+    </div>
+</body>
+
+</html>

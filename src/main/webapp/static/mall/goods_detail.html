@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="referrer" content="always" />
+<meta charset='utf-8' />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/my.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="js/app.js?v=2017091906"></script>
+    
+<style type="text/css">
+    .confirm-attribute-value, .confirm-attribute-value-sel, .confirm-attribute-value-disabled
+    {
+        height: 28px;
+        line-height: 28px;
+        background-color: #fff;
+        padding: 0 13px;
+        margin: 10px 0px 0 0;
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+        color: #9b9b9b;
+	font-size: 14px;
+    }
+    .confirm-attribute-value-sel {background-color: #F4C10D;color: white;}
+    .confirm-attribute-value-disabled {
+		color: #c5c8cf;
+     }
+    .detail img {display:block;width:100%;}
+    .go-top-btn {
+        z-index: 10;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display:none;
+    }
+
+	.confirm-attribute-name-panel{
+		display: inline-block;
+		position: absolute;
+		left: 6px;
+		font-size: 14px;
+		top: 15px;
+		line-height: 28px;
+	}
+
+	.confirm-attribute-values-panel{
+		display: inline-block;
+		margin-left: 50px;
+		position: relative;
+		width: 100%;
+	}
+    .go-top-btn img{
+        width:40px;
+        height:40px;
+    }
+
+	.service-rule {
+		color:#707070;
+		line-height:18px;
+		position: relative;
+	}
+
+	.service-rule:before {
+		content:'';
+		position: absolute;
+		display: inline-block;
+		background-color:#ec726c;
+		border-radius:2.5px;
+		height:5px;
+		width:5px;
+		right: 100%;
+		margin-right:5px;
+		top: 50%;
+		transform: translate(0,-50%);
+		-webkit-transform: translate(0,-50%);
+	}
+
+	.item_title{
+		line-height: 32px;
+		font-size: 19px;
+		color: #666;
+	}
+
+	.item_price{
+		color: #ec726c;
+		font-size: 21px;
+	}
+
+	.item_price_gary{
+		color: #707070;
+		font-size: 21px;
+	}
+
+	@media only screen 
+		and (max-device-width: 325px) {
+		.item_title{
+			font-size: 15px;
+		}
+
+		.item_price{
+			font-size: 16px;
+		}
+
+		.item_price_gary{
+			font-size: 16px;
+		}
+	}
+
+	.data_comment .comment_showname{
+		text-align: left;
+		width: 60px;
+		font-size: 11px;
+		color: #707070;
+	}
+
+	.data_comment .data_comment table{
+		border: 0;
+		width: 100%;
+	}
+
+	.data_comment .comment_detail{
+		padding-left: 4px;
+		text-align: left;
+		font-style: normal;
+		color: #666666;
+		font-family: PingFangSC,Arial,Helvetica,sans-serif;
+		font-size: 13px;
+		margin-top: 7px;
+		line-height: 20px;
+	}
+
+	.data_comment .comment_userProfileImage{
+		width: 30px;
+	}
+
+	.data_comment .comment_userProfileImage img{
+		border: 1px solid gainsboro;
+		border-radius: 15px;
+		height: 30px;
+		width: 30px;
+	}
+
+	.data_comment table{
+		width: 100%;
+	}
+
+	.data_comment .comment_createtime{
+		text-align: right;
+		color: #707070;
+		font-size:11px;
+	}
+
+	body {
+		-webkit-overflow-scrolling:touch;
+	}
+
+	.footer-float-bar td {
+		border-right: 1px solid #e6e6e6;
+		border-top: 1px solid #e6e6e6;
+		font-size:15px;
+		color: #666666;
+		letter-spacing: 0.5px;
+	}
+
+	.footer-float-bar img {
+		max-height:24px;
+		max-width:40px;
+	}
+
+	.footer-float-bar .btn-add-cart {
+		background-color: #F4C10D;
+		color:white;
+		border:none;
+	}
+
+	.float-bar .btn-add-cart {
+		background-color: #F4C10D;
+		color:white;
+		border:none;
+		width:30%;
+	}
+	.float-bar .btn-add-cart2 {
+		background-color: #F39800;
+		color:white;
+		border:none;
+		width:30%;
+	}
+	.footer-float-bar .btn-buy {
+		border-right:none;
+	}
+
+	.footer-float-bar .btn-sale-time
+	{
+		border-right:none;
+	}
+
+	.footer-float-bar .btn-sale-time span {
+		padding:0px 3px;
+		color:#F4C10D;
+	}
+	.section {
+		display: block;
+		text-decoration: none;
+		text-align:left;
+		height: 60px;
+		line-height: 60px;
+		font-family: PingFangSC;
+		font-size: 18px;
+		color: #666666;		
+		font-family: "Microsoft YaHei", 'Open Sans', sans-serif;
+	}
+
+* { padding: 0; margin: 0; }
+.am-share { font-size: 14px; border-radius: 0; bottom: 0; left: 0; position: fixed; text-align: center; -webkit-transform: translateY(100%); -ms-transform: translateY(100%); transform: translateY(100%); -webkit-transition: -webkit-transform 300ms; transition: transform 300ms ; width: 100%; z-index: 1110; }
+.am-modal-active { transform: translateY(0px);  -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0) }
+.am-modal-out { z-index: 1109; -webkit-transform: translateY(100%); -ms-transform: translateY(100%); transform: translateY(100%) }
+
+.am-share-title { background-color: #f8f8f8; border-bottom: 1px solid #fff; border-top-left-radius: 2px; border-top-right-radius: 2px; color: #555; font-weight: 400; margin: 0 10px; padding: 10px 0 0; text-align: center; }
+.am-share-title::after { border-bottom: 1px solid #dfdfdf; content: ""; display: block; height: 0; margin-top: 10px; width: 100%; }
+
+.am-share-footer { margin: 10px; }
+.am-share-footer .share_btn { color: #555;  display: block; width: 100%; background-color: #e6e6e6; border: 1px solid #e6e6e6; border-radius: 0; cursor: pointer;  font-size: 16px; font-weight: 400; line-height: 1.2; padding: 0.625em 0; text-align: center; transition: background-color 300ms ease-out 0s, border-color 300ms ease-out 0s; vertical-align: middle; white-space: nowrap;font-family:"微软雅黑";  }
+
+.am-share-sns {background-color: #fff;  /*background-image:url(images/ad.jpg); background-repeat:no-repeat; background-position:top; background-size:cover;*/ border-radius: 0 0 2px 2px; margin: 0 10px; padding-top: 15px; padding-bottom:15px; height:auto; zoom:1; overflow:auto; }
+
+.am-share-sns li { margin-bottom: 15px; display: block; float: left; height: auto;  width: 25%; }
+
+.am-share-sns a { color: #555; display: block; text-decoration:none; }
+.am-share-sns span { display: block; }
+
+.am-share-sns li i { background-position: center 50%; background-repeat: no-repeat; background-size: 36px 36px; background-color: #ccc; color: #fff; display: inline-block; font-size: 18px; height: 36px; line-height: 36px; margin-bottom: 5px; width: 36px; }
+.am-share-sns .share-icon-weibo { background-image: url(); }
+
+.sharebg { background-color: rgba(0, 0, 0, 0.6); bottom: 0; height: 100%; left: 0; opacity: 0; position: fixed; right: 0; top: 0; width: 100%; z-index: 1100; display:none; }
+.sharebg-active { opacity: 1; display:block; }
+
+.footer {
+	bottom: inherit;
+	top: 0
+}
+.footer {
+	height: 3rem;
+	width: 100%;
+	background-color: #333234;
+	box-shadow: rgba(0,0,0,.2) 0 0 10px;
+	position: fixed;
+	bottom: 0;
+	padding: .5rem;
+	padding: .5rem;
+	z-index: 1000;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-font-smoothing: antialiased;
+}
+.footer .download_logo {
+	-webkit-box-flex: 1;
+	display: -webkit-box;
+	color: #fff;
+	height: 90%;
+	width: 74%;
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+	font-size: 1rem;
+	font-weight: 400
+}
+.footer .download_logo img {
+	height: 100%;
+	width: auto;
+	margin: 0 .8rem 0 .4rem;
+	margin: 0 .8rem 0 .4rem
+}
+.footer .download_logo p {
+	letter-spacing: 2px
+}
+.footer .download {
+	-webkit-box-flex: 1;
+	display: block;
+	margin-right: .7rem;
+	justify-content: flex-end
+}
+.footer .download a {
+	width: rem;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	display: block;
+	color: #ffa42f;
+	border: 1px solid #ffa42f;
+	border-radius: .3rem;
+	text-align: center;
+	background: inherit;
+	font-size: 1rem;
+	box-sizing: content-box;
+	margin-right: 0
+}
+</style>
+
+</head>
+<body>
+	<div class="block-top">
+		<div style="background-color:#fff;height:200px;">
+           <table border="0" cellpadding="0" cellspacing="0" style="width:100%;padding: 15px 0 13.5px 0;">
+                    <tr><td width="45"><div class="color-gray-light">
+                       <div style="text-align:right;padding-right:0px;"><img src="images/back.png" style="height:16px;vertical-align:middle"></div></div></td>
+                        <td width="35">&nbsp;</td>
+                        <td width="1460"><div class="color-gray-dark" style="width:100%;text-align:center; color:#777" id="pageTitle">详情</div></td>
+                        <td width="17">&nbsp;</td>
+                        <td width="58"><div style="text-align:right;padding-right:20px;"><img src="images/shar.png" style="height:16px;vertical-align:middle"></div></td></tr>
+            </table>
+            <img id="goodsImg" src="images/banner2.jpg" style="width:100%;height:100%;vertical-align:bottom"/>
+		</div>
+		<!-- main -->
+<div style="padding: 50px 0 0 0;">    
+	<div class="float-bar" style="height:50px;padding:0 0 0 20px;">
+		<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>			
+                <td><div class="color-gray-dark" id="goodsTitle"></div></td>
+                <td width="10px">&nbsp;</td>
+                <td><div style="text-align: left; color:#999"><span id="authorName">讲课人</span> &nbsp;&nbsp; <span id="fileTime">时长</span> &nbsp;&nbsp; </div></td>
+                <td class="btn-add-cart"><div style="text-align:center;" onclick="addCart();">加入购买车</div> </td>
+			 </tr>
+         </table>
+	</div>
+    <div style="background-color:#f6f6f6;height:2px"></div>
+	<div class="float-bar" style="height:50px;padding:0 0 0 20px;">
+		<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>			
+                <td><div class="color-gray-dark">库存：<span id="goodsStock"></span></div></td>
+                <td width="10px">&nbsp;</td>
+                <td><div style="text-align: left; color:#999">运费：<span id="expressFee">0.00(包邮)</span></div></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			 </tr>
+         </table>
+	</div>
+    <div style="background-color:#f6f6f6;height:2px"></div>
+	<div class="float-bar" style="height:50px;padding:0 0 0 20px;">
+		<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>			
+                <td><div style="color:#FF0004; font-size:18px;">¥ <span id="goodsPrice">0.00</span></div></td>
+                <td width="10px">&nbsp;</td>
+                <td><div style="text-align: right; "><img src="images/speaker.jpg" style="height:40px;"></div></td>
+			 </tr>
+         </table>
+	</div>
+</div>
+        <div style="background-color:#f6f6f6;height:2px"></div>
+        <div>
+			<div class="section">内容简介</div>
+            <div class="detail" id="detail">
+	    	<div style="color:#999; padding:20px; font-size:12px;" id="goodsContent">
+            </div>
+            </div>
+        </div>
+        <div style="background-color:#f6f6f6;height:2px"></div>
+        <div>
+			<div class="section">购买需知</div>
+            <div class="detail" id="detail">
+	    	<div style="color:#999; padding:20px; font-size:12px;" id="notice">
+            </div>
+            </div>
+        </div>
+
+	</div>
+
+	<!-- 推荐 start -->
+	
+
+	<div class="gap-small"></div>
+	<div class="gap-small"></div>
+	
+	<!-- 推荐 end -->
+
+<footer class="footer" style="display:none;" id="topAd">
+    <div class="download_logo"><img src="images/play.png" alt=""><p>碎片时间 终身学习</p></div>
+    <div class="download" >
+        <a href="javascript:toRegister();">立即注册</a>
+    </div>
+</footer>
+	<!-- 底部栏 start-->
+	<div style="height:50px">&nbsp;</div>
+	<div class="footer-float-bar" style="height:52.5px;background-color:#fafafa">
+		<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr>			
+            <td  class="color-gray-dark" onclick="window.location.href='cart.html';">
+                <div><img src="images/1494910659655.png" height="152" alt=""/></div>
+            </td>		
+            <td class="btn-buy">
+                <div>合计 ¥ <span id="totalAmt">0.00</span></div>
+            </td>
+            <td class="btn-add-cart" id="payConfirm">
+                <div>下一步</div>
+            </td>
+			
+		</tr></table>
+	</div>
+	<!-- 底部栏 end-->
+
+<div class="am-share">
+  <!--<h3 class="am-share-title">推广方式</h3>-->
+  <ul class="am-share-sns">
+    <img src="images/ad.jpg" style="width:100%;vertical-align:bottom"/><br>
+   	  <span id="referralUrl2" style="width: 80%;overflow: hidden;display: inline-block;text-overflow: ellipsis;height: 22px;line-height: 22px;"></span>
+      <input id="referralUrl" type="text" value="" style="width:0.1px;height:0.1px;float:right;border:none;"/>
+      <span style="position:absolute; bottom:100px; right:20px;">
+        <img src="images/tuiguang.png"/><br>
+        <span style="border:1px solid #f4c10d;border-radius:3px;" 
+        	id="copyReferralBtn" data-clipboard-action="copy" data-clipboard-target="#referralUrl">复制链接</span>
+      </span>
+  </ul>
+  <div class="am-share-footer"><button class="share_btn">取消</button></div>
+</div>
+</body>
+<script type="text/javascript">
+window.readTime = window.readTime || {};
+window.onbeforeunload = function() {
+	window.readTime.closeTime = new Date().getTime();
+	localStorage.readTime = JSON.stringify(window.readTime);
+};
+if(window.initFlag && window.initFlag==1) {
+	//refresh page
+	if(window.readTime) {
+		window.readTime.closeTime = 0;
+		localStorage.readTime = JSON.stringify(window.readTime);
+	}
+}else{
+	window.initFlag = 1;
+}
+
+app.showLoading();
+var id = getQueryString("id");
+$.postApi("mall.goods.detail",{"id":id},function(res){
+   	if(res.errno==0 && res.data){
+   		app.hideLoading();
+   		var data = res.data;
+   		readTime.itemType = "course";
+   		readTime.itemId = data.id;
+   		readTime.itemTitle = data.goodsTitle;
+   		readTime.openTime = new Date().getTime();
+   		$("#goodsImg").attr("src",app.imgHost + data.goodsImg);
+   		$("#goodsTitle").html(data.goodsTitle);
+   		$("#authorName").html(data.authorName);
+   		var goodsPrice = toAmtStr(data.goodsPrice);
+   		$("#goodsPrice").html(goodsPrice);
+   		$("#totalAmt").html(goodsPrice);
+   		$("#goodsContent").html(data.goodsContent);
+   		$("#fileTime").html(formatFileTime(data.fileTime));
+   		//$("#fileSize").html(formatFileSize(data.fileSize));
+   		$("#notice").html(data.notice);
+   		//alert(JSON.stringify(data));
+   		$("#goodsStock").html(data.goodsStock);
+   		var user = app.getUser();
+   		if(user){
+   			var referralUrl = "http://116.62.47.157/ins/static/mall/course_detail.html?id=" + data.id + "&ruid=" + user.uid;
+   			$("#referralUrl").val(referralUrl);
+   			$("#referralUrl2").html(referralUrl);
+   		}
+   	}else{
+   		app.msg(res.errmsg);
+   	}
+});
+
+var ruid = getQueryString("ruid");//推荐人
+if(ruid && ruid!=""){
+	$("#topAd").show();
+}
+
+$("#payConfirm").on("click", function(){
+	location.href = "payment.html?goodsId=" + id;
+});
+
+function addCart(){
+	location.href = "addCart.html?goodsId=" + id;
+}
+
+function toRegister(){
+	if(ruid && ruid!=""){
+		location.href = "login.html?redirect=register&ruid="+ruid;
+	}else{
+		location.href = "login.html";
+	}
+}
+</script>
+</html>

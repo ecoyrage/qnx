@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html>
+<head>	
+<meta name="referrer" content="always" />
+<meta charset='utf-8' />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/my.css">
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">var _=function(id){return document.getElementById(id)};</script>
+<title>我的购物车</title>
+</head>
+
+<body style="background:white;">
+	<!-- 提前加载-->
+
+	<!-- 订单物品详情 start-->
+	
+	<div id="cartInfos" style="padding:10px 0px 15px 0px;background-color:white"></div>
+	<p style="text-align:center;">没有更多了</p>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	
+	<!-- 订单物品详情 end-->
+
+	<!-- 商品推荐 start-->
+
+	<!-- 商品推荐 end-->
+
+	<form id="submitForm" action="/order/confirm" method="get">
+		<input type="hidden" name="itemInfo" value=""/>
+		<input type="hidden" name="fromCart" value="true"/>
+	</form>
+
+	<!-- 底部栏占位 start-->
+	<div style="position:fixed;width:100%;right:0px;bottom:0px; background-color:#F4C10D;"> 
+ 		<table width="100%" cellpadding="0" cellspacing="0" border="0" style="height:52.5px;background-color:#F7F7F7;;">
+			<tr>
+				<td>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="height:100%;">
+						<tr>
+							<td>&nbsp;&nbsp;</td>
+							<td width="26px" align="center">
+								<div onclick="selectAll()">
+									<img id="selectAllRadio_0" style="display:block;max-height:20px" src="images/unselected.png"/>
+									<img id="selectAllRadio_1" style="display:none;max-height:20px" src="images/1495527096171.png"/>
+								</div>
+							</td>
+							<td id="selectedCount" align="left"  style="font-size:14px;padding-left:3px;color:#666;" onclick="selectAll()">全选</td>
+							<td style="text-align:right;padding:3px 10px;">
+								<div class="font-size-lx" style="color: #666;">
+									合计：<span class="color-pink">¥</span> <div id="totalPrice" class="color-pink" style="display:inline-block;min-width:40px;">0.00</div>
+								</div>
+								<div class="color-gray-light">不含运费</div>
+							</td>
+							<!-- #0f9753 -->
+							<td width="112px" style="vertical-align:center;background-color:#F4C10D;"><div class="font-size-lx" style="background-color:#F4C10D;color:white; text-align:center" onclick="submit()">去支付</div></td>
+							<!--td>&nbsp;</td-->
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<a id="foot_tab_image_0" href="index.html" style="display:block;overflow:hidden;width:15%;height:50px;padding:3% 9%; float:left;"> 
+			<img src="images/1495093725774.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+			<div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+			    <div id="reddot-mine" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px">商城</div>
+			</div>
+		</a> 
+		<a id="foot_tab_image_1" href="cart.html" style="display:block;overflow:hidden;width:15%;height:50px; padding:3% 9%; float:left;"> 
+			<img src="images/1495093688470.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+			<div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+		 	    <div id="reddot-cart" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px">购物车</div>
+			</div>
+		</a> 
+		<a id="foot_tab_image_2" href="my.html" style="display:block;overflow:hidden;width:15%;height:50px;padding:3% 9%; float:left;"> 
+			<img src="images/1495093725773.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+			<div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+			  <div id="reddot-mine" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px">订单</div>
+		    </div>
+		</a> 
+	</div>
+	
+	<!-- 底部栏占位 end-->
+
+	<script type="text/javascript">
+		//@auther zhj
+		window.onload = function(){
+			app.showLoading();
+			//数据导入:购物车
+			$.postApi("mall.userShoppingCart.list",{}, function(res){
+				//console.log(JSON.stringify(res));
+					if(res.errno==0){
+						app.hideLoading();
+						var cartList = res.data.list;
+						if(cartList && cartList.length>0) {
+							var html = '';
+							for (var i = 0; i < cartList.length; i++) {
+								var item = cartList[i];
+								html+='<div id="cartItemPanel_'+item.id+'" key="selected" style="position:relative;overflow:hidden;padding:18px 15px;height:100px">'
+									+'<div style="position:relative;float:left;height:100%;width:20px">'
+									+'<div class="center"><label for="agree"><img src="images/unselected.png" style="width:20px;" id="checkimg_'+item.id+'" onclick="checkclick('+item.id+');">'
+								    +'</label><input type="checkbox" id="check_'+item.id+'" style="display:none;" name="checkbox" value="false"/>'
+									+'</div></div><div style="float:left;margin-left:10px" onclick="window.location.href=\'#\'"><img onclick="openCourseDetail('+item.goodsId+')" style="vertical-align:middle;height:100px;width:100px;" '
+									+'src="http://116.62.47.157/ins/resource/'+item.goodsImg+'"></div><div style="position:absolute;right:15px;top:35px;left:165px">'
+									+'<div class="color-gray-dark font-size-l" style="height:1.5em;overflow:hidden;text-align:left;text-overflow:ellipsis">'
+									+item.goodsTitle+'</div><div class="color-gray-light" style="font-size:13px;text-align:left;">&nbsp;</div></div>'
+									+'<img src="images/close.png" class="count-panel-button" style="float:right" onclick="del('+item.id+')"/>'
+									+'<div class="font-size-l color-pink"  style="text-align:left;position:absolute;right:15px;bottom:15px;left:165px">¥ '
+									+toAmtStr(item.goodsPrice)+'</div><input style="display:none;" id="goodsPrice_'+item.id+'" value="'+toAmtStr(item.goodsPrice)+'" />';
+								if(item.isReal==0){
+									//虚拟物品
+									html+='<div style="position:absolute;right:27.5px;bottom:15px;"><input style="display:none;" id="number_'+item.id+'" value="'+item.number+'" /><div id="itemCountPanel_'+item.id+'" class="font-size-l color-pink count-panel" '
+										+'style="display:inline-block;text-align:center;">'+item.number+'</div></div></div><div style="background:#f4f4f4;height:1px;margin-left:44px;margin-right:10px"></div>';
+								}else if(item.isReal==1){
+									//实物
+									html+='<div style="position:absolute;right:15px;bottom:15px"><input style="display:none;" id="number_'+item.id+'" value="'+item.number+'" /><img src="images/1495869319612.png" class="count-panel-button" '
+										+'style="vertical-align:-1px" onclick="changeCount('+item.id+', -1)"/><div id="itemCountPanel_'+item.id+'" class="font-size-l color-pink count-panel" '
+										+'style="display:inline-block;text-align:center;">'+item.number+'</div><img src="images/1495781193970.png" class="count-panel-button" style="vertical-align:-1px" onclick="changeCount('
+										+item.id+', 1)"/></div></div><div style="background:#f4f4f4;height:1px;margin-left:44px;margin-right:10px"></div>';
+								}else{
+									//error
+								}
+								countAll++;
+							}
+							$("#cartInfos").html(html);
+							
+						}
+					}
+			});
+			
+		};
+		
+		function openCourseDetail(data){
+			window.location.href="course_detail.html?id="+data;
+		}
+		
+		var ids="";//id集合, ","分隔
+		var number;
+		var num;
+		var fmtPrice;
+		var countAll=0;
+		//点击事件，处理图片及一些页面数据（如合计）
+		function checkclick(id){
+	         var checkimg = document.getElementById("checkimg_"+id);
+	         var checkValue= document.getElementById("check_"+id).value;
+	         if(checkValue=="true"){
+	        	 //目前是已选状态，点击后换成未选
+	             $("#check_"+id).attr("value","false");
+	             $("#check_"+id).attr("checked",false);
+	             checkimg.src="images/unselected.png";
+	             $('#checkimg_' + id).css("width","20px");
+	             //合计价格改变
+	             totalPrice();
+	         }else if(checkValue=="false"){
+	        	//目前是未选状态，点击后换成已选
+	        	 $("#check_"+id).attr("value","true");
+	        	 $("#check_"+id).attr("checked",true);
+	        	 checkimg.src="images/1495527096171.png";
+	        	 $('#checkimg_' + id).css("width","20px");
+	        	 //合计价格改变
+	        	 totalPrice();
+	         }else{
+	        	 //error
+	         }
+	         updateSelectedCount();
+	    }
+		
+		//获取id集合(格式: id1,id2,id3)
+		function getIds(){
+			ids="";
+			var ck = document.getElementsByName("checkbox"); 
+	   	 	for(var i=0;i<ck.length;i++){
+	            if(ck[i].checked==true){
+	           	    ids+=ck[i].id.replace("check_","")+",";
+	          	}
+	        }
+	   	 	ids=ids.substring(0,ids.length-1);//去除最后一个逗号
+	   	 	return ids;
+		}
+		
+		//计算总价
+		function totalPrice()
+		{
+			var totalPrice = 0.00;
+			var arr = getIds();
+			if(arr==null || arr==""){
+				//全未选
+			}else{
+				arr = arr.split(",");
+				var arr_number = 0;
+				var arr_goodsPrice = 0.00;
+				for (var i = 0; i < arr.length; i++) {
+					arr_number = document.getElementById("number_"+arr[i]).value;
+					arr_goodsPrice = document.getElementById("goodsPrice_"+arr[i]).value;
+					if (!arr_number || !arr_goodsPrice) continue;
+					if (arr_number <= 0 || arr_goodsPrice <= 0) continue;
+					totalPrice += arr_number * arr_goodsPrice;
+				}
+			}
+			fmtPrice = toAmtStr(totalPrice);
+	        _('totalPrice').innerHTML = fmtPrice;
+		}
+		
+		//更改商品数量，并修改表数据
+		function changeCount(id, count)
+		{
+			//原值
+			var oldNum = parseInt(document.getElementById("number_"+id).value);
+			//修改后的值
+			var newNum = oldNum;
+			newNum += count;
+			if (newNum <= 0) newNum = 1;
+			if (newNum >= 1) newNum = newNum;
+			//更新数据到页面
+			$("#number_"+id).val(newNum);
+			_('itemCountPanel_' + id).innerHTML = newNum;
+			var data = {'id' : id, 'number': newNum};
+			//后台修改购物车中的商品数量 
+			$.postApi("mall.userShoppingCart.update",data, function(res){
+				if(res.errno==0){
+					//修改成功
+					totalPrice();
+				}else{
+					//提示
+					app,msg("操作失败,请重试");
+				}
+			});
+		}
+		
+		//更改所有商品选择状态
+		function selected(data){
+			if(data==1){
+				//全选
+				ids="";
+				var ck = document.getElementsByName("checkbox"); 
+		   	 	for(var i=0;i<ck.length;i++){
+		   	 		var id = ck[i].id.replace("check_","");
+		   	 		var checkimg = document.getElementById("checkimg_"+id);
+	         		var checkValue= document.getElementById("check_"+id).value;
+			   	 	$("#check_"+id).attr("value","true");
+			       	$("#check_"+id).attr("checked",true);
+			       	checkimg.src="images/1495527096171.png";
+			       	$('#checkimg_' + id).css("width","20px");
+		           	ids+=id+",";
+		        }
+		   	 	ids=ids.substring(0,ids.length-1);//去除最后一个逗号
+		   	 	
+			}else{
+				//默认,全不选
+				ids="";
+				var ck = document.getElementsByName("checkbox");
+				for(var i=0;i<ck.length;i++){
+					var id = ck[i].id.replace("check_","");
+		   	 		var checkimg = document.getElementById("checkimg_"+id);
+	         		var checkValue= document.getElementById("check_"+id).value;
+			   	 	$("#check_"+id).attr("value","false");
+			       	$("#check_"+id).attr("checked",false);
+			       	checkimg.src="images/unselected.png";
+			       	$('#checkimg_' + id).css("width","20px");
+		        }
+			}
+			//合计价格改变
+	   	 	totalPrice();
+			return ids;
+		}
+		
+		//全选/全不选
+		function selectAll()
+		{
+			var len = getIds();
+			if(len==null || len==""){
+				//全不选状态,变换成全选
+				selected(1);
+			}else{
+				len = len.split(",").length;
+				if(len < countAll){
+					//已选但未全选状态,变换成全选
+					selected(1);
+				}else if(len==countAll){
+					//全选状态,变换成全不选
+					selected(0);
+				}
+			}
+			updateSelectedCount();
+		}
+		
+		//更新已选数量,如没有已选项，则显示全选
+		function updateSelectedCount()
+		{
+			$('#selectAllRadio_0').css("display","none");
+			$('#selectAllRadio_1').css("display","none");
+			var len = getIds();
+			if(len==null || len==""){
+				//全未选
+				_('selectedCount').innerHTML = "全选";
+				$('#selectAllRadio_0').css("display","block");
+			}else{
+				len = len.split(",").length;
+				if (len<countAll || len==countAll) {
+					_('selectedCount').innerHTML = "已选" + '(' + len + ')';
+					$('#selectAllRadio_1').css("display","block");
+				}else{
+					//error
+					app.msg("数据异常");
+				}
+			}
+		}
+		
+		//删除确认 
+		function del(id)
+		{
+			//询问框
+			layer.open({
+				shadeClose: false,
+				content: "你确定要删除吗",
+				btn: ['是的', '取消'],
+				yes: function(index){
+						$.postApi("mall.userShoppingCart.delete", {"id":id}, function(res){
+					       if(res.errno==0){
+						      //删除成功
+						      //app.msg("删除成功");
+						      location.reload();
+					    	  //layer.close(index);
+						   }else{
+							  app.msg(res.errmsg);
+						   }
+						});
+					 },
+				no: null
+			});
+			
+		}
+		
+		//去支付 (提交后台生成订单)
+		function submit(){
+			var cartIds = getIds();
+			if(cartIds==null || cartIds==""){
+				//未选择任何商品
+				app.msg("请至少选择1件商品");
+			}else{
+				$.postApi("mall.order.createMoreOrder", {"cartIds":cartIds}, function(res){
+			      	if(res.errno==0){
+			      		app.msg("访问成功");
+				  	}else{
+					    app.msg(res.errmsg);
+				 	}
+			    });
+			}
+		}
+	</script>
+</body>
+</html>

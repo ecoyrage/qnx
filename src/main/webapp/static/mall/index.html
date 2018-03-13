@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>保道商城</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="js/app.js?v=20170918"></script>
+    
+<link type="text/css" href="css/swiper.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+
+<style type="text/css">
+.img-container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.img-container .img-dummy{
+    margin-top: 100%;
+}
+.img-container .img-content{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+.img-container .img-content img{
+    width: 100%;
+    height: 100%;
+}
+.item_flow_jsp .item .title{
+	margin-left:20px;display:inherit;
+}
+</style>
+</head>
+
+<body>
+<div style="position:fixed;left:0;right:0;top:0;z-index:999"> 
+<script>
+function searchValidate(form)
+{
+	if (form.q != null && form.q.value != null && form.q.value.trim() != '')
+		return true;
+
+	alert('搜索内容不能为空');
+	return false;
+}
+function submitSearchForm()
+{
+	//var form = document.getElementById("search_form");
+	//if (searchValidate(form)) form.submit();
+	var words = $("#words").val();
+	if(words!="" && words.trim()!=""){
+		location.href="goodslist.html?words=" + encodeURIComponent(words);
+	}
+}
+</script>
+      <form id="search_form" name="search_form" action="#" method="get" onsubmit="return searchValidate(this);" style="position:relative;box-sizing:border-box;height:51px;width:100%;padding:16px 16px 4px 16px;background-color:white;">
+    <input type="search" name="words" id="words" value="" placeholder="搜索商品" style="box-sizing:border-box;width:100%;height:100%;border:none;border-radius:6px;padding-left:10px;padding-right:10px;-webkit-appearance: none;background:#f4f4f4;color:#666666;font-size:11.5px;font-family:"PingFang SC", PingFangSC,Helvetica,sans-serif;"/>
+    <img src="images/serch.png" onclick="submitSearchForm()" style="position:absolute;top:21px;right:25px;border:none;width:20px" />
+  </form>
+      <script>
+var scrollBase = 0;
+window.onscroll = function() {
+	var s = window.pageYOffset;
+	var d = s - scrollBase;
+	scrollBase = s;
+
+	var form = document.getElementById("search_form");
+	if (s > 0 && d > 5)
+		form.style.display = "none";
+	else if (d < -5)
+		form.style.display = "block";
+}
+</script> 
+    </div>
+<div id="main_list" style="margin: 55px 0 20px 0"> 
+<div class="main_visual">
+	<div class="flicking_con" id="bannerImgBtn">
+		<!-- <a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a> -->
+	</div>
+	<div class="main_image">
+		<ul id="bannerImg">
+			<!-- <li><span class="img_1"></span></li>
+			<li><span class="img_2"></span></li>
+			<li><span class="img_3"></span></li> -->
+		</ul>
+		<!-- <a href="javascript:;" id="btn_prev"></a>
+		<a href="javascript:;" id="btn_next"></a> -->
+	</div>
+</div>
+  <div class="mainico">
+    <div class="mainicoitem1">
+        <a href="course.html"><img src="images/menu1.png" style="width:70%" /><br>课程</a>
+    </div>
+    <div class="mainicoitem2">
+    	<a href="goodslist.html?cgykey=ins_gift"><img src="images/menu2.png" style="width:70%" /><br>礼品</a>
+    </div>
+    <div class="mainicoitem3">
+          <a href="goodslist.html?cgykey=ins_clothes"><img src="images/menu3.png" style="width:70%" /><br>服装</a>
+    </div>
+    <div class="mainicoitem4">
+          <a href="goodslist.html?cgykey=ins_tools"><img src="images/menu4.png" style="width:70%" /><br>工具</a>
+    </div>
+  </div>      
+  <div class="blank"></div>
+  <div class="section"> 
+     人气推荐 <span style="float:right; font-size:12px; margin-right:20px;"><a href="goodslist.html?ishot=1">查看全部>></a></span> 
+  </div>
+     <hr style="height:1px;border:none;border-top:1px solid #ccc;" />
+    <div class="item_flow_jsp" style="overflow:hidden" id="hotGoodsDiv">
+        <!-- <div class="item" style="padding-right:.5px">
+        <div style="height:0;padding-bottom:100%;overflow:hidden;margin-bottom:5px"> <a href="#"> <img src="images/1500455575784.jpg" /> </a> </div>
+        <div class="price">¥69.00</div>
+        <span style="margin-left:20px;">商品名称</span>
+        </div> -->
+	</div>
+  </div>
+    </div>
+
+<div style="position:fixed;width:100%;right:0px;bottom:0px; background-color:#F4C10D;"> 
+  <a id="foot_tab_image_0" href="index.html" style="display:block;overflow:hidden;width:15%;height:50px;padding:3% 9%; float:left;"> 
+  <img src="images/1495093725774.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+    <div id="reddot-mine" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px">商城</div>
+  </div>
+  </a> 
+  <a id="foot_tab_image_1" href="cart.html" style="display:block;overflow:hidden;width:15%;height:50px; padding:3% 9%; float:left;"> 
+  <img src="images/1495093688470.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+    <div id="reddot-cart" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px">购物车</div>
+  </div>
+  </a> 
+  <a id="foot_tab_image_2" href="my.html" style="display:block;overflow:hidden;width:15%;height:50px;padding:3% 9%; float:left;"> 
+  <img src="images/1495093725773.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+    <div id="reddot-mine" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px">订单</div>
+  </div>
+  </a> 
+</div>
+<div style="font-size:10px;padding:5px;margin-bottom:15px;text-align:center;line-height:15px;
+    color:gray;background-color:#ffffff;color:#7B7B7B;">
+      <div> 增值电信业务经营许可证 </div>
+      <div>保道商城&nbsp;© 2017 - 2018 baodao.com</div>
+    </div>
+</body>
+<script type="text/javascript">
+$(function(){
+	var indexData = localStorage.getItem("indexData");
+	if(indexData) {
+		loadHtml(JSON.parse(indexData));
+	}else{
+		app.showLoading();
+	}
+	function loadHtml(data){
+		var bannerList = data.bannerList;
+		if(bannerList && bannerList.length>0) {
+			var html = '';
+			var btnHtml = '';
+			for (var i = 0; i < bannerList.length; i++) {
+				var item = bannerList[i];
+				html += '<li><img src="http://116.62.47.157/ins/resource/'+item.img+'" /></li>';
+				btnHtml += '<a href="#">'+i+'</a>';
+			}
+			$("#bannerImg").html(html);
+			$("#bannerImgBtn").html(btnHtml);
+		}
+		
+		var hotGoodsList = data.hotGoodsList;
+		if(hotGoodsList && hotGoodsList.length>0) {
+			var html = '';
+			for (var i = 0; i < hotGoodsList.length; i++) {
+				var item = hotGoodsList[i];
+	        	html += '<a href="course_detail.html?id='+item.id+'"><div class="item" style="padding-right:.5px">'
+	        		+'<div class="img-container"><p class="img-dummy"></p><p class="img-content"><img src="'+app.imgHost+item.goodsImg+'" /></p></div>'
+	        		+'<div class="price">¥'+toAmtStr(item.goodsPrice)+'</div>'
+	        		+'<span class="title">'+item.goodsTitle+'</span>'
+	        		+'</div></a>';
+			}
+			//$("#hotGoodsDiv").append(html);
+			$("#hotGoodsDiv").html(html);
+		}
+	}
+	$.postApi("mall.index.data", function(res){
+		app.hideLoading();
+		//console.log(JSON.stringify(res));
+		if(res.errno==0){
+			//bannerList,hotGoodsList
+			loadHtml(res.data);
+			localStorage.setItem("indexData", JSON.stringify(res.data));
+			bindBannerEvent();
+		}
+	});
+	$("img").one("error", function(e){
+	     $(this).attr("src", "images/default.png");
+	});
+	
+	function bindBannerEvent() {
+		$(".main_visual").hover(function(){
+			$("#btn_prev,#btn_next").fadeIn()
+		},function(){
+			$("#btn_prev,#btn_next").fadeOut()
+		});
+		
+		$dragBln = false;
+		
+		$(".main_image").touchSlider({
+			flexible : true,
+			speed : 200,
+			btn_prev : $("#btn_prev"),
+			btn_next : $("#btn_next"),
+			paging : $(".flicking_con a"),
+			counter : function (e){
+				$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+			}
+		});
+		
+		$(".main_image").bind("mousedown", function() {
+			$dragBln = false;
+		});
+		
+		$(".main_image").bind("dragstart", function() {
+			$dragBln = true;
+		});
+		
+		$(".main_image a").click(function(){
+			if($dragBln) {
+				return false;
+			}
+		});
+		
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+		
+		$(".main_visual").hover(function(){
+			clearInterval(timer);
+		},function(){
+			timer = setInterval(function(){
+				$("#btn_next").click();
+			},5000);
+		});
+		
+		$(".main_image").bind("touchstart",function(){
+			clearInterval(timer);
+		}).bind("touchend", function(){
+			timer = setInterval(function(){
+				$("#btn_next").click();
+			}, 5000);
+		});
+	}
+	
+});
+
+$(document).ready(function(){
+	
+});
+</script>
+</html>

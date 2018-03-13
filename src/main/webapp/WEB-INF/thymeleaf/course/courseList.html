@@ -1,0 +1,251 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>去哪儿学--学校</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+	<link href="../../css/wstyle.css" type="text/css" rel="stylesheet" th:href="@{/static/css/zzsc.css}">
+    <link href="../../css/wstyle.css" type="text/css" rel="stylesheet" th:href="@{/static/css/wstyle.css}">
+	<link href="${path }/base/images/bitbug_favicon.ico" th:href="@{/static/images/bitbug_favicon.ico}" rel="Shortcut Icon">
+	<script type="text/javascript" src="../../js/jquery-1.11.3.min.js" th:src="@{/static/js/jquery-1.11.3.min.js}"></script>
+    <script type="text/javascript" src="../../js/header-footer.min.js" th:src="@{/static/js/header-footer.min.js}"></script>
+	<script type="text/javascript" src="../../js/common.js" th:src="@{/static/js/common.js}"></script>
+	<script type="text/javascript" src="../../js/jquery.cookie.js" th:src="@{/static/js/jquery.cookie.js}"></script>
+</head>
+
+<body style="position:relative;">
+	<!--页面顶部header 开始-->
+	<div th:include="headerTwo::headerTwo"></div>
+	<script th:replace="fragscript :: outerJs01"></script>
+	<script th:replace="fragscript :: outerJs05"></script>
+    <!--页面顶部header 结束-->
+
+    <!--页面底部header 开始-->
+    <div class="header-search">
+        <div class="search-mid clear">
+            <div class="hx-logo-wrap fl">
+                <a  th:href="@{/common/user/index.th}">
+                    <img class="hx-logo-img" src="../../images/M_01.png" th:src="@{/static/images/M_01.png}" width="200" height="72" alt="">
+                </a>
+            </div>
+            <div class="sec-wrap fl" style="visibility: visible !important;">
+                <form method="get" th:action="@{/common/course.th}" id="searchForm">
+					<input type="hidden" name="pageNum" th:value="${page.pageNum }">
+					<input type="hidden" name="trainingType" th:value="${trainingType }">
+					<input type="hidden" name="businessCircle" th:value="${businessCircle}">
+					<input type="hidden" name="type" th:value="${type}">
+                    <div class="search-frame clear">
+                        <div class="search-wrap fl">
+                            <input class="inner-inp" autocomplete="off" type="text" name="courseName" placeholder="" value="" th:value="${courseName}">
+                        </div>
+                        <input class="inner-sub fl" type="submit" value="">
+                    </div>
+                </form>
+
+            </div>
+            <div class="phone-call fr">
+                <p class="phone-top">服务热线：400-0505-811</p>
+            </div>
+        </div>
+    </div>
+	<!--页面底部header 结束-->
+	<!-- 头部导航 开始 -->
+	<div id="top_nav">
+    	<div class="main-nav">
+        	<div class="inner-con0">
+            	<div class="inner-con1">
+                	<div class="inner-con2 clear">
+                    	<a th:href="@{/common/course.th}" class="main-nav-active" target="_blank">培训课程<em class="hot-label"></em></a>
+                    	<a th:href="@{/common/school.th}"  target="_blank">培训学校<em class="new-label"></em></a>
+                	</div>
+            	</div>
+        	</div>
+    	</div>
+    	<div class="category-con">
+        	<div class="category-inner-con clear">
+            	<div class="category-type">
+                	<div class="text">行业分类</div>
+            	</div>
+					<div id="nav_top_menu" class="nav-list" style="background:rgba(255,255,255,0.7)">
+                	<div class="nav-con " id='category-nav'>
+                    	<ul class="normal-nav clear">
+                        </ul>
+                	</div>
+            	</div>
+        	</div>
+    	</div>
+	</div>
+	<!-- 头部导航 完成 -->
+	<script type="text/javascript">
+    $('#loginout').click(function(){
+        $.ajax({
+            url:'https://i.houxue.com/accounts/login/out/',
+            dataType:'jsonp',
+            type:'get',
+            async:false,
+            jsonp:"callbackparam",
+            success:function(data)
+            {
+                if(data.flag){
+                    window.location.reload();
+                }
+            }
+        })
+    });
+	</script>
+	<!-- 内容 开始 -->
+	<div class="mainbox">
+    	<div class="main clear">
+        	<div class="crumbs clear">
+            	<p class="course_position fl">
+                	<a class="_link" href="javascript:void(0);">教育培训网 > 培训课程</a>
+            	</p>
+        	</div>
+        	<!--列表筛选 开始-->
+        	<div class="screen">
+            	<div class="row clear rg_px1">
+                	<span>行业分类：</span>
+                	<ul class="clear" >
+                    	<li>
+                        	<a  th:class="${trainingType==null || trainingType==''}? 'selected' : ''" href="javascript:void(0);"  rel="nofollow">全部</a>
+                        </li>
+                        <li th:each="trainingTypes : ${trainingTypeList}">
+                        	<a th:class="${trainingType==trainingTypes.name}? 'selected' : ''"  th:trainingTypeSort="${trainingTypes.name}" href="javascript:void(0);"  th:text="${trainingTypes.name}">艺术</a>
+                        </li>
+                    </ul>
+            	</div>
+                <div class="row clear rg_px2">
+                    <span>选择区域：</span>
+                    <ul class="clear">
+                    	<li>
+                        	<a  th:class="${businessCircle==null || businessCircle==''}? 'selected' : ''" href="javascript:void(0);">全部</a>
+                        </li>
+                        <li th:each="businessCircles : ${businessCircleList}">
+                        	<a th:class="${businessCircle==businessCircles.name}? 'selected' : ''"  th:businessCircleSort="${businessCircles.name}" href="javascript:void(0);" th:text="${businessCircles.name}">武进</a>
+                        </li>
+                    </ul>
+                </div>
+        	</div>
+        	<!--列表筛选 结束-->
+
+        	<!--列表开始-->
+        	<div class="main_left">
+            	<!--排序 开始-->
+            	<div class="zhpx clear rg_px3">
+                	<span>排序</span>
+                	<ul class="clear">
+                        <li class="sx" th:class="${type=='0'}? 'highlight' : ''">
+                            <a th:typeSort="0">近期</a>
+                        </li>
+                        <li class="sx " th:class="${type=='1'}? 'highlight' : ''">
+                            <a th:typeSort="1">人气</a>
+                        </li>
+                    </ul>
+            	</div>
+            	<!--排序 结束-->
+
+            	<!--筛选结果列表 开始-->
+            	<ul class="filter_part" th:each="course : ${courseList}">
+                	<li class="clear">
+                    	<a rel="nofollow" class="course_a fl" th:href="@{/common/courseDetail.th(courseId=${course.courseId})}" target="_blank">
+                        	<img class="course_img lazy" data-original="javascript:void(0);" width="240" height="180"  th:src="@{${course.logo}}" src="images/0937.jpg" style="display: block;">
+						</a>
+                    	<div class="filter_part_con mt_pass">
+                        	<div class="mt5">
+                            	<a class="ellip filter_title _link" th:href="@{/common/courseDetail.th(courseId=${course.courseId})}" target="_blank" th:text="${course.courseName}"></a>
+                        	</div>
+                        	<div class="mt10 clear">
+                       			<div class="com-call-box fl mr30">
+                                	<span class="com-call-num" th:text="${course.schoolTel}"></span>
+                            	</div>
+                        	</div>
+                        	<div class="filter_p_border clear">
+                            	<a class="clight _link" href="javascript:void(0);" target="_blank">
+									学校名称：<span class="inlineB mr50"  th:text="${course.schoolName}"></span>
+                            	</a>
+                            	<span class="clight _link"></span>
+								课程人气：<a rel="nofollow" class="clight _link" href="javascript:void(0);" target="_blank"  th:text="${course.hot}">65</a>
+                        	</div>
+                        	<div class="promotion_addr ">
+                            	<!--<a class="addr _link inlineB" href="#" target="_blank"></a>-->
+								<a target="_blank" class="promotion_addr_txt ellip _link" href="javascript:void(0);"  th:text="${course.schoolAddress}">11</a>
+                        	</div>
+                    	</div>
+                	</li>
+                </ul>
+            	<!--筛选结果列表 结束-->
+            	<!--分页 开始-->
+				<div th:include="page::page"></div>
+				<script th:replace="fragscript :: outerJs02"></script>
+            	<!--分页 结束-->
+        	</div>
+    	</div>
+	</div>
+	<!-- 底部 开始 -->
+	<div th:include="footer::footer"></div>
+	<!-- 侧边栏代码 开始 -->
+	<div th:include="sidebar::sidebar"></div>
+	<script th:replace="fragscript :: outerJs03"></script>
+	<!--行业分类-->
+	<script th:replace="fragscript :: outerJs01"></script>
+	<script th:replace="fragscript :: outerJs04"></script>
+
+<script>
+$(function () {
+
+	$(".rg_px1").find("a").each(function(){
+		$(this).click(function(){
+			var trainingTypeSort = $(this).attr("trainingTypeSort");
+			$("#searchForm input[name='trainingType']").val(trainingTypeSort);
+			$("#searchForm").submit();
+		});
+	});
+
+	$(".rg_px2").find("a").each(function(){
+		$(this).click(function(){
+			var businessCircleSort = $(this).attr("businessCircleSort");
+			$("#searchForm input[name='businessCircle']").val(businessCircleSort);
+			$("#searchForm").submit();
+		});
+	});
+
+	$(".rg_px3").find("a").each(function(){
+		$(this).click(function(){
+			var typeSort = $(this).attr("typeSort");
+			$("#searchForm input[name='type']").val(typeSort);
+			$("#searchForm").submit();
+		});
+	});
+
+	$('.open_stop').click(function () {
+		var h = $('#relevant_hx_ul');
+		var contentH = $("html,body").outerHeight(true);
+		if ($('.open_stop').text() == '展开') {
+			h.css('height', 'auto');
+			$(this).html('收起<i class="rotate"></i>');
+			$("[name='hid']").show();
+//                $("body").animate({scrollTop: contentH}, 1000);
+		} else {
+			$("[name='hid']").hide();
+			h.animate({height: "auto"}, 1000);
+			$(this).html('展开<i></i>');
+		}
+	});
+});
+</script>
+
+<!--seo end-->
+
+<script type="text/javascript">
+    //导航目录的显示和隐藏（首页）
+    show_hide_nav();
+
+</script>
+	<script th:replace="fragscript :: outerJs01"></script>
+	<script th:replace="fragscript :: outerJs04"></script>
+
+</body>
+</html>

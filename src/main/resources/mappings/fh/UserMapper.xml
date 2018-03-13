@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.fh.mapper.UserMapper" >
+    <resultMap id="BaseResultMap" type="com.fh.fh.model.User" >
+        <id column="id" property="id" />
+        <result column="user_code" property="userCode" />
+        <result column="mobile" property="mobile" />
+        <result column="real_name" property="realName" />
+        <result column="password" property="password" />
+        <result column="access_token" property="accessToken" />
+        <result column="expired_time" property="expiredTime" />
+        <result column="login_type" property="loginType" />
+        <result column="address" property="address" />
+        <result column="useable" property="useable" />
+        <result column="remark" property="remark" />
+        <result column="amount" property="amount" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <sql id="Example_Where_Clause" >
+        <where >
+            <foreach collection="oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Update_By_Example_Where_Clause" >
+        <where >
+            <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Base_Column_List" >
+        id,user_code,mobile,real_name,password,access_token,expired_time,login_type,address,useable,remark,amount,create_time,update_time
+    </sql>
+
+    <select id="selectByExample" resultMap="BaseResultMap" >
+        select
+        <if test="distinct" >
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        from fh_user
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null" >
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from fh_user
+        where id = #{id}
+    </select>
+
+    <delete id="deleteByPrimaryKey" >
+        delete from fh_user
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteByExample" >
+        delete from fh_user
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" >
+        insert into fh_user (id,user_code,mobile,
+        real_name,password,access_token,
+        expired_time,login_type,address,
+        useable,remark,amount,
+        create_time,update_time
+        )
+        values (#{id},#{userCode},#{mobile},
+        #{realName},#{password},#{accessToken},
+        #{expiredTime},#{loginType},#{address},
+        #{useable},#{remark},#{amount},
+        #{createTime},#{updateTime}
+        )
+    </insert>
+
+    <insert id="insertSelective" >
+        insert into fh_user
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="userCode != null" >
+                user_code,
+            </if>
+            <if test="mobile != null" >
+                mobile,
+            </if>
+            <if test="realName != null" >
+                real_name,
+            </if>
+            <if test="password != null" >
+                password,
+            </if>
+            <if test="accessToken != null" >
+                access_token,
+            </if>
+            <if test="expiredTime != null" >
+                expired_time,
+            </if>
+            <if test="loginType != null" >
+                login_type,
+            </if>
+            <if test="address != null" >
+                address,
+            </if>
+            <if test="useable != null" >
+                useable,
+            </if>
+            <if test="remark != null" >
+                remark,
+            </if>
+            <if test="amount != null" >
+                amount,
+            </if>
+            <if test="createTime != null" >
+                create_time,
+            </if>
+            <if test="updateTime != null" >
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id},
+            </if>
+            <if test="userCode != null" >
+                #{userCode},
+            </if>
+            <if test="mobile != null" >
+                #{mobile},
+            </if>
+            <if test="realName != null" >
+                #{realName},
+            </if>
+            <if test="password != null" >
+                #{password},
+            </if>
+            <if test="accessToken != null" >
+                #{accessToken},
+            </if>
+            <if test="expiredTime != null" >
+                #{expiredTime},
+            </if>
+            <if test="loginType != null" >
+                #{loginType},
+            </if>
+            <if test="address != null" >
+                #{address},
+            </if>
+            <if test="useable != null" >
+                #{useable},
+            </if>
+            <if test="remark != null" >
+                #{remark},
+            </if>
+            <if test="amount != null" >
+                #{amount},
+            </if>
+            <if test="createTime != null" >
+                #{createTime},
+            </if>
+            <if test="updateTime != null" >
+                #{updateTime},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" resultType="java.lang.Integer" >
+        select count(*) from fh_user
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" >
+        update fh_user
+        <set >
+            <if test="record.id != null" >
+                id = #{record.id},
+            </if>
+            <if test="record.userCode != null" >
+                user_code = #{record.userCode},
+            </if>
+            <if test="record.mobile != null" >
+                mobile = #{record.mobile},
+            </if>
+            <if test="record.realName != null" >
+                real_name = #{record.realName},
+            </if>
+            <if test="record.password != null" >
+                password = #{record.password},
+            </if>
+            <if test="record.accessToken != null" >
+                access_token = #{record.accessToken},
+            </if>
+            <if test="record.expiredTime != null" >
+                expired_time = #{record.expiredTime},
+            </if>
+            <if test="record.loginType != null" >
+                login_type = #{record.loginType},
+            </if>
+            <if test="record.address != null" >
+                address = #{record.address},
+            </if>
+            <if test="record.useable != null" >
+                useable = #{record.useable},
+            </if>
+            <if test="record.remark != null" >
+                remark = #{record.remark},
+            </if>
+            <if test="record.amount != null" >
+                amount = #{record.amount},
+            </if>
+            <if test="record.createTime != null" >
+                create_time = #{record.createTime},
+            </if>
+            <if test="record.updateTime != null" >
+                update_time = #{record.updateTime},
+            </if>
+        </set>
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" >
+        update fh_user
+        set id = #{id},
+        user_code = #{userCode},
+        mobile = #{mobile},
+        real_name = #{realName},
+        password = #{password},
+        access_token = #{accessToken},
+        expired_time = #{expiredTime},
+        login_type = #{loginType},
+        address = #{address},
+        useable = #{useable},
+        remark = #{remark},
+        amount = #{amount},
+        create_time = #{createTime},
+        update_time = #{updateTime}
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" >
+        update fh_user
+        <set >
+            <if test="userCode != null" >
+                user_code = #{userCode},
+            </if>
+            <if test="mobile != null" >
+                mobile = #{mobile},
+            </if>
+            <if test="realName != null" >
+                real_name = #{realName},
+            </if>
+            <if test="password != null" >
+                password = #{password},
+            </if>
+            <if test="accessToken != null" >
+                access_token = #{accessToken},
+            </if>
+            <if test="expiredTime != null" >
+                expired_time = #{expiredTime},
+            </if>
+            <if test="loginType != null" >
+                login_type = #{loginType},
+            </if>
+            <if test="address != null" >
+                address = #{address},
+            </if>
+            <if test="useable != null" >
+                useable = #{useable},
+            </if>
+            <if test="remark != null" >
+                remark = #{remark},
+            </if>
+            <if test="amount != null" >
+                amount = #{amount},
+            </if>
+            <if test="createTime != null" >
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime != null" >
+                update_time = #{updateTime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="updateByPrimaryKey" >
+        update fh_user
+        set user_code = #{userCode},
+        mobile = #{mobile},
+        real_name = #{realName},
+        password = #{password},
+        access_token = #{accessToken},
+        expired_time = #{expiredTime},
+        login_type = #{loginType},
+        address = #{address},
+        useable = #{useable},
+        remark = #{remark},
+        amount = #{amount},
+        create_time = #{createTime},
+        update_time = #{updateTime}
+        where id = #{id}
+    </update>
+
+</mapper>

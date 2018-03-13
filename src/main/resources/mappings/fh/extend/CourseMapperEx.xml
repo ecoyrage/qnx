@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.fh.mapperEx.CourseMapperEx" >
+	<resultMap id="BaseResultMap" type="com.fh.fh.modelEx.CourseEx" extends="com.fh.fh.mapper.CourseMapper.BaseResultMap">
+	</resultMap>
+
+	<select id="selectCourseList" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		c.course_id AS course_id,
+		c.school_id AS school_id,
+		c.course_name AS course_name,
+		c.level AS level,
+		c.cycle AS cycle,
+		c.course_time AS course_time,
+		c.training_type AS training_type,
+		c.hot AS hot,
+		c.logo AS logo,
+		c.create_time AS create_time,
+		c.state AS state,
+		s.name AS schoolName,
+		s.tel AS schoolTel,
+		s.address AS schoolAddress
+		FROM
+		fh_course c,
+		fh_school s
+		WHERE
+		c.school_id = s.school_id
+		<if test="courseName !=null and courseName != ''">
+			and c.course_name Like #{courseName}
+		</if>
+		<if test="trainingType !=null and trainingType != ''">
+			and c.training_type Like #{trainingType}
+		</if>
+		<if test="businessCircle !=null and businessCircle != ''">
+			and s.business_circle Like #{businessCircle}
+		</if>
+		<if test="type !=null and type != '' and type==0">
+			ORDER BY
+			c.create_time DESC
+		</if>
+		<if test="type !=null and type != '' and type==1">
+			ORDER BY
+			c.hot DESC
+		</if>
+	</select>
+
+
+	<select id="selectCourses" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		c.course_id AS course_id,
+		c.school_id AS school_id,
+		c.course_name AS course_name,
+		c.level AS level,
+		c.cycle AS cycle,
+		c.course_time AS course_time,
+		c.training_type AS training_type,
+		c.hot AS hot,
+		c.create_time AS create_time,
+		c.state AS state,
+		s.name AS schoolName
+		FROM
+		fh_course c,
+		fh_school s
+		WHERE
+		c.school_id = s.school_id
+		<if test="courseName !=null and courseName != ''">
+			and c.course_name LIKE #{courseName}
+		</if>
+		<if test="schoolName !=null and schoolName != ''">
+			and s.name LIKE #{schoolName}
+		</if>
+		ORDER BY
+		c.create_time ASC
+	</select>
+</mapper>

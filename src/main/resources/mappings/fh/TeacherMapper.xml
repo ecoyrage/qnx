@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.fh.mapper.TeacherMapper" >
+    <resultMap id="BaseResultMap" type="com.fh.fh.model.Teacher" >
+        <id column="teacher_id" property="teacherId" />
+        <result column="school_id" property="schoolId" />
+        <result column="teacher_name" property="teacherName" />
+        <result column="logo" property="logo" />
+        <result column="introduction" property="introduction" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <sql id="Example_Where_Clause" >
+        <where >
+            <foreach collection="oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Update_By_Example_Where_Clause" >
+        <where >
+            <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Base_Column_List" >
+        teacher_id,school_id,teacher_name,logo,introduction,create_time
+    </sql>
+
+    <select id="selectByExample" resultMap="BaseResultMap" >
+        select
+        <if test="distinct" >
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        from fh_teacher
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null" >
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from fh_teacher
+        where teacher_id = #{teacherId}
+    </select>
+
+    <delete id="deleteByPrimaryKey" >
+        delete from fh_teacher
+        where teacher_id = #{teacherId}
+    </delete>
+
+    <delete id="deleteByExample" >
+        delete from fh_teacher
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" >
+        insert into fh_teacher (teacher_id,school_id,teacher_name,
+        logo,introduction,create_time
+        )
+        values (#{teacherId},#{schoolId},#{teacherName},
+        #{logo},#{introduction},#{createTime}
+        )
+    </insert>
+
+    <insert id="insertSelective" >
+        insert into fh_teacher
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="teacherId != null" >
+                teacher_id,
+            </if>
+            <if test="schoolId != null" >
+                school_id,
+            </if>
+            <if test="teacherName != null" >
+                teacher_name,
+            </if>
+            <if test="logo != null" >
+                logo,
+            </if>
+            <if test="introduction != null" >
+                introduction,
+            </if>
+            <if test="createTime != null" >
+                create_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="teacherId != null" >
+                #{teacherId},
+            </if>
+            <if test="schoolId != null" >
+                #{schoolId},
+            </if>
+            <if test="teacherName != null" >
+                #{teacherName},
+            </if>
+            <if test="logo != null" >
+                #{logo},
+            </if>
+            <if test="introduction != null" >
+                #{introduction},
+            </if>
+            <if test="createTime != null" >
+                #{createTime},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" resultType="java.lang.Integer" >
+        select count(*) from fh_teacher
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" >
+        update fh_teacher
+        <set >
+            <if test="record.teacherId != null" >
+                teacher_id = #{record.teacherId},
+            </if>
+            <if test="record.schoolId != null" >
+                school_id = #{record.schoolId},
+            </if>
+            <if test="record.teacherName != null" >
+                teacher_name = #{record.teacherName},
+            </if>
+            <if test="record.logo != null" >
+                logo = #{record.logo},
+            </if>
+            <if test="record.introduction != null" >
+                introduction = #{record.introduction},
+            </if>
+            <if test="record.createTime != null" >
+                create_time = #{record.createTime},
+            </if>
+        </set>
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" >
+        update fh_teacher
+        set teacher_id = #{teacherId},
+        school_id = #{schoolId},
+        teacher_name = #{teacherName},
+        logo = #{logo},
+        introduction = #{introduction},
+        create_time = #{createTime}
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" >
+        update fh_teacher
+        <set >
+            <if test="schoolId != null" >
+                school_id = #{schoolId},
+            </if>
+            <if test="teacherName != null" >
+                teacher_name = #{teacherName},
+            </if>
+            <if test="logo != null" >
+                logo = #{logo},
+            </if>
+            <if test="introduction != null" >
+                introduction = #{introduction},
+            </if>
+            <if test="createTime != null" >
+                create_time = #{createTime},
+            </if>
+        </set>
+        where teacher_id = #{teacherId}
+    </update>
+
+    <update id="updateByPrimaryKey" >
+        update fh_teacher
+        set school_id = #{schoolId},
+        teacher_name = #{teacherName},
+        logo = #{logo},
+        introduction = #{introduction},
+        create_time = #{createTime}
+        where teacher_id = #{teacherId}
+    </update>
+
+</mapper>

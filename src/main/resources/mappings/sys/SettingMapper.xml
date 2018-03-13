@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.sys.mapper.SettingMapper" >
+    <resultMap id="BaseResultMap" type="com.fh.sys.model.Setting" >
+        <id column="id" property="id" />
+        <result column="adminsite_name" property="adminsiteName" />
+        <result column="adminsite_logo" property="adminsiteLogo" />
+        <result column="website_name" property="websiteName" />
+        <result column="website_logo" property="websiteLogo" />
+        <result column="copyright_info" property="copyrightInfo" />
+        <result column="filing_info" property="filingInfo" />
+        <result column="website_desc" property="websiteDesc" />
+        <result column="statistical_code" property="statisticalCode" />
+        <result column="seo_title" property="seoTitle" />
+        <result column="seo_keywords" property="seoKeywords" />
+        <result column="seo_desc" property="seoDesc" />
+        <result column="register_verify_mobile" property="registerVerifyMobile" />
+    </resultMap>
+
+    <resultMap id="ResultMapWithBLOBs" type="com.fh.sys.model.Setting" extends="BaseResultMap" >
+        <result column="register_agreement" property="registerAgreement" />
+    </resultMap>
+
+    <sql id="Example_Where_Clause" >
+        <where >
+            <foreach collection="oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Update_By_Example_Where_Clause" >
+        <where >
+            <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Base_Column_List" >
+        id,adminsite_name,adminsite_logo,website_name,website_logo,copyright_info,filing_info,website_desc,statistical_code,seo_title,seo_keywords,seo_desc,register_verify_mobile
+    </sql>
+
+    <sql id="Blob_Column_List" >
+        register_agreement
+    </sql>
+
+    <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" >
+        select
+        <if test="distinct" >
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        ,
+        <include refid="Blob_Column_List" />
+        from sys_setting
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null" >
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByExample" resultMap="BaseResultMap" >
+        select
+        <if test="distinct" >
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        from sys_setting
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null" >
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" >
+        select
+        <include refid="Base_Column_List" />
+        ,
+        <include refid="Blob_Column_List" />
+        from sys_setting
+        where id = #{id}
+    </select>
+
+    <delete id="deleteByPrimaryKey" >
+        delete from sys_setting
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteByExample" >
+        delete from sys_setting
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" >
+        insert into sys_setting (id,adminsite_name,adminsite_logo,
+        website_name,website_logo,copyright_info,
+        filing_info,website_desc,statistical_code,
+        seo_title,seo_keywords,seo_desc,
+        register_agreement,register_verify_mobile
+        )
+        values (#{id},#{adminsiteName},#{adminsiteLogo},
+        #{websiteName},#{websiteLogo},#{copyrightInfo},
+        #{filingInfo},#{websiteDesc},#{statisticalCode},
+        #{seoTitle},#{seoKeywords},#{seoDesc},
+        #{registerAgreement},#{registerVerifyMobile}
+        )
+    </insert>
+
+    <insert id="insertSelective" >
+        insert into sys_setting
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="adminsiteName != null" >
+                adminsite_name,
+            </if>
+            <if test="adminsiteLogo != null" >
+                adminsite_logo,
+            </if>
+            <if test="websiteName != null" >
+                website_name,
+            </if>
+            <if test="websiteLogo != null" >
+                website_logo,
+            </if>
+            <if test="copyrightInfo != null" >
+                copyright_info,
+            </if>
+            <if test="filingInfo != null" >
+                filing_info,
+            </if>
+            <if test="websiteDesc != null" >
+                website_desc,
+            </if>
+            <if test="statisticalCode != null" >
+                statistical_code,
+            </if>
+            <if test="seoTitle != null" >
+                seo_title,
+            </if>
+            <if test="seoKeywords != null" >
+                seo_keywords,
+            </if>
+            <if test="seoDesc != null" >
+                seo_desc,
+            </if>
+            <if test="registerAgreement != null" >
+                register_agreement,
+            </if>
+            <if test="registerVerifyMobile != null" >
+                register_verify_mobile,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id},
+            </if>
+            <if test="adminsiteName != null" >
+                #{adminsiteName},
+            </if>
+            <if test="adminsiteLogo != null" >
+                #{adminsiteLogo},
+            </if>
+            <if test="websiteName != null" >
+                #{websiteName},
+            </if>
+            <if test="websiteLogo != null" >
+                #{websiteLogo},
+            </if>
+            <if test="copyrightInfo != null" >
+                #{copyrightInfo},
+            </if>
+            <if test="filingInfo != null" >
+                #{filingInfo},
+            </if>
+            <if test="websiteDesc != null" >
+                #{websiteDesc},
+            </if>
+            <if test="statisticalCode != null" >
+                #{statisticalCode},
+            </if>
+            <if test="seoTitle != null" >
+                #{seoTitle},
+            </if>
+            <if test="seoKeywords != null" >
+                #{seoKeywords},
+            </if>
+            <if test="seoDesc != null" >
+                #{seoDesc},
+            </if>
+            <if test="registerAgreement != null" >
+                #{registerAgreement},
+            </if>
+            <if test="registerVerifyMobile != null" >
+                #{registerVerifyMobile},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" resultType="java.lang.Integer" >
+        select count(*) from sys_setting
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" >
+        update sys_setting
+        <set >
+            <if test="record.id != null" >
+                id = #{record.id},
+            </if>
+            <if test="record.adminsiteName != null" >
+                adminsite_name = #{record.adminsiteName},
+            </if>
+            <if test="record.adminsiteLogo != null" >
+                adminsite_logo = #{record.adminsiteLogo},
+            </if>
+            <if test="record.websiteName != null" >
+                website_name = #{record.websiteName},
+            </if>
+            <if test="record.websiteLogo != null" >
+                website_logo = #{record.websiteLogo},
+            </if>
+            <if test="record.copyrightInfo != null" >
+                copyright_info = #{record.copyrightInfo},
+            </if>
+            <if test="record.filingInfo != null" >
+                filing_info = #{record.filingInfo},
+            </if>
+            <if test="record.websiteDesc != null" >
+                website_desc = #{record.websiteDesc},
+            </if>
+            <if test="record.statisticalCode != null" >
+                statistical_code = #{record.statisticalCode},
+            </if>
+            <if test="record.seoTitle != null" >
+                seo_title = #{record.seoTitle},
+            </if>
+            <if test="record.seoKeywords != null" >
+                seo_keywords = #{record.seoKeywords},
+            </if>
+            <if test="record.seoDesc != null" >
+                seo_desc = #{record.seoDesc},
+            </if>
+            <if test="record.registerAgreement != null" >
+                register_agreement = #{record.registerAgreement},
+            </if>
+            <if test="record.registerVerifyMobile != null" >
+                register_verify_mobile = #{record.registerVerifyMobile},
+            </if>
+        </set>
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExampleWithBLOBs" >
+        update sys_setting
+        set id = #{id},
+        adminsite_name = #{adminsiteName},
+        adminsite_logo = #{adminsiteLogo},
+        website_name = #{websiteName},
+        website_logo = #{websiteLogo},
+        copyright_info = #{copyrightInfo},
+        filing_info = #{filingInfo},
+        website_desc = #{websiteDesc},
+        statistical_code = #{statisticalCode},
+        seo_title = #{seoTitle},
+        seo_keywords = #{seoKeywords},
+        seo_desc = #{seoDesc},
+        register_agreement = #{registerAgreement},
+        register_verify_mobile = #{registerVerifyMobile}
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" >
+        update sys_setting
+        set id = #{id},
+        adminsite_name = #{adminsiteName},
+        adminsite_logo = #{adminsiteLogo},
+        website_name = #{websiteName},
+        website_logo = #{websiteLogo},
+        copyright_info = #{copyrightInfo},
+        filing_info = #{filingInfo},
+        website_desc = #{websiteDesc},
+        statistical_code = #{statisticalCode},
+        seo_title = #{seoTitle},
+        seo_keywords = #{seoKeywords},
+        seo_desc = #{seoDesc},
+        register_verify_mobile = #{registerVerifyMobile}
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" >
+        update sys_setting
+        <set >
+            <if test="adminsiteName != null" >
+                adminsite_name = #{adminsiteName},
+            </if>
+            <if test="adminsiteLogo != null" >
+                adminsite_logo = #{adminsiteLogo},
+            </if>
+            <if test="websiteName != null" >
+                website_name = #{websiteName},
+            </if>
+            <if test="websiteLogo != null" >
+                website_logo = #{websiteLogo},
+            </if>
+            <if test="copyrightInfo != null" >
+                copyright_info = #{copyrightInfo},
+            </if>
+            <if test="filingInfo != null" >
+                filing_info = #{filingInfo},
+            </if>
+            <if test="websiteDesc != null" >
+                website_desc = #{websiteDesc},
+            </if>
+            <if test="statisticalCode != null" >
+                statistical_code = #{statisticalCode},
+            </if>
+            <if test="seoTitle != null" >
+                seo_title = #{seoTitle},
+            </if>
+            <if test="seoKeywords != null" >
+                seo_keywords = #{seoKeywords},
+            </if>
+            <if test="seoDesc != null" >
+                seo_desc = #{seoDesc},
+            </if>
+            <if test="registerAgreement != null" >
+                register_agreement = #{registerAgreement},
+            </if>
+            <if test="registerVerifyMobile != null" >
+                register_verify_mobile = #{registerVerifyMobile},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="updateByPrimaryKeyWithBLOBs" >
+        update sys_setting
+        set adminsite_name = #{adminsiteName},
+        adminsite_logo = #{adminsiteLogo},
+        website_name = #{websiteName},
+        website_logo = #{websiteLogo},
+        copyright_info = #{copyrightInfo},
+        filing_info = #{filingInfo},
+        website_desc = #{websiteDesc},
+        statistical_code = #{statisticalCode},
+        seo_title = #{seoTitle},
+        seo_keywords = #{seoKeywords},
+        seo_desc = #{seoDesc},
+        register_agreement = #{registerAgreement},
+        register_verify_mobile = #{registerVerifyMobile}
+        where id = #{id}
+    </update>
+
+    <update id="updateByPrimaryKey" >
+        update sys_setting
+        set adminsite_name = #{adminsiteName},
+        adminsite_logo = #{adminsiteLogo},
+        website_name = #{websiteName},
+        website_logo = #{websiteLogo},
+        copyright_info = #{copyrightInfo},
+        filing_info = #{filingInfo},
+        website_desc = #{websiteDesc},
+        statistical_code = #{statisticalCode},
+        seo_title = #{seoTitle},
+        seo_keywords = #{seoKeywords},
+        seo_desc = #{seoDesc},
+        register_verify_mobile = #{registerVerifyMobile}
+        where id = #{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.fh.mapper.BusinessCircleMapper" >
+    <resultMap id="BaseResultMap" type="com.fh.fh.model.BusinessCircle" >
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="level" property="level" />
+        <result column="parent_id" property="parentId" />
+        <result column="rank" property="rank" />
+        <result column="tree_path" property="treePath" />
+        <result column="full_name" property="fullName" />
+    </resultMap>
+
+    <sql id="Example_Where_Clause" >
+        <where >
+            <foreach collection="oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Update_By_Example_Where_Clause" >
+        <where >
+            <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Base_Column_List" >
+        id,name,level,parent_id,rank,tree_path,full_name
+    </sql>
+
+    <select id="selectByExample" resultMap="BaseResultMap" >
+        select
+        <if test="distinct" >
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        from fh_business_circle
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null" >
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from fh_business_circle
+        where id = #{id}
+    </select>
+
+    <delete id="deleteByPrimaryKey" >
+        delete from fh_business_circle
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteByExample" >
+        delete from fh_business_circle
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" >
+        insert into fh_business_circle (id,name,level,
+        parent_id,rank,tree_path,
+        full_name
+        )
+        values (#{id},#{name},#{level},
+        #{parentId},#{rank},#{treePath},
+        #{fullName}
+        )
+    </insert>
+
+    <insert id="insertSelective" >
+        insert into fh_business_circle
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="level != null" >
+                level,
+            </if>
+            <if test="parentId != null" >
+                parent_id,
+            </if>
+            <if test="rank != null" >
+                rank,
+            </if>
+            <if test="treePath != null" >
+                tree_path,
+            </if>
+            <if test="fullName != null" >
+                full_name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id},
+            </if>
+            <if test="name != null" >
+                #{name},
+            </if>
+            <if test="level != null" >
+                #{level},
+            </if>
+            <if test="parentId != null" >
+                #{parentId},
+            </if>
+            <if test="rank != null" >
+                #{rank},
+            </if>
+            <if test="treePath != null" >
+                #{treePath},
+            </if>
+            <if test="fullName != null" >
+                #{fullName},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" resultType="java.lang.Integer" >
+        select count(*) from fh_business_circle
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" >
+        update fh_business_circle
+        <set >
+            <if test="record.id != null" >
+                id = #{record.id},
+            </if>
+            <if test="record.name != null" >
+                name = #{record.name},
+            </if>
+            <if test="record.level != null" >
+                level = #{record.level},
+            </if>
+            <if test="record.parentId != null" >
+                parent_id = #{record.parentId},
+            </if>
+            <if test="record.rank != null" >
+                rank = #{record.rank},
+            </if>
+            <if test="record.treePath != null" >
+                tree_path = #{record.treePath},
+            </if>
+            <if test="record.fullName != null" >
+                full_name = #{record.fullName},
+            </if>
+        </set>
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" >
+        update fh_business_circle
+        set id = #{id},
+        name = #{name},
+        level = #{level},
+        parent_id = #{parentId},
+        rank = #{rank},
+        tree_path = #{treePath},
+        full_name = #{fullName}
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" >
+        update fh_business_circle
+        <set >
+            <if test="name != null" >
+                name = #{name},
+            </if>
+            <if test="level != null" >
+                level = #{level},
+            </if>
+            <if test="parentId != null" >
+                parent_id = #{parentId},
+            </if>
+            <if test="rank != null" >
+                rank = #{rank},
+            </if>
+            <if test="treePath != null" >
+                tree_path = #{treePath},
+            </if>
+            <if test="fullName != null" >
+                full_name = #{fullName},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="updateByPrimaryKey" >
+        update fh_business_circle
+        set name = #{name},
+        level = #{level},
+        parent_id = #{parentId},
+        rank = #{rank},
+        tree_path = #{treePath},
+        full_name = #{fullName}
+        where id = #{id}
+    </update>
+
+</mapper>

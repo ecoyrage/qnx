@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="referrer" content="always" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/my.css">
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+</style>
+<link rel="stylesheet" type="text/css" href="css/login.css?v=1" />
+
+<!-- <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> -->
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="js/app.js?v=20170921"></script>
+<script type="text/javascript" src="js/login.js?v=20170921"></script>
+
+</head>
+
+<body>
+
+
+	<div class="demo">
+    <div style="width:100%; margin: 60px auto 10px auto;text-align:center"> <img src="images/login.png" style="width:40%; "/></div>
+		<nav class="main_nav">
+			<ul>
+				<li><a class="cd-signin" href="#0">登录</a></li>
+				<li><a class="cd-signup" href="#0">注册</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+    <div style="width:100%; margin: 60px auto 10px auto;text-align:center;display:none;" id="downloadApp"> 
+    <img src="images/app_ios.png" style="width:60%; "/> <br>
+    <img src="images/app_anz.png" style="width:60%; "/>
+    </div>
+    
+	<div class="cd-user-modal">
+		<div class="cd-user-modal-container">
+			<ul class="cd-switcher">
+				<li><a href="#0">用户登录</a></li>
+				<li><a href="#0">注册新用户</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- 登录表单 -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signin-username">用户名</label>
+						<input class="full-width has-padding has-border" id="signin-username" type="text" placeholder="输入手机号">
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">密码</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="输入密码">
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">记住登录状态</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width2 submit-btn" type="button" value="登 录" id="login">
+					</p>
+				</form>
+			</div>
+
+			<div id="cd-signup"> <!-- 注册表单 -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">用户名</label>
+						<input class="full-width has-padding has-border" id="name" type="text" placeholder="输入用户名">
+					</p>
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">用户名</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="输入手机号">
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">短信验证</label>
+						<input class="hafe-width has-padding has-border" type="text" placeholder="输入短信验证码" id="smscode">
+                        <input class="hafe-width submit-btn" type="button" value="获取验证码" id="sendSmsBtn">
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">密码</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="输入密码">
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">密码</label>
+						<input class="full-width has-padding has-border" id="signup-password2" type="password"  placeholder="再次输入密码">
+					</p>
+
+					<!-- <p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">我已阅读并同意 <a href="#0">用户协议</a></label>
+					</p> -->
+
+					<p class="fieldset">
+						<input class="full-width2 submit-btn" type="button" value="注册新用户" id="register">
+					</p>
+				</form>
+			</div>
+
+			<a href="#0" class="cd-close-form">关闭</a>
+		</div>
+	</div> 
+</body>
+</html>

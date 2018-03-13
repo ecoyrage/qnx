@@ -1,0 +1,945 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta name="referrer" content="always" />
+<meta charset='utf-8' />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/my.css" />
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">var _=function(id){return document.getElementById(id)};</script>
+<title>我的订单</title>
+</head>
+
+<body onload="show(0,-1)">
+	<!-- header start -->
+	<div style="height:44px">&nbsp;</div>
+	<div class="header-float-bar">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="40px" align="center"><div style="padding:0 10px;" onclick="window.location='my.html'"><img src="images/new-back.png" style="height:20px;vertical-align:middle"/></div></td>
+				<td><div class="font-size-lxx" style="padding:0px 0;">我的订单</div></td>
+				<td width="40px"><div class="font-size-l" onclick="window.location.href='#'" style="padding:0px 0;">客服</div></td>
+			</tr>
+		</table>
+	</div>
+	<!-- header end -->
+
+	<!-- title start -->
+	<div class="info_row block-top">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr>
+			
+			<td width="20%" align="center">
+				<div class="font-size-l color-gray-dark" style="display:inline-block;" id="title_0" onclick="show(0,-1)">
+					<div style="height:2px;"></div>
+					全部
+					<div style="height:3px;"></div>
+					<div id="selected_subline_0" style="height:3px;"></div>
+				</div>
+			</td>
+			
+			<td width="20%" align="center">
+				<div class="font-size-l color-gray-dark" style="display:inline-block;" id="title_1" onclick="show(1,0)">
+					<div style="height:2px;"></div>
+					待付款
+					<div style="height:3px;"></div>
+					<div id="selected_subline_1" style="height:3px;"></div>
+				</div>
+			</td>
+			
+			<td width="20%" align="center">
+				<div class="font-size-l color-gray-dark" style="display:inline-block;" id="title_2" onclick="show(2,1)">
+					<div style="height:2px;"></div>
+					待发货
+					<div style="height:3px;"></div>
+					<div id="selected_subline_2" style="height:3px;"></div>
+				</div>
+			</td>
+			
+			<td width="20%" align="center">
+				<div class="font-size-l color-gray-dark" style="display:inline-block;" id="title_3" onclick="show(3,2)">
+					<div style="height:2px;"></div>
+					待收货
+					<div style="height:3px;"></div>
+					<div id="selected_subline_3" style="height:3px;"></div>
+				</div>
+			</td>
+			
+			<td width="20%" align="center">
+				<div class="font-size-l color-gray-dark" style="display:inline-block;" id="title_4" onclick="show(4,3)">
+					<div style="height:2px;"></div>
+					已完成
+					<div style="height:3px;"></div>
+					<div id="selected_subline_4" style="height:3px;"></div>
+				</div>
+			</td>
+			
+		</tr></table>
+	</div>
+	<!-- title end -->
+
+	<div class="gap-small"></div>
+
+	<!-- 全部  -->
+	<div id="orders_0" style="display:none"></div>
+	
+	<div id="orders_1" style="display:none"></div>
+	
+	<div id="orders_2" style="display:none"></div>
+	
+	<div id="orders_3" style="display:none"></div>
+	
+	<div id="orders_4" style="display:none"></div>
+
+	<!-- 支付类型选择弹出框 -->
+	<div id="payTypeSelectPanel" style="position:fixed;top:0;left:0;bottom:0;right:0;display:none">
+		<div style="position:relative;height:100%;width:100%">
+			<div style="position:absolute;top:0;left:0;bottom:0;right:0;background-color:#8e8e8e;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;">
+			</div>
+			<div style="position:absolute;top:0;left:0;bottom:0;right:0">
+				<table style="height:100%;width:100%" border="0">
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>
+						<div style="width:80%;z-index:999;display:inline-block;background-color:white;padding:15px;" class="round font-size-lx">
+							<div style="text-align:center;font-size:16px;position:relative">
+								选择支付方式
+								<div style="position:absolute;top:0;right:0" onclick="closePayTypeSelectPanel()">
+									<img src="images/close.png" style="max-width:16px;max-height:16px;padding:0 5px;">
+								</div>
+							</div>
+							<div style="height:10px;">&nbsp;</div>
+							<div style="text-align:left;">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td colspan="3" style="padding:10px 0">
+										<div class="block-sep" style="height:1px"></div>
+									</td>
+								</tr>
+
+								
+								<tr>
+									<td align="center" width="25px" valign="middle" style="padding:0 10px"><img style="max-height:24px" src="images/alipay.png"></td>
+									<td align="left"><div style="font-size:16px">支付宝</div></td>
+									<td align="right" style="padding:0 10px"><div onclick="setPayType(101)"><img id="pay101" style="max-height:20px" src="images/unselected.png"/></div></td>
+								</tr>
+
+								<tr>
+									<td colspan="3" style="padding:10px 0">
+										<div class="block-sep" style="height:1px"></div>
+									</td>
+								</tr>
+								
+
+								<tr>
+									<td colspan="3" align="center" style="padding:10px 0 0 0">
+										<div class="button bg-blue round" style="width:100px" onclick="submitRepay()">确定</div>
+									</td>
+								</tr>
+								
+								</table>
+							</div>
+						</div>
+					</td></tr>
+					<tr><td>&nbsp;</td></tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- end of 支付类型选择弹出框 -->
+
+	<!-- 评论弹出框 -->
+	<div id="commentPanel" style="position:fixed;top:0;left:0;bottom:0;right:0;display:none">
+		<div style="position:relative;height:100%;width:100%">
+			<div style="position:absolute;top:0;left:0;bottom:0;right:0;background-color:#8e8e8e;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;">
+			</div>
+			<div style="position:absolute;top:0;left:0;bottom:0;right:0">
+				<table style="height:100%;width:100%" border="0">
+					<tr><td>&nbsp;</td></tr>
+					<tr><td>
+						<div style="width:80%;z-index:999;display:inline-block;background-color:white;padding:15px;" class="round font-size-lx">
+							<div style="text-align:center;font-size:16px;position:relative">
+								评论
+								<div style="position:absolute;top:0;right:0" onclick="closeCommentPanel()">
+									<img src="images/close.png" style="max-width:16px;max-height:16px;padding:0 5px;">
+								</div>
+							</div>
+							<div style="height:10px;">&nbsp;</div>
+							<!-- 展示评论（如果已经有评论）-->
+							<div style="text-align:left;display:none" id="displayCommentPanel">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td colspan="3" style="padding:10px 0">
+										<div class="block-sep" style="height:1px"></div>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="3" style="padding:10px 0">
+										<div id="commentScore" class="commentGradeTag" style="background: #40a2dc;color: white;"></div>
+										<div style="height:10px"></div>
+										<div id="commentDetail" class="font-size-m"></div>
+									</td>
+								</tr>
+
+								<tr>
+									<td colspan="3" style="padding:10px 0">
+										<div class="block-sep" style="height:1px"></div>
+									</td>
+								</tr>
+
+								</table>
+							</div>
+							<!-- 添加评论（如果没有评论）-->
+							<div style="text-align:left;display:none" id="addCommentPanel">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td style="padding:10px 0" height="2px">
+										<div class="block-sep" style="height:1px"></div>
+									</td>
+								</tr>
+								
+
+								<tr>
+									<td style="padding:10px 0" valign="top" height="100px">
+										<div class="font-size-m">
+											<div id="commentScore1" class="commentGradeTag" onclick="commentStar(1)">差评</div>
+											<div id="commentScore3" class="commentGradeTag" onclick="commentStar(3)">中评</div>
+											<div id="commentScore5" class="commentGradeTag" onclick="commentStar(5)" style="background: #40a2dc;color: white;">好评</div>
+										</div>
+										<div style="height:10px"></div>
+										<div><textarea id="commentInput" class="round info_input" rows="3" placeholder="" style="text-indent:0px;height:100%; width:98%;"></textarea></div>
+									</td>
+								</tr>
+
+								<tr>
+									<td style="padding:10px 0" height="2px">
+										<div class="block-sep" style="height:1px"></div>
+									</td>
+								</tr>
+
+								<tr>
+									<td align="center" style="" height="40px">
+										<div id="submitCommentBtn" class="button bg-blue round" style="width:100px" onclick="submitComment()">提交</div>
+										<div id="submittingCommentBtn" class="button bg-blue round" style="width:100px;display:none">正在提交...</div>
+									</td>
+								</tr>
+								
+								</table>
+							</div>
+							<!-- 展示加载中 -->
+							<div style="text-align:left;display:none" id="displayCommentLoadingPanel">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td style="padding:10px 0">
+										<div class="block-sep" style="height:1px"></div>
+										<div class="color-gray-light font-size-m" style="padding:20px;text-align:center">正在加载，请稍候...</div>
+										<div class="block-sep" style="height:1px"></div>
+									</td>
+								</tr>
+								</table>
+							</div>
+
+							<!-- 展示加载失败 -->
+							<div style="text-align:left;display:none" id="displayCommentLoadErrorPanel">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td style="padding:10px 0">
+										<div class="block-sep" style="height:1px"></div>
+										<div class="color-gray-light font-size-m" style="padding:20px;text-align:center">加载评论失败 :(</div>
+										<div class="block-sep" style="height:1px"></div>
+									</td>
+								</tr>
+								</table>
+							</div>
+
+						</div>
+					</td></tr>
+					<tr><td>&nbsp;</td></tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- end of 评论弹出框 -->
+	<div class="my-modal" id="trans_trace_modal">
+		<div class="my-modal-mask"></div>
+			<div class="my-modal-content">
+			   <div class="my-modal-header">
+				   <div class="font-size-lx">运单：<span id="trans_trace_modal_title"></span></div>
+				   <div class="my-modal-close" id="trans_trace_modal_close">
+					   <img src="images/close.png">
+				   </div>
+			   </div>
+
+			   <div id="trans_trace_modal_detail" class="font-size-lx" style="border:1px solid lightgray; margin:15px 5px;padding:5px; height:280px; overflow:auto">
+
+			   </div>
+			</div>
+		</div>
+    </div>
+	
+	<div style="position:fixed;width:100%;right:0px;bottom:0px; background-color:#F4C10D;"> 
+	  <a id="foot_tab_image_0" href="index.html" style="display:block;overflow:hidden;width:15%;height:50px;padding:3% 9%; float:left;"> 
+	  <img src="images/1495093725774.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+	  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+	    <div id="reddot-mine" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px">商城</div>
+	  </div>
+	  </a> 
+	  <a id="foot_tab_image_1" href="cart.html" style="display:block;overflow:hidden;width:15%;height:50px; padding:3% 9%; float:left;"> 
+	  <img src="images/1495093688470.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+	  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+	    <div id="reddot-cart" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px">购物车</div>
+	  </div>
+	  </a> 
+	  <a id="foot_tab_image_2" href="my.html" style="display:block;overflow:hidden;width:15%;height:50px;padding:3% 9%; float:left;"> 
+	  <img src="images/1495093725773.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+	  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+	    <div id="reddot-mine" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px">订单</div>
+	  </div>
+	  </a> 
+	</div>
+</body>
+
+<script type="text/javascript">
+	//改变显示方式:将时间格式改为"年:月:日"
+	function changeDisplay_one(data){
+		var str_time = data.toString();
+		str_time= str_time.substring(0,11);
+		return str_time;
+	}
+	//改变显示方式:将物流状态(数字)转换成文字 
+	function changeDisplay_two(data){
+		var str_expressStatus="";
+		if(data==0){
+			str_expressStatus="待付款";
+		}else if(data==1){
+			str_expressStatus="待发货";
+		}else if(data==2){
+			str_expressStatus="待收货";
+		}else if(data==3){
+			str_expressStatus="已完成";
+		}else{
+			//error
+		}
+		return str_expressStatus;
+	}
+	
+	//$(function(){ show(0,-1);}
+	function loadHtml(showTab,expressStatus){
+		$.postApi("mall.order.list",{"expressStatus":expressStatus,"pageNum":1,"pageSize":4}, function(res){
+		//console.log(JSON.stringify(res));
+			if(res.errno==0){
+				var orderList = res.data.orderList;
+				if(orderList && orderList.length>0) {
+					var html = '';
+					for (var i = 0; i < orderList.length; i++) {
+						var item = orderList[i];
+						var imgPath = '';
+						if(item.goodsImg==null||item.goodsImg==""){
+							if(item.categoryImg==null||item.categoryImg==""){
+								//error
+							}else{
+								imgPath=item.categoryImgPath;
+							}
+						}else{
+							imgPath=item.goodsImgPath;
+						}
+						//第一部分(订单编号、日期、物流状态)
+						var firstHtml='<div id="divList_'+item.id+'"><div class="block">'
+					        	+'<div class="color-gray-light" style="padding:5px 10px"><table width="100%"><tr><td align="left"><div>订单编号：'
+					        	+item.trackingNo+'</div></td><td align="left">'+changeDisplay_one(item.updateTime)+'</td><td align="right">'
+					        	+changeDisplay_two(item.expressStatus)+'</td></tr></table></div><div style="height:1px" class="block-sep">&nbsp;</div><div style="padding:1px"></div>'
+					        	+'<div style="height:2px"></div>';
+					        	
+						//第二部分(商品相关:图片、描述、单价、数量等)
+						var secondHtml='<div style="padding:5px;"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="90px">'
+				        	+'<div style="position:relative;width:80px;padding-left:8px;"><img style="max-width:80px;max-height:80px" src='
+				        	+'"http://116.62.47.157/ins/resource/' +imgPath+'" /></div></td><td valign="top" style="position:relative;">'
+				        	+'<div class="color-gray-dark font-size-l" style="max-height:33px;overflow:hidden;text-align:left;padding:3px;">'
+				        	+item.name+'</div><div class="color-gray-light font-size-l" style="text-align:left;padding:3px;">'
+				        	+item.attrText+'&nbsp;</div><div style="text-align:left"></div><div class="font-size-l" style="text-align:left;padding:3px;">'
+				        	+'<table width="100%"><tr><td align="left"><div class="font-size-l"><span>¥ '+item.price+'</span></div></td><td align="right">'
+				        	+'</td></tr></table></div></td><td width="40px" valign="bottom" align="right"><div class="color-gray-dark" '
+				        	+'style="font-size:16px;padding-right:10px;">x '+item.number+'</div></td></tr></table></div><div style="height:1px" '
+				        	+'class="block-sep">&nbsp;</div>';
+						
+				        //第三部分(订单金额、收货地址)
+				        var thirdHtml='';
+						if(item.isReal==0){
+							//虚拟物品 (无收货地址)
+							thirdHtml='<div class="font-size-l color-gray-light" style="padding:5px 10px">'
+					        	+'<table width="100%"><tr><td align="left">订单金额</td><td align="left">￥ '
+					        	+item.orderAmt+'</td><td>&nbsp;</td></tr></table></div><div style="'
+					        	+'height:1px" class="block-sep">&nbsp;'+item.orderStatus+'</div>';
+						}else if(item.isReal==1){
+							//实物
+							thirdHtml='<div id="ua_0_'+item.id+'" style="display:none">'
+					        	+'<div class="font-size-l color-gray-dark" style="padding:5px 8px;line-height:16px;text-align:left;">'
+					        	+'<p><span style="font-weight:bolder;">收件人：</span><span>'+item.receiverName+'&nbsp;'+item.receiverMobile+'</span></p>'
+					        	+'<p><span style="font-weight:bolder;">省市区：</span><span>'+item.receiverProvinceId+'&nbsp;'+item.receiverCityId
+					        	+'</span></p><p><span style="font-weight:bolder;">详细地址：</span><span>'+item.receiverAddress
+					        	+'</span></p></div><div style="height:1px" class="block-sep">&nbsp;</div></div><div class="font-size-l color-gray-light" style="padding:5px 10px">'
+					        	+'<table width="100%"><tr><td align="left">订单金额</td><td align="left">￥ '+item.orderAmt+'</td><td align="right">'
+					        	+'<span class="font-size-l" style="color:gray" onclick="toggleUA(\'ua_0_'+item.id+'\')">收货地址</span></td></tr></table>'
+					        	+'</div><div style="height:1px" class="block-sep">&nbsp;</div>';
+						}else{
+							//error
+						}
+						
+				        //第四部分(取消订单、立即付款)
+				        var tdset = '';
+			        	if(item.expressStatus==0){
+			        		//待付款
+			    			tdset='<td align="right" width="80px"><div class="round bg-blue button" style="height:30px;line-height:30px;text-align:center;" onclick="repay('+item.id+', 101, false)">立即付款</div></td>';
+			    		}else if(item.expressStatus==1){
+			    			//待发货
+			    			tdset='<td align="right" width="80px"><div class="round bg-blue button" style="height:30px;line-height:30px;text-align:center;" onclick="repay('+item.id+', 101, false)">查看物流</div></td>';
+			    		}else if(item.expressStatus==2){
+			    			//待收货
+			    			tdset='<td align="right" width="80px"><div class="round bg-blue button" style="height:30px;line-height:30px;text-align:center;" onclick="repay('+item.id+', 101, false)">确认收货</div></td>';
+			    		}else if(item.expressStatus==3){
+			    			//已完成
+			    			tdset='<td align="right" width="80px"><div class="round bg-blue button" style="height:30px;line-height:30px;text-align:center;" onclick="repay('+item.id+', 101, false)">立即评价</div></td>';
+			    		}else{
+			    			//error
+			    		}
+				        var fourthHtml='<div style="padding:5px 10px"><table width="100%"><tr>'
+				        	+'<td align="right"><span class="font-size-l" style="color:gray" onclick="cancelOrder('+item.id+');">取消订单&nbsp;&nbsp;</span>'
+				        	+'</td>'+tdset+'</tr></table></div></div><div class="gap-small"></div></div></div>';
+				        //增加div高度(优化浏览效果)
+				        if(i==orderList.length-1){
+				        	fourthHtml+='<br/><br/><br/><br/><br/>';
+				        }
+						html+= firstHtml+secondHtml+thirdHtml+fourthHtml;
+						
+					}
+					$("#orders_"+showTab).html(html);
+				}
+			}
+		})
+		
+		
+	}
+	
+	var count = 5;
+	var showTab = 0;
+	function show (id,expressStatus) 
+	{
+		showTab = id;
+		for (var i = 0; i < count; i++)
+		{
+			try 
+			{
+				_('selected_subline_' + i).className = '';
+				_('orders_' + i).style.display = 'none';
+			}
+			catch (e) {}
+		}
+
+		if (id < count)
+		{
+			try 
+			{
+				_('selected_subline_' + id).className = 'bg-black-light';
+				_('orders_' + id).style.display = 'block';
+				loadHtml(showTab,expressStatus);
+			}
+			catch (e) {}
+		}
+		
+	}
+	
+	
+	
+	/*
+	 * ===== repay =====
+	 */
+	var submitPayType = null;
+	var submitOrderId = 0;
+	var possibleRadioNames = ['pay101', 'pay102', 'pay201', 'pay202','pay301', 'pay302'];
+	function radioGroupSelect(selected)
+	{
+		var radios = [];
+		for (var i = 0; i < possibleRadioNames.length; i++)
+		{
+			var r = _(possibleRadioNames[i]);
+			radios.push(r);
+		}
+		// var radios = [_('pay101'), _('pay102'), _('pay201'), _('pay202')];
+		var selectedImg = 'images/selected.png';
+		var unselectedImg = 'images/unselected.png';
+
+		for (var i = 0; i < radios.length; i++)
+		{
+			try {radios[i].src = unselectedImg;} catch (e) {}
+		}
+		try {selected.src = selectedImg;} catch (e) {}
+	}
+	function setPayType(type)
+	{   
+		// _('payType').value = type;
+		var radioName = 'pay' + type;
+		if (!_(radioName))
+		{
+			// 只有一个，默认选上
+			var count = 0;
+			var name = null;
+			for (var i = 0; i < possibleRadioNames.length; i++)
+			{
+				var r = _(possibleRadioNames[i]);
+				if (r)
+				{
+					count++;
+					name = possibleRadioNames[i];
+				}
+			}
+			if (count == 1)
+			{
+				type = parseInt(name.replace(/pay/g, ''));
+			}
+		}
+		submitPayType = type;
+		radioGroupSelect(_('pay' + type));
+	} 
+
+	function repay(orderId, payType, promotionExpired)
+	{
+	    if(promotionExpired)
+	    {
+	        if(!confirm('订单中的优惠活动已经结束，将按照正常价格进行结算，是否继续支付？'))
+	        {
+	            return;
+	        }
+	    }
+		_('payTypeSelectPanel').style.display = 'block';
+		submitOrderId = orderId;
+		setPayType(payType);
+	}
+
+	function submitRepay()
+	{
+		if (!submitPayType || !submitOrderId)
+		{
+			return;
+		}
+
+		window.location.href = rndUrl("/m/order/repay?orderId=" + submitOrderId + "&payType=" + submitPayType);
+		closePayTypeSelectPanel();		
+	}
+
+	function closePayTypeSelectPanel()
+	{
+		submitPayType = null;
+		submitOrderId = 0;
+		_('payTypeSelectPanel').style.display = 'none';
+	}
+
+	/*
+	 * ===== comments =====
+	 */
+	var starLight = 'images/star_light.png';
+	var starGray  = 'images/star_gray.png';
+
+	var currentCommentOrderId = 0;
+	var currentCommentItemId = 0;
+	var currentCommentSubItemId = 0;
+	var currentCommentScore = 5;
+	function openCommentPage(orderId) {
+	    var url = '/m/order/make_comment?userOrderId=' + orderId;
+	    window.location.href = rndUrl(url);
+    }
+	function showComment(orderId, itemId, subItemId)
+	{
+		var showPanel = function (panel)
+		{
+			var statusPanels = [_('displayCommentPanel'), _('addCommentPanel'), _('displayCommentLoadingPanel'), _('displayCommentLoadErrorPanel')];
+			for (var i = 0; i < statusPanels.length; i++)
+			{
+				statusPanels[i].style.display = 'none';
+			}
+			panel.style.display = 'block';
+		}
+
+		var panel = _('commentPanel');
+		panel.style.display = 'block';
+
+		showPanel(_('displayCommentLoadingPanel'));
+		console.log("curScore = " + currentCommentScore);
+
+		function onSuccess(json)
+		{
+			try
+			{
+				var res = JSON.parse(json);
+				console.info(res);
+				var errorCode = res.errorCode;
+				if (errorCode != 0)
+				{
+					onError(res, errorCode);
+					return;
+				}
+				var comment = res.comment;
+				var score = res.score ? res.score : 5;
+				if (!comment)
+				{
+				    score = 5;
+				    falseGradeTag(_('commentScore1'));
+				    falseGradeTag(_('commentScore3'));
+				    trueGradeTag(_('commentScore5'));
+					showPanel(_('addCommentPanel'));
+					return;
+				}
+				else
+				{
+					_('commentDetail').innerHTML = comment;
+					var scoreTag;
+					if(score == 1)scoreTag = "差评";
+					else if(score === 2 || score === 3) scoreTag = "中评";
+					else scoreTag = "好评";
+					_('commentScore').innerHTML = scoreTag;
+					showPanel(_('displayCommentPanel'));
+					return;
+				}
+
+			}catch (e)
+			{
+				showPanel(_('displayCommentLoadErrorPanel'));
+			}
+
+		}
+		function onError(response, status)
+		{
+			showPanel(_('displayCommentLoadErrorPanel'));
+		}
+
+		currentCommentOrderId = orderId;
+		currentCommentItemId = itemId;
+		currentCommentSubItemId = subItemId;
+		var url = rndUrl('/m/comment/get?orderId=' + orderId + '&itemId=' + itemId + '&subItemId=' + subItemId);
+		new Ajax().get(url, onSuccess, onError);
+	}
+
+	function closeCommentPanel()
+	{
+		currentCommentOrderId = 0;
+		currentCommentItemId = 0;
+		currentCommentSubItemId = 0;
+		currentCommentScore = 5;
+
+		var panel = _('commentPanel');
+		panel.style.display = 'none';
+
+		_('commentInput').disabled = '';
+		_('commentInput').value = '';
+		_('submitCommentBtn').style.display = 'block';
+		_('submittingCommentBtn').style.display = 'none';
+
+	}
+
+	function submitComment()
+	{
+		if (!currentCommentOrderId || !currentCommentItemId || !currentCommentSubItemId)
+		{
+			return;
+		}
+
+		var comment = _('commentInput').value;
+		if (!comment || comment.length < 1)
+		{
+			alert('请填写评论内容');
+			return;
+		}
+
+		_('commentInput').disabled = 'true';
+		console.info(comment);
+
+		_('submitCommentBtn').style.display = 'none';
+		_('submittingCommentBtn').style.display = 'block';
+
+		function onSuccess(json)
+		{
+			try
+			{
+				var res = JSON.parse(json);
+				console.info(res);
+				if (res.errorCode == 0)
+				{
+					closeCommentPanel();
+					alert('提交成功');
+				}
+				else
+				{
+					onError(json, -1);
+				}
+			}
+			catch (e)
+			{
+				onError(json, -1);
+			}
+		}
+		function onError(response, status)
+		{
+			alert('提交评论出错');
+			_('commentInput').disabled = '';
+			_('submitCommentBtn').style.display = 'block';
+			_('submittingCommentBtn').style.display = 'none';
+		}
+
+		var url = rndUrl('/m/comment/add');
+		var data = {
+			'orderId'   : currentCommentOrderId, 
+			'itemId'    : currentCommentItemId, 
+			'subItemId' : currentCommentSubItemId, 
+			'comment'   : comment,
+			'score'     : currentCommentScore,
+		};
+		new Ajax().post(url, data, onSuccess, onError);
+	}
+
+	function commentStar(score)
+	{
+		if (score <= 0 || score > 5)
+		{
+			return;
+		}
+		if(score === 4)score = 5;
+		if(score === 2)score = 3;
+		falseGradeTag(_('commentScore1'));
+		falseGradeTag(_('commentScore3'));
+		falseGradeTag(_('commentScore5'));
+		trueGradeTag(_('commentScore'+score));
+        currentCommentScore = score;
+	}
+	function falseGradeTag(tag) {
+	    tag.style.background = '0';
+	    tag.style.color = '#a3a2a3';
+    }
+    function trueGradeTag(tag) {
+	    tag.style.background = '#40a2dc';
+	    tag.style.color = 'white';
+    }
+</script>
+
+<script type="text/javascript">
+    var transTraceModal = _("trans_trace_modal");
+   	var transTraceTitle = _("trans_trace_modal_title");
+   	var transTraceClose = _("trans_trace_modal_close");
+   	var transTraceDetail= _("trans_trace_modal_detail");
+
+   	transTraceDetail.onscroll = function(e){
+   		console.log('scrolling')
+   		return false;
+   	};
+
+   	transTraceClose.onclick = function(){
+   		transTraceModal.style.display = "none";
+   		transTraceTitle.innerHTML = "";
+   		transTraceDetail.innerHTML = "";
+   	};
+
+   	function showTransportTrace(orderId, transType, transNo)
+	{
+		var errMsg = '获取物流信息失败，请稍后重试！';
+		new Ajax().post(rndUrl('/m/order/transport_trace'), {userOrderId:orderId}, function(json){
+			console.log(orderId, json);
+			try
+			{
+				var strJson = JSON.parse(json);
+				var traceList = JSON.parse(strJson);
+			}
+			catch(e)
+			{
+				console.log(json);
+				traceList = [];
+			}
+			transTraceModal.style.display = "block";
+			transTraceTitle.innerHTML = transType + "-" + transNo;
+
+			if(!traceList.length)
+			{
+				transTraceDetail.innerHTML = '<div style="text-align:center">暂无物流信息，请稍后关注</div>';
+				return;
+			}
+
+			var html = "";
+			for(var i=traceList.length-1; i>=0; i--)
+			{
+				var detail = traceList[i];
+				var time = detail["time"]?detail["time"]:detail[":time"];
+				var status = detail["status"]?detail["status"]:detail[":status"];
+				var extra = detail["extra"]?detail["extra"]:detail[":extra"];
+
+				time = escapeHtml(time);
+				status = escapeHtml(status);
+				extra = escapeHtml(extra);
+
+				html += '<div style="margin:5px 0px;text-align:left;border-bottom:1px dashed lightgray">';
+				html += '<span>' + time +'&nbsp;&nbsp;</span>';
+				html += '<span>' + status +'&nbsp;&nbsp;</span>';
+
+				if(extra)
+				{
+					html += '<span>' + extra +'</span>';
+				}
+
+				html += '</div>';
+			}
+
+			transTraceDetail.innerHTML = html;
+		}, function(response, status){
+			console.log(response);
+			alert(errMsg);
+		});
+	}
+
+	function escapeHtml(str)
+	{
+		if(!str)
+		{
+			return str;
+		}
+
+		return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g,"&lt;").replace(/>/g,"&gt;");
+	}
+
+	//取消订单
+	function cancelOrder(orderId)
+	{
+		  //询问框
+		  layer.open({
+		    content: '你确定要取消订单吗'
+		    ,btn: ['是的', '否']
+		    ,yes: function(index){
+		    	$.postApi("mall.order.cancel",{"orderId":orderId}, function(res){
+		    		if(res.errno==0){
+						app.msg('操作成功');
+						setTimeout(function(){  //使用  setTimeout（）方法设定定时2000毫秒
+							window.location.reload();//页面刷新
+						},2000);
+					}else{
+						app.msg('操作失败，请稍后重试！');
+					}
+				});
+		      layer.close(index);
+		    }
+		  });
+		
+	}
+	function cancel(orderId){
+		
+		/* $.postApi("mall.order.cancel",{"orderId":orderId}, function(json){
+			try
+			{
+				var data = JSON.parse(json);
+				if(!data || data["errorCode"])
+				{
+					alert(errMsg);
+                       return;
+				}
+
+				
+				for(var i = 0; i < 4; i++)
+				{
+					try
+					{
+						var block = _("order_block_"+orderId+"_"+i);
+						if(block)
+						{
+							block.style.display = "none";
+						}
+					}
+					catch(e)
+					{
+						//do nothing
+					}
+				}
+				
+
+				return;
+			}
+			catch(e)
+			{
+				console.log(json, e);
+				alert(errMsg);
+				return;
+			}
+			if(res.errno==0){
+				var orderList = res.data.orderList;
+				if(orderList && orderList.length>0) {
+					
+				}
+			}
+
+		}, function(response, status){
+			console.log(response);
+			alert(errMsg);
+		}); */
+	}
+
+	function refundOrder(orderId)
+	{
+		var errMsg = '正在等待第三方支付确认，请稍后重试！';
+		new Ajax().post(rndUrl('/m/order/refund'), {userOrderId:orderId}, function(json){
+			try
+			{
+				var data = JSON.parse(json);
+				if(!data || data["errorCode"])
+				{
+					alert(errMsg);
+					return;
+				}
+
+				window.location.reload();
+
+				return;
+			}
+			catch(e)
+			{
+				console.log(json, e);
+				alert(errMsg);
+				return;
+			}
+
+		}, function(response, status){
+			console.log(response);
+			alert(errMsg);
+		});
+	}
+
+	function receiveOrder(orderId)
+	{
+		if(!confirm('请确认您已经收到快递!\n确认收货吗？'))
+		{
+			return false;
+		}
+
+		window.location.replace(rndUrl("/m/order/received?tab="+showTab+"&orderId=" + orderId));
+	}
+
+	function toggleUA(uaId)
+	{
+		var uaDiv = _(uaId);
+		if(!uaDiv) return;
+
+		var shown = (uaDiv.style.display == "block");
+
+		if(shown)
+		{
+			uaDiv.style.display = "none";
+		}
+		else
+		{
+			uaDiv.style.display = "block";
+		}
+	}
+   </script>
+    	
+</html>

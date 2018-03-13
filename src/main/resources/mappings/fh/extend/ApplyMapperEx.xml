@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.fh.mapperEx.ApplyMapperEx" >
+	<resultMap id="BaseResultMap" type="com.fh.fh.modelEx.ApplyEx" extends="com.fh.fh.mapper.ApplyMapper.BaseResultMap">
+	</resultMap>
+
+	<select id="selectApplys" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		a.apply_id AS apply_id,
+		a.course_id AS course_id,
+		a.name AS name,
+		a.tel AS tel,
+		a.training_type AS training_type,
+		a.business_circle AS business_circle,
+		a.create_time AS create_time,
+		c.course_name AS courseName
+		FROM
+		fh_course c,
+		fh_apply a
+		WHERE
+		c.course_id = a.course_id
+		<if test="courseName !=null and courseName != ''">
+			and c.course_name LIKE #{courseName}
+		</if>
+		ORDER BY
+		a.create_time DESC
+	</select>
+</mapper>

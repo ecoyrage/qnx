@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>    
+<meta name="referrer" content="always" />
+<meta charset='utf-8' />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+	<link rel="stylesheet" type="text/css" href="css/my.css" />
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="js/app.js?v=20170918"></script>
+    <title>确认订单</title>
+</head>
+
+<body>
+    <div id="address_flag" style="background-image:url(images/post_addr_line.png);background-size:contain;height:5px"></div>
+
+    <div id="main_panel" style="background-color: white;">
+
+        <!-- 收件人信息 start-->
+        
+        <div style="padding:8px 15px;position:relative;" onclick="selectUserAddress()">
+            <div id="user_address_section" style="display: inline-block;">
+                    <div>
+                        <span>收货地址</span>
+                    </div>
+                    <div style="font-size:12px;margin-top:3px;" id="fullAddress">您还没有收货地址，请点击添加</div>
+                    <input type="hidden" value="" id="addressId">
+            </div>
+            <div style="position:absolute;right:15px;top: 50%;transform: translate(0,-50%);-webkit-transform: translate(0,-50%);">
+                <img src="images/right.png" style="height:12px;display:block">
+            </div>
+        </div>
+    
+        
+
+        <div class="gap-small" style="padding:3px"></div>
+
+        <!-- 商品列表 start-->
+        <div class="items-list" id="goodsList">
+            <!-- 订单物品详情 start-->
+            	<!-- 
+                <div class="item">
+                    <div class="item-img">
+                        <img src="images/1500455575784.jpg"/>
+			                        活动标签显示 start
+			                        活动标签显示 end
+                    </div>
+                    <div class="item-primary-info">
+                        <div class="item-title">笔记本</div>
+                        <div class="item-count">x 1</div>
+                    </div>
+                    <div class="item-sub-info">
+                        <div class="item-sub-title">
+                        </div>
+                        <div class="item-price">
+			                            活动价格显示 start
+			                            活动价格显示 end
+                            <span>¥ 19.00</span>
+                        </div>
+                    </div>
+                </div>
+            	 -->
+            <div class="block-sep" style="height:1px"></div>
+            <!-- 订单物品详情 end-->
+        </div>
+        <!-- 商品列表 end-->
+
+        <!-- 订单汇总信息 start-->
+        <div class="price-summary">
+            <div class="price-info">
+                <div>商品总价</div>
+                <div>¥ <span id="orderAmt">0.00</span></div>
+            </div>
+            <div  class="price-info">
+                <div>邮费<span style="color:#F4C10D;font-size: 13px;" id="expressFreeTip"></span></div>
+                <div style="color:#4A92E6;">¥ <span id="expressAmt">0.00</span></div>
+            </div>
+            <!-- <div  class="price-info">
+                <div>优惠</div>
+                <div style="color:#FF726C;">- ¥0.00</div>
+            </div> -->
+        </div>
+        <!-- 订单汇总信息 end-->
+		
+        <div class="gap-small" style="padding:3px"></div>
+
+        <!-- 订单信息隐藏form end -->
+
+        <!-- 支付信息 start -->
+        <div class="pay-info">
+            <!-- 留言 start-->
+            <div class="order-memo">
+                <div>给卖家留言：</div>
+                <div>
+                    <input id="userNote" value="" type="text" placeholder="在这里说明您的要求哦~~"/>
+                </div>
+
+            </div>
+            <!-- 留言 end-->
+
+            <!-- 代金券 start -->
+            
+            <!-- 代金券 end -->
+
+            <!-- 支付方式 start-->
+            <div class="pay-type-list">
+                <div >支付方式</div>
+                	<div class="pay-type">
+                        <div>账户余额</div>
+                        <div style="color:#FF0000;">¥ <span id="accountAmt">0.00</span></div>
+                        <div onclick="setPayType('accountpay')"><img id="radio_accountpay" src="images/unselected.png"/></div>
+                    </div>
+                	<!-- 客户端支付 start-->
+                    <div class="pay-type">
+                        <div>
+                            <img src="images/alipay.png">
+                        </div>
+                        <div>支付宝</div>
+                        <div onclick="setPayType('alipay')"><img id="radio_alipay" src="images/unselected.png"/></div>
+                    </div>
+	                <!-- 客户端支付 end-->
+	                <!-- 网页支付 start-->
+                    <div class="pay-type">
+                        <div>
+                            <img src="images/wxpay.png">
+                        </div>
+                        <div>微信支付</div>
+                        <div onclick="setPayType('wxpay')"><img id="radio_wxpay" src="images/unselected.png"/></div>
+                    </div>
+                
+                <!-- 网页支付 end-->
+            </div>
+        </div>
+        <!-- 支付信息 end -->
+
+        <!-- 底部栏 start-->
+        <div style="height:52px;background-color: white;">&nbsp;</div>
+        <div class="confirm-bar">
+            <div class="confirm-btn" id="toPay">付款</div>
+            <div class="confirm-price">
+                <span style="color:#666666">实付：</span>
+                <span style="color:#ec726c;margin-right:20px;">¥ <span id="payAmt">0.00</span></span>
+            </div>
+        </div>
+        <!-- 底部栏 end-->
+    </div>
+    <!-- main panel end -->
+</body>
+<script type="text/javascript">
+app.showLoading();
+var payFor = '';
+var payType = '';
+var canAccountpay = 0;//
+var orderId = getQueryString("orderId");
+var goodsId = getQueryString("goodsId");
+var addressId = getQueryString("addressId");
+var confirm = false;
+function payConfirm(){
+	$.postApi("mall.order.payConfirm",{"orderId":orderId, "goodsId":goodsId, "addressId":addressId},function(res){
+	  	app.hideLoading();
+	   	if(res.errno==0){
+	   		confirm = true;
+	  		var data = res.data;
+	  		payFor = data.payFor;
+	  		canAccountpay = data.canAccountpay;
+			$("#payAmt").html(toAmtStr(data.payAmt));
+			$("#accountAmt").html(toAmtStr(data.accountAmt));
+			
+			$("#expressAmt").html(toAmtStr(data.expressAmt));
+			$("#orderAmt").html(toAmtStr(data.orderAmt));
+			//$("#expressFreeTip").html("（满"+data.expressFreeAmt+"包邮）");
+			if(data.address){
+				$("#addressId").val(data.address.id);
+				$("#fullAddress").html(data.address.fullAddress);
+			}
+			if(payFor=="goods"){
+				var item = data.goods;
+				var html = '<div class="item"><div class="item-img"><img src="'+app.imgHost+item.goodsImg+'"/></div>'
+					+'<div class="item-primary-info"><div class="item-title">'+item.goodsTitle+'</div><div class="item-count">x 1</div></div>'
+					+'<div class="item-sub-info"><div class="item-sub-title"></div><div class="item-price"><span>¥ '+toAmtStr(item.goodsPrice)+'</span></div></div></div>';
+				$("#goodsList").html(html);
+			}
+	   	}else{
+	   		confirm = false;
+			//app.msg(res.errmsg);
+			app.alert(res.errmsg, function(){
+				location.href = history.go(-1);
+			});
+	   	}
+	});
+}
+payConfirm();
+
+function setPayType(type){
+	payType = type;
+	$("#radio_accountpay,#radio_alipay,#radio_wxpay").attr("src", "images/unselected.png");
+	$("#radio_" + type).attr("src", "images/selected.png");
+}
+
+function toPay(orderId, token){
+	if(payType == 'accountpay'){
+		app.showLoading();
+		$.postApi("mall.order.accountPay",{"orderId":orderId},function(res){
+			app.hideLoading();
+			if(res.errno==0) {
+				if(res.data.status=="PAY_SUCCESS"){
+					//支付成功页面
+					location.href = "pay_success.html?orderId=" + orderId;
+				}
+			}else{
+				app.msg(res.errmsg);
+			}
+		});
+	}else{
+		location.href = "/ins/pay/orderPay?token=" + token + "&payType=" + payType + "&orderId=" + createdOrderId;
+	}
+}
+
+var createdOrderId = "";
+$("#toPay").on("click",function(){
+	if(!confirm){
+		payConfirm();
+		return;
+	}
+	var addressId = $("#addressId").val();
+	if(isEmpty(addressId)){
+		app.msg("请添加收货地址！");
+		return;
+	}
+	if(payType == '') {
+		app.msg("请选择支付方式！");
+		return;
+	}
+	if(payType == 'wxpay'){
+		app.msg("请使用其他支付方式");
+		return;
+	}
+	var token = app.getToken();
+	if(token && token != '') {
+		if(payType == 'accountpay'){
+			if(canAccountpay == 0){
+				app.msg("账户余额不足！");
+				return;
+			}
+		}
+		if(payFor == 'goods') {
+			if(createdOrderId && createdOrderId != "") {
+				toPay(createdOrderId);
+			}else{
+				app.showLoading();
+				var userNote = $("#userNote").val();
+				$.postApi("mall.order.createOrder",{"goodsId":goodsId,"number":1,"addressId":addressId,"userNote":userNote},function(res){
+					app.hideLoading();
+					if(res.errno == 0) {
+						createdOrderId = res.data;
+						toPay(createdOrderId, token);
+					}else{
+						app.msg(res.errmsg);
+					}
+				});
+			}
+		}else{
+			location.href = "/ins/pay/orderPay?token=" + token + "&payType=" + payType + "&orderId=" + orderId;
+		}
+	}
+});
+
+function selectUserAddress(){
+	location.href = "myAddress.html?redirect=" + encodeURIComponent(location.href);
+}
+</script>
+</html>

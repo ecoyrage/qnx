@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.fh.mapperEx.SchoolMapperEx" >
+	<resultMap id="BaseResultMap" type="com.fh.fh.modelEx.SchoolEx" extends="com.fh.fh.mapper.SchoolMapper.BaseResultMap">
+	</resultMap>
+
+	<select id="selectSchoolList" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		s.*
+		FROM
+		fh_school s
+		WHERE
+		1 = 1
+		<if test="name !=null and name != ''">
+			and s.name Like #{name}
+		</if>
+		<if test="trainingType !=null and trainingType != ''">
+			and s.training_type Like #{trainingType}
+		</if>
+		<if test="businessCircle !=null and businessCircle != ''">
+			and s.business_circle Like #{businessCircle}
+		</if>
+		<if test="type !=null and type != '' and type==0">
+			ORDER BY
+			s.create_time DESC
+		</if>
+		<if test="type !=null and type != '' and type==1">
+			ORDER BY
+			s.hot DESC
+		</if>
+	</select>
+</mapper>

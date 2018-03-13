@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>课程列表</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="js/app.js?v=20170918"></script>
+</head>
+
+<body>
+<div style="position:fixed;left:0;right:0;top:0;z-index:999"> 
+
+  <form id="search_form" name="search_form" action="#" method="get" onsubmit="return searchValidate(this);" style="position:relative;box-sizing:border-box;height:51px;width:100%;padding:16px 16px 4px 16px;background-color:white;">
+    <input type="search" name="q" value="" placeholder="搜索商品" style="box-sizing:border-box;width:100%;height:100%;border:none;border-radius:6px;padding-left:10px;padding-right:10px;-webkit-appearance: none;background:#f4f4f4;color:#666666;font-size:11.5px;font-family:"PingFang SC", PingFangSC,Helvetica,sans-serif;"/>
+    <img src="images/serch.png" onclick="submitSearchForm()" style="position:absolute;top:21px;right:25px;border:none;width:20px" />
+  </form>
+      <script>
+var scrollBase = 0;
+window.onscroll = function() {
+	var s = window.pageYOffset;
+	var d = s - scrollBase;
+	scrollBase = s;
+
+	var form = document.getElementById("search_form");
+	if (s > 0 && d > 5)
+		form.style.display = "none";
+	else if (d < -5)
+		form.style.display = "block";
+}
+</script> 
+</div>
+<div id="main_list" style="margin: 55px 0 20px 0">
+  <div class="section"> 大咖课程 <span style="float:right; font-size:12px; color:#BDBDBD; margin-right:20px;"> <a href="goodslist.html?cgykey=star_course">查看全部 ></a></span></div>
+  <div style="background-color:#999;height:1px"></div>
+  <div>
+  
+	<div class="item_list_jsp" style="overflow:hidden" id="starCourseDiv"> 
+		<!-- <a class="item" href="#"> <img src="images/daka.jpg" />
+			<div class="text">
+				<div class="name">课程名称</div>
+				<div class="desc">简介详情简介详情简介详情简介详情...</div>
+				<div class="price">¥ 3.00</div>
+			</div>
+		</a> -->
+	</div>
+  </div>
+  <div class="blank"></div>
+  <div class="section"> 专栏订阅 <span style="float:right; font-size:12px; color:#BDBDBD; margin-right:20px;"><a href="goodslist.html?cgykey=ins_column">查看全部 ></a></span></div>
+  <div style="background-color:#999;height:1px"></div>
+  <div>
+	<div class="item_list_jsp" style="overflow:hidden" id="columnDiv"> 
+		<!-- <a class="item" href="#"> <img src="images/1500455575784.jpg" />
+			<div class="text">
+			<div class="name">办公本子</div>
+			<div class="desc">需不需要我，都在</div>
+			<div class="price">¥ 3.00</div>
+			</div>
+		</a> -->
+	</div>
+   </div>
+</div>
+ 
+<div style="position:fixed;right:15px;bottom:15px"> <a id="foot_tab_image_0" href="#" style="display:block;overflow:hidden;width:50px;height:50px;margin-top:5px;"> <img src="images/1495093688470.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+    <div id="reddot-cart" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px"> </div>
+  </div>
+  </a> <a id="foot_tab_image_1" href="#" style="display:block;overflow:hidden;width:50px;height:50px;margin-top:5px;"> <img src="images/1495093725773.png" style="width:100%;margin:auto;display:block;opacity: 0.92;"/>
+  <div style="position:relative;width:21px;height:31.5px;margin:auto;margin-top:-32px">
+    <div id="reddot-mine" style="display:none;position:absolute;top:0;right:0;background-color:red;border-radius:2.5px;height:5px;width:5px"> </div>
+  </div>
+  </a> </div>
+<div style="font-size:10px;padding:5px;margin-bottom:15px;text-align:center;line-height:15px;
+    color:gray;background-color:#ffffff;color:#7B7B7B;">
+      <div> 增值电信业务经营许可证 </div>
+      <div>保道商城&nbsp;© 2017 - 2018 baodao.com</div>
+    </div>
+</body>
+<script>
+function searchValidate(form)
+{
+	if (form.q != null && form.q.value != null && form.q.value.trim() != '')
+		return true;
+
+	alert('搜索内容不能为空');
+	return false;
+}
+function submitSearchForm()
+{
+	var form = document.getElementById("search_form");
+	if (searchValidate(form)) form.submit();
+}
+
+$.postApi("mall.goods.courseIndex",function(res){
+   	if(res.errno==0 && res.data){
+   		var courseIndex = res.data;
+		//大咖课程
+   		var courseList = courseIndex.courseList;
+   		var columnList = courseIndex.columnList;
+   		
+   		var courseHtml = '';
+   		for (var i = 0; i < courseList.length; i++) {
+			var row = courseList[i];
+			courseHtml += '<a class="item" href="course_detail.html?id='+row.id+'"> <img src="'+app.imgHost+row.goodsImg+'" /><div class="text">'
+				+'<div class="name">'+row.goodsTitle+'</div>'
+				+'<div class="desc">'+row.goodsBrief+'</div>'
+				+'<div class="price">¥ '+row.goodsPrice+'</div></div></a>';
+		}
+   		$("#starCourseDiv").append(courseHtml);
+   		//专栏
+   		var columnHtml = '';
+   		for (var i = 0; i < columnList.length; i++) {
+			var row = columnList[i];
+			columnHtml += '<a class="item" href="column_detail.html?id='+row.id+'"> <img src="'+app.imgHost+row.goodsImg+'" /><div class="text">'
+				+'<div class="name">'+row.goodsTitle+'</div>'
+				+'<div class="desc">'+row.goodsBrief+'</div>'
+				+'<div class="price">¥ '+row.goodsPrice+'</div></div></a>';
+		}
+   		$("#columnDiv").append(columnHtml);
+   	}
+});
+
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="referrer" content="always" />
+<meta charset='utf-8' />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/my.css" />
+<link rel="stylesheet" type="text/css" href="css/address.css" />
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+    <script type="text/javascript" src="js/app.js?v=20170921"></script>
+<script type="text/javascript">var _=function(id){return document.getElementById(id)};</script>
+<title>地址管理</title>
+</head>
+
+<body>
+<div style="background-image:url(images/post_addr_line.png);background-size:contain;height:5px"></div>
+<div> 
+  <!-- begin of 地址选择相关模板 -->
+  <div class="uam-panel" id="uam_panel" style="display: block;">
+    <div class="uam-panel-list" id="addressList">
+		<div class="ual-panel-row">
+		    <div id="uam_panel_list_detail_8718559">
+		      <div class="address-detail-line">
+		        <div>test</div>
+		        <div>18888888888</div>
+		      </div>
+		      <div class="address-detail-line"> 北京 北京 东城 test </div>
+		    </div>
+		    <div class="address-detail-line">
+		      <div><img style="opacity:1" src="images/selected.png">&nbsp;&nbsp;&nbsp;默认地址</div>
+		      <div> <img src="http://mall1.bczcdn.com/rc201603281546/image/items/m/uploads/1499761858679.png" id="uam_panel_list_del_8718559"> <img src="http://mall1.bczcdn.com/rc201603281546/image/items/m/uploads/1499761901582.png" style="margin-left:40px;" id="uam_panel_list_edit_8718559"> </div>
+		    </div>
+		</div>
+    </div>
+    
+    <!-- 底部栏 start-->
+    <div class="an-footer-bar">
+      <div class="an-large-btn" id="uam_panel_new" onclick="addAddress()">+ 新建地址</div>
+    </div>
+    <!-- 底部栏 end--> 
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+app.showLoading();
+$.postApi("mall.user.addressList", function(res){
+	app.hideLoading();
+	if(res.errno==0){
+		var addressList = res.data;
+		var html = '';
+		for (var i = 0; i < addressList.length; i++) {
+			var item = addressList[i];
+			html += '<div class="ual-panel-row default-'+item.isDefault+'" id=\''+item.id+'\'><div onclick="selectedAddress(\''+item.id+'\')"><div class="address-detail-line"><div>' 
+				+ item.name +'</div><div>'+item.mobile+'</div></div><div class="address-detail-line">'+ item.fullAddress +'</div></div><div class="address-detail-line">'
+				+'<div onclick="setDefaultAddress(\''+item.id+'\')"><img class="default-img" id="defaultImg_'+item.id+'" default="'+item.isDefault+'" style="opacity:1" src="images/'+ (item.isDefault==1?'selected.png':'unselected.png') +'">&nbsp;&nbsp;&nbsp;默认地址</div>'
+				+'<div><img src="images/1499761858679.png" onclick="deleteAddress(\''+item.id+'\')">'
+				+'<img src="images/1499761901582.png" style="margin-left:40px;" onclick="editAddress(\''+item.id+'\')">'
+				+'</div></div></div>';
+		}
+		$("#addressList").html(html);
+	}else{
+		app.msg(res.errmsg);
+	}
+});
+
+var redirect = getQueryString("redirect");
+function addAddress(){
+	location.href = "myAddressAdd.html?redirect=" + encodeURIComponent(redirect);
+}
+function deleteAddress(id){
+	app.confirm("您确定要删除该地址吗？",function(){
+		$.postApi("mall.user.deleteAddress", {"id":id}, function(res){
+			if(res.errno==0){
+				app.msg("删除成功");
+				$("#"+id).remove();
+			}else{
+				app.msg(res.errmsg);
+			}
+		});
+	});
+}
+function editAddress(id){
+	location.href = "myAddressEdit.html?editAddressId="+id+"&redirect=" + encodeURIComponent(redirect);
+}
+function setDefaultAddress(id){
+	var $this = $("#defaultImg_"+id);
+	var isDefault = $this.attr("default");
+	if(isDefault && isDefault == '0'){
+		$.postApi("mall.user.setDefaultAddress", {"id":id}, function(res){
+			if(res.errno==0){
+				$(".default-img").attr("default", "0");
+				$(".default-img").attr("src", "images/unselected.png");
+				app.msg("设置默认地址成功");
+				$this.attr("default", "1");
+				$this.attr("src", "images/selected.png");
+			}else{
+				app.msg(res.errmsg);
+			}
+		});
+	}
+}
+
+function selectedAddress(addressId){
+	if(!isEmpty(redirect)){
+		location.href = setURLArg(redirect, "addressId", addressId);
+	}
+}
+</script>
+</html>

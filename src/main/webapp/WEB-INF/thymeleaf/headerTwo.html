@@ -1,0 +1,81 @@
+<div th:fragment="headerTwo">
+    <!--页面顶部header 开始-->
+    <!--<div th:include="header::header"></div>-->
+    <div id="header" class="header-top">
+       <!-- <div class="top-mid clear">
+            <div class="fr top-left-li">
+                <a rel="nofollow" class="top-left-each-a inlineB" href="javascript:;">登录/注册</a>
+            </div>
+        </div>
+        <div class="top-mid2 clear" style="height:34px;line-height:34px;width:1200px; margin:0px auto;">
+            <div class="fr">
+                <a rel="nofollow" class="top-login-name2 " style="color: #f5c609;"  href="javascript:;">注销</a>
+            </div>
+            <div class="fr" style="margin-right:30px;">
+                <a rel="nofollow" class="inlineB" style="color: #888;" href="javascript:;">欢迎您登陆去哪儿学！</a>
+            </div>
+        </div>-->
+    </div>
+    <!--页面顶部header 结束-->
+    <!--pc端登录弹窗-->
+    <div class="loginMask" style="display:none;">
+        <div class="loginCon">
+            <span class="pop-close close" style="cursor:pointer;font-size: 20px">Ｘ</span>
+            <!--<span class="cancelLogin"></span>-->
+            <!--<div class="codeTxt02">密码登录<span class="codeTriangle"></span></div>-->
+            <!--<div class="codeTab"></div>-->
+            <div class="loginRegisted">
+                <ul class="clear">
+                    <li class="tabActive1">登录</li>
+                    <li class="tabActive2">注册</li>
+                    <!--<li>找回密码</li>-->
+                </ul>
+            </div>
+            <div class="loginTabBox">
+                <div class="loginAll">
+                    <div class="login-style01">
+                        <div class="passwordLogin">
+                            <div class="ipt01">
+                                <input type="text" placeholder="请输入帐号"id="tel" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength="11"/>
+                            </div>
+                            <div class="ipt02">
+                                <input type="password" placeholder="请输入密码" id="password"/>
+                            </div>
+                            <div class="rembpassword clear">
+                                <!--<div class="fl rp">
+
+                                    <a class="fgtpassword fr tabActive3" href="javascript:;">忘记密码?</a>
+                                </div>-->
+                                <!--<input type="checkbox" id="check01"/><label>记住密码</label>-->
+                            </div>
+                            <div class="lgbutton"><!--class="lgbutton"-->
+                                <button  onclick="loginCus()">登录</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--注册页面-->
+                <div class="reg regPage">
+                    <ul>
+                        <li><input type="text" placeholder="请输入手机号（必填）" id="recTel" name="tel" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength="11" required/></li>
+                        <li class="clear"><input type="text" id="vaidCode" placeholder="请确认验证码" class="VerificationCode fl"/><a href="javascript:void(0);" onclick="telPhone()" class="fr getVer">获取短信验证码</a></li>
+                        <li><input type="password" id="password1" placeholder="请输入密码（必填）"/></li>
+                        <li><input type="password" id="password2" placeholder="请确认密码（必填）"/></li>
+                        <!--<li><input type="checkbox" class="agree_"/>我已阅读并同意 <a href="" class="userAgreement">《厚学网用户协议》</a></li>-->
+                        <li><button class="Reg" onclick="regCus()">注册</button></li>
+                    </ul>
+                </div>
+                <!--找回密码-->
+                <div class="fPsw regPage">
+                    <ul>
+                        <li><input type="text" placeholder="请输入手机号（必填）"/></li>
+                        <li class="clear"><input type="text" placeholder="请确认验证码" class="VerificationCode fl"/><a href="" class="fr getVer">获取短信验证码</a></li>
+                        <li><input type="text" placeholder="请输入新密码（必填）"/></li>
+                        <li><button class="Reg">确认</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--pc端登录弹窗-->
+</div>

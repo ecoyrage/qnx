@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.fh.mapperEx.BannerMapperEx" >
+	<resultMap id="BaseResultMap" type="com.fh.fh.modelEx.BannerEx" extends="com.fh.fh.mapper.BannerMapper.BaseResultMap">
+	</resultMap>
+
+	<select id="selectBannerList" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		b.*
+		FROM
+		fh_banner b
+		WHERE
+		1 = 1
+		<if test="type !=null and type != ''">
+			and b.type = #{type}
+		</if>
+		ORDER BY
+		b.create_time ASC
+	</select>
+</mapper>

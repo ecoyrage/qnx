@@ -1,0 +1,411 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a:link {
+	color: #333;
+	text-decoration: none;
+}
+a:visited {
+	color: #333;
+	text-decoration: none;
+}
+a:hover {
+	color: #333;
+	text-decoration: none;
+}
+a:active {
+	color: #333;
+	text-decoration: none;
+}
+.blank {
+	width: 100%;
+	height: 10px;
+	background-color: #f4f4f4;
+}
+.section {
+	font-family: "Microsoft YaHei", 'Open Sans', sans-serif;
+	display: block;
+	text-decoration: none;
+	margin-left:20px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #666666;
+}
+.section img {
+	margin-left: 10px;
+	height: 14.2px;
+}
+body {
+	-webkit-overflow-scrolling: touch;
+}
+
+	/* 命名空间 */
+	.item_list_jsp { margin: 0; padding: 0;}
+
+	.item_list_jsp .item {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 150px;
+		text-decoration: none;
+	}
+
+	.item_list_jsp .item img {
+		width: 130px;
+		height: 130px;
+		float: left;
+		margin:10px;
+	}
+
+	.item_list_jsp .item .text {
+		text-overflow: ellipsis;
+		/*white-space:nowrap;*/
+		position: absolute;
+		text-align: left;
+		left: 150px;
+		right: 10px;
+		top: 10px;
+		bottom: 0;
+		box-sizing: border-box;
+		padding: 10px 0 0 13px;
+		/*border-top: solid 1px #d0d0d0;*/
+	}
+	.item_list_jsp .item .text2 {
+		text-overflow: ellipsis;
+		white-space:nowrap;
+		position: absolute;
+		text-align: left;
+		left: 150px;
+		right: 10px;
+		top: 10px;
+		bottom: 0;
+		box-sizing: border-box;
+		padding: 35px 0 0 13px;
+	}
+
+	.item_list_jsp .item .name {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 100%;
+		height: 22.5px;
+		line-height: 22.5px;
+		font-family: "Microsoft YaHei", 'Open Sans', sans-serif;
+		font-size: 16px;
+		color: #666666;
+	}
+
+	.item_list_jsp .item .desc {
+		font-family: "Microsoft YaHei", 'Open Sans', sans-serif;
+		margin-top:5px;
+		font-size: 12px;
+		color: #999999;
+	}
+
+	.item_list_jsp .item .price {
+		height: 22.5px;
+		line-height: 22.5px;
+		margin-top:10px;
+		font-weight: 300;
+		font-family: "Microsoft YaHei", 'Open Sans', sans-serif;
+		font-size: 16px;
+		color: #ec726c;
+	}
+
+    .modal-dialog {
+        display:none;
+        width:100%;
+        height:100%;
+        position:fixed;
+        bottom:0;
+        left:0;
+        text-align:center;
+        z-index:1000;
+    }
+
+    .modal-mask {
+        height:100%;
+        width:100%;
+        background-color:#272727;
+        filter:alpha(opacity=80);
+        -moz-opacity:0.8;
+        opacity:0.8;
+    }
+
+    .modal-content {
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0px;
+        background-color:white;
+        padding:20px 20px 0px 20px;
+        box-sizing: content-box;
+    }
+
+    .modal-close {
+        position: relative;
+        height: 20px;
+    }
+
+    .modal-close img {
+        max-width:15px;
+        max-height:15px;
+        padding:0 5px;
+        position: absolute;
+        right: 0;
+    }
+
+    .modal-item-img {
+        width:110px;
+        height:110px;
+    }
+
+    .modal-item-img img {
+        width:100%;
+    }
+
+    .modal-item-title {
+        padding:2px;
+        text-align:left;
+        font-size:18px;
+        max-height:80px;
+        text-overflow: ellipsis;
+        color:#666666;
+        overflow: hidden;
+        line-height: 25px;
+        max-height: 50px;
+    }
+
+    .modal-item-tips {
+        padding:5px 2px;
+        text-align:left;
+        font-size: 14px;
+        color:#9B9B9B;
+    }
+
+    .modal-item-price {
+		font-family: "Microsoft YaHei", 'Open Sans', sans-serif;
+        text-align:left;
+        font-size:20px;
+        position: absolute;
+        left: 0;bottom: 0;
+        color:#f35858;
+    }
+
+    .modal-attrs-panel {
+        color: #9b9b9b;
+        font-size: 14px;
+        position:relative;
+        text-align:left;
+        padding: 5px;
+    }
+
+    .modal-attrs-panel div {
+        display: inline-block;
+    }
+
+    .modal-attrs-title {
+        width:50px;
+    }
+
+    .modal-sub-items {
+		font-family: "Microsoft YaHei", 'Open Sans', sans-serif;
+    }
+
+    .modal-sub-item {
+        height: 28px;
+        line-height: 28px;
+        background-color: #fff;
+        padding: 0 13px;
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+        color: #9b9b9b;
+        font-size: 14px;
+    }
+
+    .modal-sub-item.selected {
+        background-color: #F4C10D;
+        color: white;
+    }
+
+    .modal-sub-item.disabled {
+        color: #e6e6e6;
+    }
+
+    .modal-count-panel {
+        padding:5px;
+        text-align:left;
+        font-size: 14px;
+        color:#9B9B9B;
+        position:relative;
+    }
+
+    .modal-count-panel div {
+        display:inline-block;
+    }
+
+    .modal-item-count-op {
+        float:right;
+    }
+
+    .modal-count-title {
+        width:50px;
+    }
+
+    .modal-item-stock {
+        padding-left:13px;
+    }
+
+    .modal-item-count {
+        text-align:center;
+        width:60px;
+        height:25px;
+        line-height:25px;
+        font-size: 20px;
+        color:#f35858;
+    }
+
+    .modal-item-count-decrease, .modal-item-count-increase {
+        text-align:center;
+        line-height:25px;
+    }
+
+    .modal-item-count-decrease img, .modal-item-count-increase img {
+        width:15px;
+        height:15px;
+    }
+
+    .modal-confirm {
+        position: relative;
+        margin-top: 25px;
+    }
+
+    .modal-confirm .modal-confirm-btn {
+        width: 111px;
+        height: 52px;
+        font-size: 15px;
+        background-color: #F4C10D;
+        color: white;
+        float: right;line-height: 51px;
+        margin-right: -20px;
+    }
+
+
+    .toast-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+        background-color: white;
+        border-radius: 10px;
+        display: none;
+        box-shadow: 2px 2px 10px rgba(166, 166, 166, 0.6);
+        z-index: 1000;
+    }
+
+    .toast-content {
+        font-size: 14px;
+        vertical-align: middle;
+        display: inline-block;
+        padding-top: 1px;
+        color: #666666;
+    }
+    .toast_img{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+    }
+	/* 命名空间 */
+	.item_flow_jsp { margin: 0; padding: 0;}
+
+	.item_flow_jsp .item {
+		display: block;
+		position: relative;
+		box-sizing: border-box;
+		float: left;
+		margin-bottom: 20px;
+		width: 50%;
+		text-decoration: none;
+		font-weight: lighter;
+	}
+
+	.item_flow_jsp .item img {
+		padding: 15px;
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	.item_flow_jsp .item .name {
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space:nowrap;
+		height: 24px;
+		line-height: 24px;
+		text-align: center;
+		font-family: "Microsoft YaHei", 'Open Sans', sans-serif;
+		font-size: 12px;
+		font-weight: 300;
+		color: #666666;
+	}
+
+	.item_flow_jsp .item .price {
+		display: inline-block;
+		float: right;
+		text-align: left;
+		margin-right: 10px;
+		height: 17.5px;
+		line-height: 17.5px;
+		font-family: Helvetica,sans-serif;
+		font-size: 15px;
+		font-weight: 300;
+		color: #f08e89;
+	}
+	
+	.item_flow_jsp .item .cart {
+		display: block;
+		float: right;
+		margin-top: 10px;
+		margin-right: 15px;
+		width: auto;
+		height: 17.5px;
+		line-height: 17.5px;
+		font-family: Helvetica,sans-serif;
+		font-size: 15px;
+		font-weight: 300;
+		color: #f08e89;
+	}
+
+	.item-desc-test {
+		font-size: 14px;
+		font-weight: 300;
+		margin: 0px 15px;
+		color: #666666;
+		height: 40px;
+		overflow: hidden;
+	}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+.mainico {
+padding:10px 5%;
+	position: relative;
+	bottom: 0px;
+	display: -webkit-box;
+	display: flex;
+	display: -ms-flex;
+	display: -webkit-flex;
+}
+.mainicoitem1,.mainicoitem2,.mainicoitem3,.mainicoitem4 {
+	height: auto;
+	flex: 1;
+	-ms-flex: 1;
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+	position: relative;
+	text-align: center;
+	
+}

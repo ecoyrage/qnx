@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.fh.mapperEx.TeacherMapperEx" >
+	<resultMap id="BaseResultMap" type="com.fh.fh.modelEx.TeacherEx" extends="com.fh.fh.mapper.TeacherMapper.BaseResultMap">
+	</resultMap>
+
+	<select id="selectTeachers" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		t.teacher_id AS teacher_id,
+		t.school_id AS school_id,
+		t.teacher_name AS teacher_name,
+		t.logo AS logo,
+		t.create_time AS create_time,
+		s.name AS schoolName
+		FROM
+		fh_teacher t,
+		fh_school s
+		WHERE
+		t.school_id = s.school_id
+		<if test="teacherName !=null and teacherName != ''">
+			and t.teacher_name LIKE #{teacherName}
+		</if>
+		<if test="schoolName !=null and schoolName != ''">
+			and s.name LIKE #{schoolName}
+		</if>
+		ORDER BY
+		t.create_time ASC
+	</select>
+</mapper>

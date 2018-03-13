@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.sys.mapper.MenuMapper" >
+    <resultMap id="BaseResultMap" type="com.fh.sys.model.Menu" >
+        <id column="id" property="id" />
+        <result column="parent_id" property="parentId" />
+        <result column="parent_ids" property="parentIds" />
+        <result column="name" property="name" />
+        <result column="rights_code" property="rightsCode" />
+        <result column="level" property="level" />
+        <result column="sort" property="sort" />
+        <result column="href" property="href" />
+        <result column="target" property="target" />
+        <result column="icon" property="icon" />
+        <result column="is_hide" property="isHide" />
+        <result column="remarks" property="remarks" />
+        <result column="create_by" property="createBy" />
+        <result column="create_date" property="createDate" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_date" property="updateDate" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <sql id="Example_Where_Clause" >
+        <where >
+            <foreach collection="oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Update_By_Example_Where_Clause" >
+        <where >
+            <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Base_Column_List" >
+        id,parent_id,parent_ids,name,rights_code,level,sort,href,target,icon,is_hide,remarks,create_by,create_date,update_by,update_date,del_flag
+    </sql>
+
+    <select id="selectByExample" resultMap="BaseResultMap" >
+        select
+        <if test="distinct" >
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        from sys_menu
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null" >
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from sys_menu
+        where id = #{id}
+    </select>
+
+    <delete id="deleteByPrimaryKey" >
+        delete from sys_menu
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteByExample" >
+        delete from sys_menu
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" >
+        insert into sys_menu (id,parent_id,parent_ids,
+        name,rights_code,level,
+        sort,href,target,
+        icon,is_hide,remarks,
+        create_by,create_date,update_by,
+        update_date,del_flag
+        )
+        values (#{id},#{parentId},#{parentIds},
+        #{name},#{rightsCode},#{level},
+        #{sort},#{href},#{target},
+        #{icon},#{isHide},#{remarks},
+        #{createBy},#{createDate},#{updateBy},
+        #{updateDate},#{delFlag}
+        )
+    </insert>
+
+    <insert id="insertSelective" >
+        insert into sys_menu
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="parentId != null" >
+                parent_id,
+            </if>
+            <if test="parentIds != null" >
+                parent_ids,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="rightsCode != null" >
+                rights_code,
+            </if>
+            <if test="level != null" >
+                level,
+            </if>
+            <if test="sort != null" >
+                sort,
+            </if>
+            <if test="href != null" >
+                href,
+            </if>
+            <if test="target != null" >
+                target,
+            </if>
+            <if test="icon != null" >
+                icon,
+            </if>
+            <if test="isHide != null" >
+                is_hide,
+            </if>
+            <if test="remarks != null" >
+                remarks,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id},
+            </if>
+            <if test="parentId != null" >
+                #{parentId},
+            </if>
+            <if test="parentIds != null" >
+                #{parentIds},
+            </if>
+            <if test="name != null" >
+                #{name},
+            </if>
+            <if test="rightsCode != null" >
+                #{rightsCode},
+            </if>
+            <if test="level != null" >
+                #{level},
+            </if>
+            <if test="sort != null" >
+                #{sort},
+            </if>
+            <if test="href != null" >
+                #{href},
+            </if>
+            <if test="target != null" >
+                #{target},
+            </if>
+            <if test="icon != null" >
+                #{icon},
+            </if>
+            <if test="isHide != null" >
+                #{isHide},
+            </if>
+            <if test="remarks != null" >
+                #{remarks},
+            </if>
+            <if test="createBy != null" >
+                #{createBy},
+            </if>
+            <if test="createDate != null" >
+                #{createDate},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" resultType="java.lang.Integer" >
+        select count(*) from sys_menu
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" >
+        update sys_menu
+        <set >
+            <if test="record.id != null" >
+                id = #{record.id},
+            </if>
+            <if test="record.parentId != null" >
+                parent_id = #{record.parentId},
+            </if>
+            <if test="record.parentIds != null" >
+                parent_ids = #{record.parentIds},
+            </if>
+            <if test="record.name != null" >
+                name = #{record.name},
+            </if>
+            <if test="record.rightsCode != null" >
+                rights_code = #{record.rightsCode},
+            </if>
+            <if test="record.level != null" >
+                level = #{record.level},
+            </if>
+            <if test="record.sort != null" >
+                sort = #{record.sort},
+            </if>
+            <if test="record.href != null" >
+                href = #{record.href},
+            </if>
+            <if test="record.target != null" >
+                target = #{record.target},
+            </if>
+            <if test="record.icon != null" >
+                icon = #{record.icon},
+            </if>
+            <if test="record.isHide != null" >
+                is_hide = #{record.isHide},
+            </if>
+            <if test="record.remarks != null" >
+                remarks = #{record.remarks},
+            </if>
+            <if test="record.createBy != null" >
+                create_by = #{record.createBy},
+            </if>
+            <if test="record.createDate != null" >
+                create_date = #{record.createDate},
+            </if>
+            <if test="record.updateBy != null" >
+                update_by = #{record.updateBy},
+            </if>
+            <if test="record.updateDate != null" >
+                update_date = #{record.updateDate},
+            </if>
+            <if test="record.delFlag != null" >
+                del_flag = #{record.delFlag},
+            </if>
+        </set>
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" >
+        update sys_menu
+        set id = #{id},
+        parent_id = #{parentId},
+        parent_ids = #{parentIds},
+        name = #{name},
+        rights_code = #{rightsCode},
+        level = #{level},
+        sort = #{sort},
+        href = #{href},
+        target = #{target},
+        icon = #{icon},
+        is_hide = #{isHide},
+        remarks = #{remarks},
+        create_by = #{createBy},
+        create_date = #{createDate},
+        update_by = #{updateBy},
+        update_date = #{updateDate},
+        del_flag = #{delFlag}
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" >
+        update sys_menu
+        <set >
+            <if test="parentId != null" >
+                parent_id = #{parentId},
+            </if>
+            <if test="parentIds != null" >
+                parent_ids = #{parentIds},
+            </if>
+            <if test="name != null" >
+                name = #{name},
+            </if>
+            <if test="rightsCode != null" >
+                rights_code = #{rightsCode},
+            </if>
+            <if test="level != null" >
+                level = #{level},
+            </if>
+            <if test="sort != null" >
+                sort = #{sort},
+            </if>
+            <if test="href != null" >
+                href = #{href},
+            </if>
+            <if test="target != null" >
+                target = #{target},
+            </if>
+            <if test="icon != null" >
+                icon = #{icon},
+            </if>
+            <if test="isHide != null" >
+                is_hide = #{isHide},
+            </if>
+            <if test="remarks != null" >
+                remarks = #{remarks},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="updateByPrimaryKey" >
+        update sys_menu
+        set parent_id = #{parentId},
+        parent_ids = #{parentIds},
+        name = #{name},
+        rights_code = #{rightsCode},
+        level = #{level},
+        sort = #{sort},
+        href = #{href},
+        target = #{target},
+        icon = #{icon},
+        is_hide = #{isHide},
+        remarks = #{remarks},
+        create_by = #{createBy},
+        create_date = #{createDate},
+        update_by = #{updateBy},
+        update_date = #{updateDate},
+        del_flag = #{delFlag}
+        where id = #{id}
+    </update>
+
+</mapper>

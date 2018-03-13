@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fh.sys.mapper.GroupMapper" >
+    <resultMap id="BaseResultMap" type="com.fh.sys.model.Group" >
+        <id column="id" property="id" />
+        <result column="parent_id" property="parentId" />
+        <result column="parent_ids" property="parentIds" />
+        <result column="name" property="name" />
+        <result column="role_id" property="roleId" />
+        <result column="group_type" property="groupType" />
+        <result column="province_code" property="provinceCode" />
+        <result column="city_code" property="cityCode" />
+        <result column="county_code" property="countyCode" />
+        <result column="address" property="address" />
+        <result column="zip_code" property="zipCode" />
+        <result column="level" property="level" />
+        <result column="phone" property="phone" />
+        <result column="fax" property="fax" />
+        <result column="email" property="email" />
+        <result column="sort" property="sort" />
+        <result column="useable" property="useable" />
+        <result column="master" property="master" />
+        <result column="primary_person" property="primaryPerson" />
+        <result column="deputy_person" property="deputyPerson" />
+        <result column="remarks" property="remarks" />
+        <result column="create_by" property="createBy" />
+        <result column="create_date" property="createDate" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_date" property="updateDate" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <sql id="Example_Where_Clause" >
+        <where >
+            <foreach collection="oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Update_By_Example_Where_Clause" >
+        <where >
+            <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+                <if test="criteria.valid" >
+                    <trim prefix="(" suffix=")" prefixOverrides="and" >
+                        <foreach collection="criteria.criteria" item="criterion" >
+                            <choose >
+                                <when test="criterion.noValue" >
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue" >
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue" >
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue" >
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Base_Column_List" >
+        id,parent_id,parent_ids,name,role_id,group_type,province_code,city_code,county_code,address,zip_code,level,phone,fax,email,sort,useable,master,primary_person,deputy_person,remarks,create_by,create_date,update_by,update_date,del_flag
+    </sql>
+
+    <select id="selectByExample" resultMap="BaseResultMap" >
+        select
+        <if test="distinct" >
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        from sys_group
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null" >
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from sys_group
+        where id = #{id}
+    </select>
+
+    <delete id="deleteByPrimaryKey" >
+        delete from sys_group
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteByExample" >
+        delete from sys_group
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" >
+        insert into sys_group (id,parent_id,parent_ids,
+        name,role_id,group_type,
+        province_code,city_code,county_code,
+        address,zip_code,level,
+        phone,fax,email,
+        sort,useable,master,
+        primary_person,deputy_person,remarks,
+        create_by,create_date,update_by,
+        update_date,del_flag
+        )
+        values (#{id},#{parentId},#{parentIds},
+        #{name},#{roleId},#{groupType},
+        #{provinceCode},#{cityCode},#{countyCode},
+        #{address},#{zipCode},#{level},
+        #{phone},#{fax},#{email},
+        #{sort},#{useable},#{master},
+        #{primaryPerson},#{deputyPerson},#{remarks},
+        #{createBy},#{createDate},#{updateBy},
+        #{updateDate},#{delFlag}
+        )
+    </insert>
+
+    <insert id="insertSelective" >
+        insert into sys_group
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="parentId != null" >
+                parent_id,
+            </if>
+            <if test="parentIds != null" >
+                parent_ids,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="roleId != null" >
+                role_id,
+            </if>
+            <if test="groupType != null" >
+                group_type,
+            </if>
+            <if test="provinceCode != null" >
+                province_code,
+            </if>
+            <if test="cityCode != null" >
+                city_code,
+            </if>
+            <if test="countyCode != null" >
+                county_code,
+            </if>
+            <if test="address != null" >
+                address,
+            </if>
+            <if test="zipCode != null" >
+                zip_code,
+            </if>
+            <if test="level != null" >
+                level,
+            </if>
+            <if test="phone != null" >
+                phone,
+            </if>
+            <if test="fax != null" >
+                fax,
+            </if>
+            <if test="email != null" >
+                email,
+            </if>
+            <if test="sort != null" >
+                sort,
+            </if>
+            <if test="useable != null" >
+                useable,
+            </if>
+            <if test="master != null" >
+                master,
+            </if>
+            <if test="primaryPerson != null" >
+                primary_person,
+            </if>
+            <if test="deputyPerson != null" >
+                deputy_person,
+            </if>
+            <if test="remarks != null" >
+                remarks,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id},
+            </if>
+            <if test="parentId != null" >
+                #{parentId},
+            </if>
+            <if test="parentIds != null" >
+                #{parentIds},
+            </if>
+            <if test="name != null" >
+                #{name},
+            </if>
+            <if test="roleId != null" >
+                #{roleId},
+            </if>
+            <if test="groupType != null" >
+                #{groupType},
+            </if>
+            <if test="provinceCode != null" >
+                #{provinceCode},
+            </if>
+            <if test="cityCode != null" >
+                #{cityCode},
+            </if>
+            <if test="countyCode != null" >
+                #{countyCode},
+            </if>
+            <if test="address != null" >
+                #{address},
+            </if>
+            <if test="zipCode != null" >
+                #{zipCode},
+            </if>
+            <if test="level != null" >
+                #{level},
+            </if>
+            <if test="phone != null" >
+                #{phone},
+            </if>
+            <if test="fax != null" >
+                #{fax},
+            </if>
+            <if test="email != null" >
+                #{email},
+            </if>
+            <if test="sort != null" >
+                #{sort},
+            </if>
+            <if test="useable != null" >
+                #{useable},
+            </if>
+            <if test="master != null" >
+                #{master},
+            </if>
+            <if test="primaryPerson != null" >
+                #{primaryPerson},
+            </if>
+            <if test="deputyPerson != null" >
+                #{deputyPerson},
+            </if>
+            <if test="remarks != null" >
+                #{remarks},
+            </if>
+            <if test="createBy != null" >
+                #{createBy},
+            </if>
+            <if test="createDate != null" >
+                #{createDate},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" resultType="java.lang.Integer" >
+        select count(*) from sys_group
+        <if test="_parameter != null" >
+            <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" >
+        update sys_group
+        <set >
+            <if test="record.id != null" >
+                id = #{record.id},
+            </if>
+            <if test="record.parentId != null" >
+                parent_id = #{record.parentId},
+            </if>
+            <if test="record.parentIds != null" >
+                parent_ids = #{record.parentIds},
+            </if>
+            <if test="record.name != null" >
+                name = #{record.name},
+            </if>
+            <if test="record.roleId != null" >
+                role_id = #{record.roleId},
+            </if>
+            <if test="record.groupType != null" >
+                group_type = #{record.groupType},
+            </if>
+            <if test="record.provinceCode != null" >
+                province_code = #{record.provinceCode},
+            </if>
+            <if test="record.cityCode != null" >
+                city_code = #{record.cityCode},
+            </if>
+            <if test="record.countyCode != null" >
+                county_code = #{record.countyCode},
+            </if>
+            <if test="record.address != null" >
+                address = #{record.address},
+            </if>
+            <if test="record.zipCode != null" >
+                zip_code = #{record.zipCode},
+            </if>
+            <if test="record.level != null" >
+                level = #{record.level},
+            </if>
+            <if test="record.phone != null" >
+                phone = #{record.phone},
+            </if>
+            <if test="record.fax != null" >
+                fax = #{record.fax},
+            </if>
+            <if test="record.email != null" >
+                email = #{record.email},
+            </if>
+            <if test="record.sort != null" >
+                sort = #{record.sort},
+            </if>
+            <if test="record.useable != null" >
+                useable = #{record.useable},
+            </if>
+            <if test="record.master != null" >
+                master = #{record.master},
+            </if>
+            <if test="record.primaryPerson != null" >
+                primary_person = #{record.primaryPerson},
+            </if>
+            <if test="record.deputyPerson != null" >
+                deputy_person = #{record.deputyPerson},
+            </if>
+            <if test="record.remarks != null" >
+                remarks = #{record.remarks},
+            </if>
+            <if test="record.createBy != null" >
+                create_by = #{record.createBy},
+            </if>
+            <if test="record.createDate != null" >
+                create_date = #{record.createDate},
+            </if>
+            <if test="record.updateBy != null" >
+                update_by = #{record.updateBy},
+            </if>
+            <if test="record.updateDate != null" >
+                update_date = #{record.updateDate},
+            </if>
+            <if test="record.delFlag != null" >
+                del_flag = #{record.delFlag},
+            </if>
+        </set>
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" >
+        update sys_group
+        set id = #{id},
+        parent_id = #{parentId},
+        parent_ids = #{parentIds},
+        name = #{name},
+        role_id = #{roleId},
+        group_type = #{groupType},
+        province_code = #{provinceCode},
+        city_code = #{cityCode},
+        county_code = #{countyCode},
+        address = #{address},
+        zip_code = #{zipCode},
+        level = #{level},
+        phone = #{phone},
+        fax = #{fax},
+        email = #{email},
+        sort = #{sort},
+        useable = #{useable},
+        master = #{master},
+        primary_person = #{primaryPerson},
+        deputy_person = #{deputyPerson},
+        remarks = #{remarks},
+        create_by = #{createBy},
+        create_date = #{createDate},
+        update_by = #{updateBy},
+        update_date = #{updateDate},
+        del_flag = #{delFlag}
+        <if test="_parameter != null" >
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" >
+        update sys_group
+        <set >
+            <if test="parentId != null" >
+                parent_id = #{parentId},
+            </if>
+            <if test="parentIds != null" >
+                parent_ids = #{parentIds},
+            </if>
+            <if test="name != null" >
+                name = #{name},
+            </if>
+            <if test="roleId != null" >
+                role_id = #{roleId},
+            </if>
+            <if test="groupType != null" >
+                group_type = #{groupType},
+            </if>
+            <if test="provinceCode != null" >
+                province_code = #{provinceCode},
+            </if>
+            <if test="cityCode != null" >
+                city_code = #{cityCode},
+            </if>
+            <if test="countyCode != null" >
+                county_code = #{countyCode},
+            </if>
+            <if test="address != null" >
+                address = #{address},
+            </if>
+            <if test="zipCode != null" >
+                zip_code = #{zipCode},
+            </if>
+            <if test="level != null" >
+                level = #{level},
+            </if>
+            <if test="phone != null" >
+                phone = #{phone},
+            </if>
+            <if test="fax != null" >
+                fax = #{fax},
+            </if>
+            <if test="email != null" >
+                email = #{email},
+            </if>
+            <if test="sort != null" >
+                sort = #{sort},
+            </if>
+            <if test="useable != null" >
+                useable = #{useable},
+            </if>
+            <if test="master != null" >
+                master = #{master},
+            </if>
+            <if test="primaryPerson != null" >
+                primary_person = #{primaryPerson},
+            </if>
+            <if test="deputyPerson != null" >
+                deputy_person = #{deputyPerson},
+            </if>
+            <if test="remarks != null" >
+                remarks = #{remarks},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="updateByPrimaryKey" >
+        update sys_group
+        set parent_id = #{parentId},
+        parent_ids = #{parentIds},
+        name = #{name},
+        role_id = #{roleId},
+        group_type = #{groupType},
+        province_code = #{provinceCode},
+        city_code = #{cityCode},
+        county_code = #{countyCode},
+        address = #{address},
+        zip_code = #{zipCode},
+        level = #{level},
+        phone = #{phone},
+        fax = #{fax},
+        email = #{email},
+        sort = #{sort},
+        useable = #{useable},
+        master = #{master},
+        primary_person = #{primaryPerson},
+        deputy_person = #{deputyPerson},
+        remarks = #{remarks},
+        create_by = #{createBy},
+        create_date = #{createDate},
+        update_by = #{updateBy},
+        update_date = #{updateDate},
+        del_flag = #{delFlag}
+        where id = #{id}
+    </update>
+
+</mapper>
