@@ -1,0 +1,288 @@
+<script  th:fragment="outerJs01" xmlns:th="http://www.springframework.org/schema/mvc" type="text/javascript" th:inline="javascript">
+    var basePath = [[${#httpServletRequest.getScheme() + "://" + #httpServletRequest.getServerName() + ":" + #httpServletRequest.getServerPort() + #httpServletRequest.getContextPath()}]];
+</script>
+<script   th:fragment="outerJs02" xmlns:th="http://www.springframework.org/schema/mvc" type="text/javascript" th:inline="javascript">
+    $(function() {
+        $(".page-a").click(function() {
+            $("#searchForm input[name='pageNum']").val($(this).attr("pageIndex"));
+            var a =  $("#searchForm input[name='pageNum']").val();
+            $("#searchForm").submit();
+        });
+    });
+</script>
+
+<!-- 侧边栏代码 开始 -->
+<script  th:fragment="outerJs03" xmlns:th="http://www.springframework.org/schema/mvc" type="text/javascript" th:inline="javascript">
+    $(document).ready(function(){
+        $("#leftsead a").hover(function(){
+            if($(this).prop("className")=="youhui"){
+                $(this).children("img.hides").show();
+            }else{
+                $(this).children("div.hides").show();
+                $(this).children("img.shows").hide();
+                $(this).children("div.hides").animate({marginRight:'0px'},'0');
+            }
+        },function(){
+            if($(this).prop("className")=="youhui"){
+                $(this).children("img.hides").hide();
+            }else{
+                $(this).children("div.hides").animate({marginRight:'-163px'},0,function(){$(this).hide();$(this).next("img.shows").show();});
+            }
+        });
+
+        $("#top_btn").click(function(){if(scroll=="off") return;$("html,body").animate({scrollTop: 0}, 600);});
+
+        //右侧导航 - 二维码
+        $(".youhui").mouseover(function(){
+            $(this).children(".2wm").show();
+        })
+        $(".youhui").mouseout(function(){
+            $(this).children(".2wm").hide();
+        });
+    });
+</script>
+<!-- 侧边栏代码 结束 -->
+<!--行业分类-->
+<script  th:fragment="outerJs04" xmlns:th="http://www.springframework.org/schema/mvc" type="text/javascript" th:inline="javascript">
+    $(function() {
+        /*var url = "http://192.168.1.191:8088/qnx/common/user/trainingType";*/
+        var url = basePath +"/common/user/trainingType";
+        var cateNav = $("#category-nav");
+        $.ajax({
+            type : "post",
+            dataType : "json",
+            data : {},
+            contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+            url : url,
+            async : false,
+            success : function(data) {
+                if (0 == data.code) {
+                    alert(data.msg);
+                } else if (1 == data.code) {
+                    cateNav.empty();
+                    var data = data.data;
+                    var html = "<ul class='normal-nav clear'>";
+                    for ( var i = 0; i < data.length; i++) {
+                        var b = data[i].id;
+                        html += "<li class='nav-item nav-item-0'><b class='arrow fr'></b><a  href='http://www.qunaerxue.cn/qnx/common/course.th?trainingType="+data[i].name+"' target='_blank'>"+data[i].name+"</a>";
+                        html += "<div class='pannel-con j_CategoryMenuPannel_104' style='display: none;'><div class='sub_type_con'>";
+                        var subs1 = data[i].subs;
+                        /*html += "<div class='third' style='width:960px;padding:0px 20px;float:left;'>"+
+                            "<dl style='clear:both;'>";*/
+                        for(var j=0;j<subs1.length;j++){
+                            html +="<dl class='sub_type_dl clear'><dt><a href='http://www.qunaerxue.cn/qnx/common/course.th?trainingType="+subs1[j].name+"' target='_blank'>"+subs1[j].name+">"+"</a></dt>";
+                            /*html +="<dd style='width:910px;'>";
+                            html +="<ul style='clear:botn;'>";*/
+                            var subs2=subs1[j].subs;
+                            for(var k=0;k<subs2.length;k++){
+                                html+="<dd class='cell clear'><em><a  href='http://www.qunaerxue.cn/qnx/common/course.th?trainingType="+subs2[k].name+"' target='_blank'>"+subs2[k].name+"</a></em></dd>"
+                            }
+                            html+="</dl>";
+                        }
+                        /*var html = "<div class='first' style='width:196px;float:left;'>"+
+                            "<h3><a  href='http://101.132.100.176/qnx/common/course.th?trainingType="+data[i].name+"' target='_blank' style='font-size:18px;color:#333333;width:200px;text-align:center;display:block;height:40px;line-height:40px;'>"+data[i].name+"</a><i class='icon-tri'></i></h3>";
+                        html += "</div>";
+
+                        var subs1 = data[i].subs;
+                        html += "<div class='third' style='width:960px;padding:0px 20px;float:left;'>"+
+                            "<dl style='clear:both;'>";
+                        for(var j=0;j<subs1.length;j++){
+                            html +="<dt style='width:50px;'><a style='color:#000;font-size:14px;float:left;height:40px;line-height:40px;' href='http://101.132.100.176/qnx/common/course.th?trainingType="+subs1[j].name+"' target='_blank'>"+subs1[j].name+">"+"</a></dt>";
+                            html +="<dd style='width:910px;'>";
+                            html +="<ul style='clear:botn;'>";
+                            var subs2=subs1[j].subs;
+                            for(var k=0;k<subs2.length;k++){
+                                html+="<li><a style='color:#333;font-size:14px;float:left;height:40px;line-height:40px;margin-right:20px;' href='http://101.132.100.176/qnx/common/course.th?trainingType="+subs2[k].name+"' target='_blank'>"+subs2[k].name+"</a></li>"
+                            }
+                            html+="</ul>";
+                            html+="</dd>";
+                        }
+                        html+="</dl>";
+                        html+="</div>"
+                        cateNav.append(html);*/
+                    }
+                    html+="</ul>"
+                    cateNav.append(html);
+                }
+            }
+        });
+        $("#nav_top_menu").find(".nav-item").mouseenter(function(){var a=$(this).index();showLevel2(this,a)});$("#nav_top_menu").mouseleave(function(){$("#nav_top_menu").find(".nav-item").removeClass("selected");$(".pannel-con").hide()})
+    });
+    var u = false;
+    function showLevel2(the , number){
+        $("#nav_top_menu").find(".nav-item").removeClass("selected");
+        $(the).addClass("selected");
+        $(".pannel-con").hide(0);
+        if(u){
+            $(".pannel-con").eq(number).fadeIn();
+            u = false;
+        }else{
+            $(".pannel-con").eq(number).show();
+        }
+    }
+</script>
+
+<!--登录注册-->
+<script  th:fragment="outerJs05" xmlns:th="http://www.springframework.org/schema/mvc" type="text/javascript" th:inline="javascript">
+    function loginCus(){
+        var cellPhone = $("#tel").val();
+        if (cellPhone == undefined || cellPhone ==""){
+            alert("手机号不能为空！");
+            return;
+        }
+        var password = $("#password").val();
+        if (password == undefined || password ==""){
+            alert("密码不能为空！");
+            return;
+        }
+        var url = basePath +"/common/user/loginCheck";
+        $.ajax({
+            type : "post",
+            dataType : "json",
+            data : {mobile:cellPhone,password:password},
+            contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+            url : url,
+            async : false,
+            success : function(data) {
+                if (0 == data.code) {
+                    alert(data.msg);
+                } else if (1 == data.code) {
+                    $('.loginMask').slideUp(200);
+                    setCookie('userCode', data.data.userCode, 1);
+                    setCookie('mobile', data.data.mobile, 1);
+                    window.location.reload();
+                }
+            }
+        });
+    };
+    function regCus(){
+        var password1 = $("#password1").val();
+        var password2 = $("#password2").val();
+        if (password2 == undefined || password2 ==""){
+            alert("密码不能为空！");
+            return;
+        }
+        var RegCell = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{4,16}$/;
+        falg=password2.search(RegCell);
+        /*if (falg==-1 && password2 !=""){
+            alert("密码只能是4-16位数字和字母组合");
+            $("#password2").val("");
+        }else if(falg==0){*/
+            if(password1 != password2){
+                alert("两次密码输入不一致");
+                $("#password2").val("");
+                return;
+            }
+       /* }*/
+        var cellPhone = $("#recTel").val();
+        var vaidCode = $("#vaidCode").val();
+        if (cellPhone == undefined || cellPhone ==""){
+            alert("手机号不能为空！");
+            return;
+        }
+        if (vaidCode == undefined || vaidCode ==""){
+            alert("验证码不能为空！");
+            return;
+        }
+        var url = basePath +"/common/user/regCheck";
+        $.ajax({
+            type : "post",
+            dataType : "json",
+            data : {mobile:cellPhone,password:password2,vaidCode:vaidCode},
+            contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+            url : url,
+            async : false,
+            success : function(data) {
+                if (0 == data.code) {
+                    alert(data.msg);
+                } else if (1 == data.code) {
+                    alert(data.msg);
+                    $('.loginMask').slideUp(200);
+                }
+            }
+        });
+    };
+    function telPhone(){
+        var cellPhone = $("#recTel").val();
+        if (cellPhone == undefined || cellPhone ==""){
+            alert("手机号不能为空！");
+            return;
+        }
+        var RegCellPhone = /^1[3|4|5|7|8][0-9]\d{8}$/;
+        falg=cellPhone.search(RegCellPhone);
+        if (cellPhone != "" && falg==-1){
+            alert("手机号不合法！");
+            return;
+        }
+        var url = basePath +"/common/user/mobileSms";
+        $.ajax({
+            type : "post",
+            dataType : "json",
+            data : {mobile:cellPhone,type:1},
+            contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+            url : url,
+            async : false,
+            success : function(data) {
+                if (0 == data.code) {
+                    alert(data.msg);
+                } else if (1 == data.code) {
+                    alert(data.msg);
+                }
+            }
+        });
+    };
+    jQuery(document).ready(function($) {
+        var userCode = getCookie('userCode');
+        var mobile = getCookie('mobile');
+        var html = '<div class="top-mid clear"><div class="fr top-left-li"><a rel="nofollow" class="top-left-each-a inlineB" href="javascript:;">登录/注册</a></div></div>';
+        if(userCode!=null && userCode!=undefined){
+            html = '<div class="top-mid2 clear" style="height:34px;line-height:34px; width:1200px; margin:0px auto;"><div class="fr"><a rel="nofollow" class="top-login-name" style="color: #f5c609;"  href="javascript:;">注销</a>'+
+                '</div><div class="fr" style="margin-right:30px;"><a rel="nofollow" class="inlineB" style="color: #888;" href="javascript:;">'+mobile+' 欢迎您登陆去哪儿学！</a></div></div>';
+        }
+        $("#header").html(html);
+        $('.top-left-each-a').click(function(){
+            $('.theme-popover-mask').fadeIn(100);
+            $('.loginMask').slideDown(200);
+        })
+        $('.top-login-name').click(function(){
+            $('.theme-popover-mask').fadeIn(100);
+            delCookie('userCode');
+            delCookie('mobile');
+            /*var html = '<div class="top-mid clear"><div class="fr top-left-li"><a rel="nofollow" class="top-left-each-a inlineB" href="javascript:;">登录/注册</a></div></div>';
+            $("#header").html(html);*/
+            window.location.reload();
+        })
+        $('.close').click(function(){
+            $('.theme-popover-mask').fadeOut(100);
+            $('.loginMask').slideUp(200);
+        })
+
+        $('.tabActive2').click(function(){
+            $('.loginAll').hide();
+            $('.fPsw').hide();
+            $('.reg').show();
+        })
+        $('.tabActive1').click(function(){
+            $('.fPsw').hide();
+            $('.reg').hide();
+            $('.loginAll').show();
+        })
+        $('.tabActive3').click(function(){
+            $('.loginAll').hide();
+            $('.reg').hide();
+            $('.fPsw').show();
+        })
+        /*$('.lgbutton').click(function(){
+            $('.top-mid2').fadeOut(100);
+            $('.top-mid2').slideDown(200);
+            $('.top-mid').slideUp(200);
+            $('.loginMask').slideUp(200);
+        })*/
+
+        $('.top-login-name2').click(function(){
+            $('.top-mid').slideDown(200);
+            $('.top-mid2').slideUp(200);
+        })
+
+    })
+</script>

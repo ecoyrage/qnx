@@ -1,0 +1,396 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>去哪儿学--学校</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link href="../../css/wstyle.css" type="text/css" rel="stylesheet" th:href="@{/static/css/wstyle.css}">
+	<link href="../../css/wstyle.css" type="text/css" rel="stylesheet" th:href="@{/static/css/zzsc.css}">
+	<link href="${path }/base/images/bitbug_favicon.ico" th:href="@{/static/images/bitbug_favicon.ico}" rel="Shortcut Icon">
+	<script type="text/javascript" src="../../js/jquery-1.11.3.min.js" th:src="@{/static/js/jquery-1.11.3.min.js}"></script>
+    <script type="text/javascript" src="../../js/header-footer.min.js" th:src="@{/static/js/header-footer.min.js}"></script>
+	<script type="text/javascript" src="../../js/common.js" th:src="@{/static/js/common.js}"></script>
+	<script type="text/javascript" src="../../js/jquery.cookie.js" th:src="@{/static/js/jquery.cookie.js}"></script>
+</head>
+
+<body style="position:relative;">
+<!--页面顶部header 开始-->
+<div th:include="header::header"></div>
+<script th:replace="fragscript :: outerJs01"></script>
+<script th:replace="fragscript :: outerJs05"></script>
+<!--页面顶部header 结束-->
+
+
+<!-- 头部导航 开始 -->
+<div id="top_nav">
+	<div class="main-nav">
+		<div class="inner-con0">
+			<div class="inner-con1">
+				<div class="inner-con2 clear">
+					<a th:href="@{/common/course.th}" target="_blank">培训课程<em class="hot-label"></em></a>
+					<a th:href="@{/common/school.th}" class="main-nav-active" target="_blank">培训学校<em class="new-label"></em></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="category-con">
+		<div class="category-inner-con clear">
+			<div class="category-type">
+				<div class="text">行业分类</div>
+			</div>
+			<div id="nav_top_menu" class="nav-list" style="background:rgba(255,255,255,0.7)">
+				<div class="nav-con " id='category-nav'>
+					<ul class="normal-nav clear">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="con-wrap">
+	<div class="w1200 auto">
+		<!--面包屑-->
+		<div class="crumbs">
+			<a class="c9 _link " href="#">常州培训</a><em class="crumbs-arrow c9">&gt;</em>
+			<a class="c9 _link " href="#">培训机构</a><em class="crumbs-arrow c9">&gt;</em>
+			<span class="c6" th:text="${school.name}"></span>
+		</div>
+		<div class="sch-head"  data-url="/assets/images/school/sch-zst-banner.png" style="background-image: url(&quot;/assets/images/school/sch-zst-banner.png&quot;);">
+			<div class="nun-mess" style="color:#000;">
+            		<span class="nun-mess-each inlineB" style="color:#000;">
+                		<em class="nun-mess-t inlineB" th:text="${school.hot}"></em><br>
+                		<em class="nun-mess-b inlineB">学校人气</em>
+            		</span>
+					<span class="nun-mess-each inlineB" style="color:#000;">
+                		<em class="nun-mess-t inlineB" th:text="${courseCount}"></em><br>
+                		<em class="nun-mess-b inlineB">课程数量</em>
+            		</span>
+					<span class="nun-mess-each border-r-trans inlineB" style="color:#000;">
+                		<em class="nun-mess-t inlineB" th:text="${teacherCount}"></em><br>
+                		<em class="nun-mess-b inlineB">老师人数</em>
+            		</span>
+			</div>
+			<div class="sch-head-wrap clear">
+				<div class="sch-head-le fl">
+					<img class="sch-head-img"   th:src="@{${school.logo}}" src="../../images/0718_l.jpg" alt="">
+					<div class="sch-cir"></div>
+				</div>
+				<div class="sch-head-ri fl">
+					<div class="sch-name clear">
+						<span class="fl" th:text="${school.name}"></span>
+					</div>
+					<div class="sch-address">
+						<!--<a target="_blank" class="sch-map-icon" href="#"></a>-->
+						<a target="_blank" class="sch-address-name inlineB ellip _link" href="#"  th:text="${school.address}"></a>
+					</div>
+					<div class="sch-phone">
+						<p>咨询电话：<span  th:text="${school.tel}"></span></p>
+					</div>
+					<div class="sch-btn">
+						<div class="sign-wrap fl">
+								<a id="now-sign" class="con-btn-sign inlineB" href="javascript:;">立即报名</a>
+								<a class="con-btn-qr inlineB" href="javascript:;" onclick="iBaoMing();">确认报名</a>
+								<style>
+									.bm{
+										border:solid 1px #f5c609;
+										padding:30px;
+										font-size:14px;
+										color:#333;
+										z-index:5;
+										display:none;
+									}
+									.dis{display:block !important;}
+									.bmT{
+										margin-bottom:40px;
+									}
+									.bm input{
+										border:none;
+										border-bottom:solid 1px #000;
+										margin-right:20px;
+									}
+									.bm select{
+										width:100px;
+									}
+									.close{
+										font-size:38px;
+										font-weight:normal;
+										color:red;
+									}
+								</style>
+								<script>
+								</script>
+								<script>
+                                    jQuery(document).ready(function($) {
+                                        $('.con-btn-sign').click(function(){
+                                            $('.theme-popover-mask').fadeIn(100);
+                                            $('.bm').slideDown(200);
+                                        })
+                                        $('.close').click(function(){
+                                            $('.theme-popover-mask').fadeOut(100);
+                                            $('.bm').slideUp(200);
+                                        })
+                                    })
+								</script>
+								<div class="bm">
+									<form id="form"  method="get"  th:action="@{/admin/apply/form}">
+										<div style="text-align:right; margin-bottom:10px;"><a href="javascript:;" title="关闭" class="close">×</a></div>
+										<div class="bmT">
+											<label>姓名：</label><input type="text" name="name"id="name"  value="">
+											<label>所在商圈：</label>
+											<select name="businessCircle1" id="cgyIdT" onchange="changeCgyIdT(this.value)">
+												<option value="">--无--</option>
+												<option  th:each="item : ${businessCircleList1}" th:class="|cgyopt cgyopt-${item.parentId}|" th:value="${item.id}" th:text="${item.name}" th:id="|cgyT${item.id }|" th:cgykey="${item.parentId}">${item.name }</option>
+											</select>
+											<select name="businessCircle2" id="subcgyIdT" onchange="changeCgyIdTwoT(this.value)">
+												<option value="">--无--</option>
+												<option th:class="|${item.name eq businessCircle2 ? '' : 'hidden'} subcgyoptT subcgyoptT-${item.parentId }|" th:each="item : ${businessCircleList2}" th:value="${item.id}" th:text="${item.name}"  th:id="|cgyTwoT${item.id }|" th:cgykey="${item.parentId}"></option>
+											</select>
+											<select name="businessCircle3"  id="subcgyIdTwoT">
+												<option value="">--无--</option>
+												<option th:each="item : ${businessCircleList3}" th:class="|${item.name eq businessCircle3 ? '' : 'hidden'} subcgyoptTwoT subcgyoptTwoT-${item.parentId }|" th:value="${item.id}" th:text="${item.name}"></option>
+											</select>
+										</div>
+										<div>
+											<!--<label>手机：</label><input type="text" value="">-->
+											<!--<label>手机：--></label><input type="hidden" name="tel" id="telP" value="" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength="11">
+											<label>学习科目：</label>
+											<select style="width: 250px" name="courseId">
+												<option th:each="course : ${courseList}" th:text="${course.courseName}" th:value="${course.courseId}"></option>
+											</select>
+										</div>
+										<div style="text-align:center; margin-top:15px;">
+											<a id="now-sign" class="con-btn-sign inlineB" href="javascript:;" onclick="submit()">确认报名</a>
+										</div>
+									</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear">
+			<!--左侧主体内容 -->
+			<div class="main_left fl">
+				<div style="width:1200px;">
+					<div class="tabPanel">
+						<ul>
+							<li class="hit">学校课程</li>
+							<li>学校介绍</li>
+							<!--<li>学校环境</li>-->
+							<!--<li>学校老师</li>-->
+						</ul>
+						<style>
+							.hidden{
+								display:none;
+							}
+							.list{
+								padding:30px 30px 50px 30px;
+								border:solid 1px #eeeeee;
+							}
+							.pic{
+								width:230px;
+								height:150px;
+							}
+							.list dt{
+								margin-left:20px;
+							}
+							.list dt h3{
+								font-size:20px;
+								color:#333;
+							}
+							.list dt p{
+								font-size:20px;
+								color:#ff5400;
+								margin:15px 0px 20px 0px;
+								text-indent:0em;
+							}
+							.det span{
+								display:block;
+								float:left;
+								font-size:16px;
+								color:#666666;
+								margin-right:30px;
+							}
+							.rq{
+								font-size:14px;
+								color:#666666;
+								margin-top:20px;
+							}
+						</style>
+						<div class="panes">
+							<div class="pane" style="display:block;">
+								<dl class="list clear" th:each="course : ${courseList}">
+									<a th:href="@{/common/courseDetail.th(courseId=${course.courseId})}">
+										<dd class="fl pic"><img src="images/2069.jpg" th:src="@{${course.logo}}"  width="239" height="180"></dd>
+										<dt class="fl">
+										<h3 th:text="${course.courseName}" ></h3>
+										<p th:text="${school.tel}"></p>
+										<div class="det clear">
+											<span>授课老师：教务安排</span>
+											<span>课程级别:</span><span th:text="${course.level}"></span>
+											<span>培训周期:</span><span th:text="${course.cycle}"></span>
+										</div>
+										<div class="rq">人气：<span th:text="${course.hot}"></span></div>
+										</dt>
+									</a>
+								</dl>
+							</div>
+							<div class="pane" th:utext="${school.introduction}">
+								<p></p>
+							</div>
+							<!--<div class="pane">
+								<ul class="u2 clear">
+									<li><img src="../../images/1595_l.jpg" width="280" height="280" th:src="@{/static/images/1595_l.jpg}"></li>
+									<li><img src="images/1595_l.jpg" width="280" height="280" th:src="@{/static/images/1595_l.jpg}"></li>
+									<li><img src="images/1595_l.jpg" width="280" height="280" th:src="@{/static/images/1595_l.jpg}"></li>
+									<li><img src="images/1595_l.jpg" width="280" height="280" th:src="@{/static/images/1595_l.jpg}"></li>
+									<li><img src="images/1595_l.jpg" width="280" height="280" th:src="@{/static/images/1595_l.jpg}"></li>
+									<li><img src="images/1595_l.jpg" width="280" height="280" th:src="@{/static/images/1595_l.jpg}"></li>
+									<li><img src="images/1595_l.jpg" width="280" height="280" th:src="@{/static/images/1595_l.jpg}"></li>
+									<li><img src="images/1595_l.jpg" width="280" height="280" th:src="@{/static/images/1595_l.jpg}"></li>
+								</ul>
+							</div>-->
+							<!--学校老师-->
+							<!--<div class="pane">
+								<dl class="d1 clear" th:each="teacher : ${teacherList}">
+									<dd><img src="images/1595_l.jpg"  th:src="@{${teacher.logo}}" width="240" height="300" alt=""></dd>
+									<dt>
+									<h3 th:text="${teacher.teacherName}"></h3>
+									<p th:utext="${teacher.introduction}"></p>
+									</dt>
+								</dl>
+							</div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- 底部 开始 -->
+<div th:include="footer::footer"></div>
+<!-- 侧边栏代码 开始 -->
+<div th:include="sidebar::sidebar"></div>
+<script th:replace="fragscript :: outerJs03"></script>
+<!--行业分类-->
+<script th:replace="fragscript :: outerJs01"></script>
+<script th:replace="fragscript :: outerJs04"></script>
+</body>
+<!-- 头部导航 完成 -->
+<script type="text/javascript">
+    $('#loginout').click(function(){
+        $.ajax({
+            url:'https://i.houxue.com/accounts/login/out/',
+            dataType:'jsonp',
+            type:'get',
+            async:false,
+            jsonp:"callbackparam",
+            success:function(data)
+            {
+                if(data.flag){
+                    window.location.reload();
+                }
+            }
+        })
+    });
+</script>
+<script type="text/javascript">
+    $(function(){
+        $('.tabPanel ul li').click(function(){
+            $(this).addClass('hit').siblings().removeClass('hit');
+            $('.panes>div:eq('+$(this).index()+')').show().siblings().hide();
+        })
+    })
+</script>
+<script type="text/javascript">
+    //导航目录的显示和隐藏（首页）
+    show_hide_nav();
+</script>
+<script th:replace="fragscript :: outerJs01"></script>
+<script type="text/javascript">
+    function changeCgyId(cgyId) {
+        $("#subcgyId").val("");
+        $(".subcgyopt").addClass("hidden");
+        $("#subcgyIdTwo").val("");
+        $(".subcgyoptTwo").addClass("hidden");
+        if(cgyId) {
+            var cgykey = $("#cgy"+cgyId).attr("cgykey");
+            $(".subcgyopt.subcgyopt-"+cgyId).removeClass("hidden");
+        }
+    }
+    function changeCgyIdTwo(cgyId) {
+        $("#subcgyIdTwo").val("");
+        $(".subcgyoptTwo").addClass("hidden");
+        if(cgyId) {
+            var cgykey = $("#cgyTwo"+cgyId).attr("cgykey");
+            $(".subcgyoptTwo.subcgyoptTwo-"+cgyId).removeClass("hidden");
+        }
+    }
+    function changeCgyIdT(cgyId) {
+        $("#subcgyIdT").val("");
+        $(".subcgyoptT").addClass("hidden");
+        $("#subcgyIdTwoT").val("");
+        $(".subcgyoptTwoT").addClass("hidden");
+        if(cgyId) {
+            var cgykey = $("#cgyT"+cgyId).attr("cgykey");
+            $(".subcgyoptT.subcgyoptT-"+cgyId).removeClass("hidden");
+        }
+    }
+    function changeCgyIdTwoT(cgyId) {
+        $("#subcgyIdTwoT").val("");
+        $(".subcgyoptTwoT").addClass("hidden");
+        if(cgyId) {
+            var cgykey = $("#cgyTwoT"+cgyId).attr("cgykey");
+            $(".subcgyoptTwoT.subcgyoptTwoT-"+cgyId).removeClass("hidden");
+        }
+    }
+		function submit(){
+            var userCode = getCookie('userCode');
+            if(userCode==null || userCode==undefined){
+                alert("请先登录!");
+                return;
+            }
+			var url = basePath +"/common/user/applyForm";
+			var form = new FormData(document.getElementById("form"));
+			var name = $("#name").val();
+			var telP = $("#telP").val();
+			if(name == '' || name == undefined){
+			    alert("姓名不能为空!");
+			    return;
+			}
+            /*if(telP == '' || telP == undefined){
+                alert("电话不能为空!");
+                return;
+            }
+            var RegCellPhone = /^1[3|4|5|7|8][0-9]\d{8}$/;
+            falg=telP.search(RegCellPhone);
+            if (telP != "" && falg==-1){
+                alert("手机号不合法！");
+                return;
+            }*/
+            var mobile = getCookie('mobile');
+            form.set("tel", mobile);
+			$.ajax({
+				url:url,
+				type:"post",
+				dataType : "json",
+				data:form,
+				processData:false,
+				contentType:false,
+				success:function(data){
+					if (0 == data.code) {
+						alert(data.msg);
+					} else if (1 == data.code) {
+						alert(data.msg);
+                        $('.theme-popover-mask').fadeOut(100);
+                        $('.bm').slideUp(200);
+					}
+				}
+			});
+		}
+</script>
+</html>
