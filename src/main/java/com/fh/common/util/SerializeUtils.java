@@ -1,5 +1,7 @@
 package com.fh.common.util;
 
+import com.fh.sys.model.Admin;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
@@ -76,7 +78,7 @@ public class SerializeUtils {
 		}
 		return null;
 	}
-	
+
 	/*public static void main(String[] args) {
 		Admin admin = new Admin();
 		admin.setName("111");

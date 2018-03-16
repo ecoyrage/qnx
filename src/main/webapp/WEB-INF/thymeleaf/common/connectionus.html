@@ -1,0 +1,77 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>去哪儿学--学校</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+	<link href="../../css/wstyle.css" type="text/css" rel="stylesheet" th:href="@{/static/css/zzsc.css}">
+	<link href="../../css/ionicons.min.css" type="text/css" rel="stylesheet" th:href="@{/static/css/ionicons.min.css}" >
+	<link href="../../css/wstyle.css" type="text/css" rel="stylesheet" th:href="@{/static/css/wstyle.css}" >
+	<link href="${path }/base/images/bitbug_favicon.ico" th:href="@{/static/images/bitbug_favicon.ico}" rel="Shortcut Icon">
+	<script type="text/javascript" src="../../js/jquery-1.11.3.min.js" th:src="@{/static/js/jquery-1.11.3.min.js}"></script>
+	<script type="text/javascript" src="../../js/header-footer.min.js" th:src="@{/static/js/header-footer.min.js}"></script>
+	<script type="text/javascript" src="../../js/common.js" th:src="@{/static/js/common.js}"></script>
+	<script type="text/javascript" src="../../js/jquery.cookie.js" th:src="@{/static/js/jquery.cookie.js}"></script>
+</head>
+
+<body style="position:relative;">
+<!--页面顶部header 开始-->
+<div th:include="header::header"></div>
+<script th:replace="fragscript :: outerJs01"></script>
+<script th:replace="fragscript :: outerJs05"></script>
+<!--页面顶部header 结束-->
+    
+
+	<!-- 头部导航 开始 -->
+	<div id="top_nav">
+    	<div class="main-nav">
+        	<div class="inner-con0">
+            	<div class="inner-con1">
+                	<div class="inner-con2 clear">
+						<a th:href="@{/common/course.th}"  target="_blank">培训课程<em class="hot-label"></em></a>
+						<a th:href="@{/common/school.th}"  target="_blank">培训学校<em class="new-label"></em></a>
+                	</div>
+            	</div>
+        	</div>
+    	</div>
+    	<div class="category-con">
+        	<div class="category-inner-con clear">
+            	<div class="category-type">
+                	<div class="text">全部分类</div>
+            	</div>
+            	<div id="nav_top_menu" class="nav-list" style="background:rgba(255,255,255,0.7)">
+                	<div class="nav-con " id='category-nav'>
+                    	<ul class="normal-nav clear">
+                        </ul>
+                	</div>
+            	</div>
+        	</div>
+    	</div>
+	</div>
+	<!-- 头部导航 完成 -->
+
+
+    <div style="background:url(images/M_02.jpg) center center;">
+    	<div style="width:1200px; margin:0px auto;">
+        	<!--<img src="images/M_03.jpg" th:src="@{/static/images/M_03.jpg}" width="1200" height="158">-->
+        </div>
+    </div>
+    <div class="fm">
+		<h2>关于我们</h2>
+        <p style="margin-top:20px; margin-bottom:70px; font-size:14px; text-align:center; line-height:45px;">去哪儿学是中国教育培训行业可信赖的第三方平台，隶属于常州数赢云网络科技有限公司。去哪儿学致力于帮学员找课、<br>帮机构招生，撮合学员与机构成交，创建公平、公正、透明的第三方撮合交易平台。<br>
+去哪儿学提高了用户的选课效率、降低了机构的招生成本。去哪儿学自2017年创立之初便倡导因材施教，整合市场上主打<br>类型各异的培训机构资源，根据用户的兴趣和需求，推荐与之匹配的培训机构。解决了学员用户的选择困难的问题，提高<br>了培训机构的招生效率，引领中国教育培训市场蓬勃发展。</p>
+    </div>
+
+
+
+<script type="text/javascript">
+    //导航目录的显示和隐藏（首页）
+    show_hide_nav();
+
+</script>
+
+</body>
+</html>

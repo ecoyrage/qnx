@@ -352,8 +352,7 @@ public class WebUtil {
 		try {
 			while (iter.hasNext()) {
 				// 取得上传文件
-				List<MultipartFile> files = multipartRequest.getFiles(iter
-						.next());
+				List<MultipartFile> files = multipartRequest.getFiles(iter.next());
 				for (MultipartFile file : files) {
 					if (file != null && file.getName().equals(uploadFileName)) {
 						String myFileName = file.getOriginalFilename(); // 原文件名

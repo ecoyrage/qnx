@@ -10,6 +10,7 @@ import com.fh.fh.modelEx.BannerEx;
 import com.fh.fh.service.BannerService;
 import com.github.pagehelper.PageHelper;
 import org.apache.commons.collections.map.HashedMap;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +22,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -71,6 +74,7 @@ public class BannerController extends BaseController {
             }
             banner.setImgUrl(pics[0]);
             banner.setCreateTime(new Date());
+
             int r = bannerService.insertSelective(banner);
             if(r <= 0){
                 return Res.error("保存失败！");

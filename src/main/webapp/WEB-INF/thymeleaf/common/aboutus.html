@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head lang="en">
     <meta charset="UTF-8">
     <title>去哪儿学--学校</title>
@@ -116,7 +116,7 @@
     
     <div style="background:url(images/M_02.jpg) center center;">
     	<div style="width:1200px; margin:0px auto;">
-        	<img src="images/M_03.jpg" th:src="@{/static/images/M_03.jpg}" width="1200" height="158">
+        	<!--<img src="images/M_03.jpg" th:src="@{/static/images/M_03.jpg}" width="1200" height="158">-->
         </div>
     </div>
     <div class="fm">
@@ -128,55 +128,55 @@
 <!-- 底部 开始 -->
 <div th:include="footer::footer"></div>
 <!-- 侧边栏代码 开始 -->
-<div th:include="sidebar::sidebar"></div>
-<script th:replace="fragscript :: outerJs03"></script>
+<!--<div th:include="sidebar::sidebar"></div>-->
+<!--<script th:replace="fragscript :: outerJs03"></script>-->
 <!--行业分类-->
-<script th:replace="fragscript :: outerJs01"></script>
-<script th:replace="fragscript :: outerJs04"></script>
+<!--<script th:replace="fragscript :: outerJs01"></script>-->
+<!--<script th:replace="fragscript :: outerJs04"></script>-->
 <!--<script type="text/javascript">
 <script th:replace="fragscript :: outerJs03"></script>
 <!-- 侧边栏代码 结束 -->
-	<script type="text/javascript">
-    $('#loginout').click(function(){
-        $.ajax({
-            url:'https://i.houxue.com/accounts/login/out/',
-            dataType:'jsonp',
-            type:'get',
-            async:false,
-            jsonp:"callbackparam",
-            success:function(data)
-            {
-                if(data.flag){
-                    window.location.reload();
-                }
-            }
-        })
-    });
-	</script>
-    <script>
+	<!--<script type="text/javascript">-->
+    <!--$('#loginout').click(function(){-->
+        <!--$.ajax({-->
+            <!--url:'https://i.houxue.com/accounts/login/out/',-->
+            <!--dataType:'jsonp',-->
+            <!--type:'get',-->
+            <!--async:false,-->
+            <!--jsonp:"callbackparam",-->
+            <!--success:function(data)-->
+            <!--{-->
+                <!--if(data.flag){-->
+                    <!--window.location.reload();-->
+                <!--}-->
+            <!--}-->
+        <!--})-->
+    <!--});-->
+	<!--</script>-->
+    <!--<script>-->
 
-    $(function () {
+    <!--$(function () {-->
 
-        $('.open_stop').click(function () {
-            var h = $('#relevant_hx_ul');
-            var contentH = $("html,body").outerHeight(true);
-            if ($('.open_stop').text() == '展开') {
-                h.css('height', 'auto');
-                $(this).html('收起<i class="rotate"></i>');
-                $("[name='hid']").show();
-//                $("body").animate({scrollTop: contentH}, 1000);
-            } else {
-                $("[name='hid']").hide();
-                h.animate({height: "auto"}, 1000);
-                $(this).html('展开<i></i>');
-            }
-        });
+        <!--$('.open_stop').click(function () {-->
+            <!--var h = $('#relevant_hx_ul');-->
+            <!--var contentH = $("html,body").outerHeight(true);-->
+            <!--if ($('.open_stop').text() == '展开') {-->
+                <!--h.css('height', 'auto');-->
+                <!--$(this).html('收起<i class="rotate"></i>');-->
+                <!--$("[name='hid']").show();-->
+<!--//                $("body").animate({scrollTop: contentH}, 1000);-->
+            <!--} else {-->
+                <!--$("[name='hid']").hide();-->
+                <!--h.animate({height: "auto"}, 1000);-->
+                <!--$(this).html('展开<i></i>');-->
+            <!--}-->
+        <!--});-->
 
 
 
-    });
+    <!--});-->
 
-</script>
+<!--</script>-->
 
 <!--seo end-->
 

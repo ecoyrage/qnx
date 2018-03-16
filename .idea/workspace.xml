@@ -6,728 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72a32227-7db6-4734-8ae2-1a9cb5ac2fb3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/thymeleaf/fragscript.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/thymeleaf/header.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/thymeleaf/headerTwo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/thymeleaf/page.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/thymeleaf/school/schoolDetail.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/thymeleaf/school/schoolList.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/thymeleaf/sidebar.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/tlds/fns.tld" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/views/error.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/WEB-INF/views/fh/apply/applyList.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/M_59.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/M_60.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/M_61.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/M_62.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/M_63.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/Thumbs.db" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/back.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/delete_down.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/delete_up.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/fwtk.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/hytk.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/pro_down.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/pro_left.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/spinner.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/imagesNew/车盟首页.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/js/YuxiSlider.jQuery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/js/demo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/js/jquery-1.11.2.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/h5/js/jquery.spinner.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/css/supershopui.common.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/js/skin/default/icon-ext.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/js/skin/default/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/js/skin/default/layer.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/js/skin/default/loading-0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/js/skin/default/loading-1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/js/skin/default/loading-2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/js/skin/moon/default.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/js/skin/moon/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/min/js/supershopui.common.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-datetimepicker/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-datetimepicker/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/css/bootstrap-select.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/css/bootstrap-select.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/css/bootstrap-select.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/bootstrap-select.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/bootstrap-select.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/bootstrap-select.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ar_AR.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ar_AR.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-bg_BG.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-bg_BG.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-cs_CZ.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-cs_CZ.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-da_DK.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-da_DK.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-de_DE.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-de_DE.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-en_US.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-en_US.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-es_CL.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-es_CL.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-eu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-eu.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-fa_IR.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-fa_IR.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-fi_FI.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-fi_FI.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-fr_FR.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-fr_FR.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-hu_HU.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-hu_HU.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-id_ID.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-id_ID.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-it_IT.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-it_IT.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ko_KR.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ko_KR.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-nb_NO.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-nb_NO.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-nl_NL.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-nl_NL.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-pl_PL.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-pl_PL.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-pt_BR.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-pt_BR.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-pt_PT.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-pt_PT.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ro_RO.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ro_RO.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ru_RU.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ru_RU.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-sk_SK.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-sk_SK.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-sl_SI.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-sl_SI.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-sv_SE.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-sv_SE.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-tr_TR.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-tr_TR.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ua_UA.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-ua_UA.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-zh_CN.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-zh_CN.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-zh_TW.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-select/js/i18n/defaults-zh_TW.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-slider/bootstrap-slider.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-slider/slider.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-table/bootstrap-table.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-table/bootstrap-table.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-table/locale/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-table/locale/bootstrap-table-en-US.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-table/locale/bootstrap-table-en-US.js.template" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-table/locale/bootstrap-table-zh-TW.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/chartjs/Chart.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/chartjs/Chart.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/CHANGES.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/LICENSE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/adapters/jquery.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/build-config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/ckeditor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/contents.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/af.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/az.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/bg.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/bn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/bs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/cs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/cy.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/da.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/de-ch.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/de.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/el.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/en-au.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/en-ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/en-gb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/en.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/eo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/es-mx.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/es.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/et.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/eu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/fa.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/fi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/fo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/fr-ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/fr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/gl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/gu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/he.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/hi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/hr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/hu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/id.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/is.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/it.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ja.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ka.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/km.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ko.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ku.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/lt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/lv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/mk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/mn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ms.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/nb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/nl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/no.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/oc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/pl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/pt-br.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/pt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ro.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ru.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/si.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/sk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/sl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/sq.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/sr-latn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/sr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/sv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/th.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/tr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/tt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/ug.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/uk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/vi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/zh-cn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/lang/zh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/about/dialogs/about.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/about/dialogs/logo_ckeditor.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/colordialog/dialogs/colordialog.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/colordialog/dialogs/colordialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/copyformatting/cursors/cursor-disabled.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/copyformatting/cursors/cursor.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/copyformatting/styles/copyformatting.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/dialog/dialogDefinition.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/div/dialogs/div.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/find/dialogs/find.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/flash/dialogs/flash.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/flash/images/placeholder.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/forms/dialogs/button.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/forms/dialogs/checkbox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/forms/dialogs/form.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/forms/dialogs/hiddenfield.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/forms/dialogs/radio.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/forms/dialogs/select.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/forms/dialogs/textarea.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/forms/dialogs/textfield.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/forms/images/hiddenfield.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/icons.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/icons_hidpi.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/iframe/dialogs/iframe.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/iframe/images/placeholder.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/image/dialogs/image.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/image/images/noimage.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/link/dialogs/anchor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/link/dialogs/link.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/link/images/anchor.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/link/images/hidpi/anchor.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/liststyle/dialogs/liststyle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/magicline/images/hidpi/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/magicline/images/icon-rtl.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/magicline/images/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/pagebreak/images/pagebreak.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/pastefromword/filter/default.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/preview/preview.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/scayt/CHANGELOG.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/scayt/LICENSE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/scayt/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/scayt/dialogs/dialog.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/scayt/dialogs/options.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/scayt/dialogs/toolbar.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_address.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_blockquote.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_div.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_h1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_h2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_h3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_h4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_h5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_h6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_p.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/showblocks/images/block_pre.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/dialogs/smiley.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/angel_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/angel_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/angry_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/angry_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/broken_heart.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/broken_heart.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/confused_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/confused_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/cry_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/cry_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/devil_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/devil_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/embaressed_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/embarrassed_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/embarrassed_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/envelope.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/envelope.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/heart.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/heart.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/kiss.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/kiss.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/lightbulb.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/lightbulb.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/omg_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/omg_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/regular_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/regular_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/sad_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/sad_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/shades_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/shades_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/teeth_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/teeth_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/thumbs_down.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/thumbs_down.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/thumbs_up.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/thumbs_up.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/tongue_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/tongue_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/tounge_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/wink_smile.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/smiley/images/wink_smile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/af.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/ar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/az.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/bg.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/cs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/cy.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/da.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/de.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/el.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/en.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/eo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/es.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/et.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/eu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/fa.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/fi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/fr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/gl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/he.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/hr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/hu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/id.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/it.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/ja.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/km.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/ko.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/ku.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/lt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/lv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/nb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/nl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/no.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/oc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/pl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/pt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/ru.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/si.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/sk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/sl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/sq.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/sv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/th.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/tr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/tt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/ug.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/uk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/vi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/lang/zh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/specialchar/dialogs/specialchar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/table/dialogs/table.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/tableselection/styles/tableselection.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/tabletools/dialogs/tableCell.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/templates/dialogs/templates.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/templates/dialogs/templates.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/templates/templates/default.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/templates/templates/images/template1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/templates/templates/images/template2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/templates/templates/images/template3.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/wsc/LICENSE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/wsc/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/wsc/dialogs/ciframe.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/wsc/dialogs/wsc.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/wsc/dialogs/wsc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/wsc/dialogs/wsc_ie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/dialog.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/dialog_ie.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/dialog_ie8.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/dialog_iequirks.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/editor.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/editor_gecko.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/editor_ie.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/editor_ie8.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/editor_iequirks.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/icons.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/icons_hidpi.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/arrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/close.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/hidpi/close.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/hidpi/lock.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/lock-open.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/lock.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/refresh.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/images/spinner.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/skins/moono-lisa/readme.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ckeditor/styles.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/colorpicker/bootstrap-colorpicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/colorpicker/bootstrap-colorpicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/colorpicker/bootstrap-colorpicker.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/colorpicker/bootstrap-colorpicker.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/colorpicker/img/alpha-horizontal.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/colorpicker/img/alpha.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/colorpicker/img/hue-horizontal.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/colorpicker/img/hue.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/colorpicker/img/saturation.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/DatePicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/WdatePicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/bootstrap-datepicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/calendar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/datepicker3.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/lang/en.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/lang/zh-cn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/lang/zh-tw.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/WdatePicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/datePicker.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/datePicker.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/default/datepicker-dev.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/default/datepicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/default/img.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/default/img.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/whyGreen/bg.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/whyGreen/datepicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/datepicker/skin/whyGreen/img.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/daterangepicker/daterangepicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/daterangepicker/daterangepicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/daterangepicker/moment.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/daterangepicker/moment.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/CHANGELOG.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/lib/jquery-1.10.1.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/lib/jquery-1.9.0.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/blank.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/fancybox_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/fancybox_loading@2x.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/fancybox_overlay.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/fancybox_sprite.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/fancybox_sprite@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/helpers/fancybox_buttons.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/helpers/jquery.fancybox-buttons.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/helpers/jquery.fancybox-media.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/jquery.fancybox.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/jquery.fancybox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fancybox/source/jquery.fancybox.pack.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fastclick/fastclick.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fastclick/fastclick.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/excanvas.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/excanvas.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.colorhelpers.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.colorhelpers.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.canvas.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.canvas.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.categories.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.categories.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.crosshair.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.crosshair.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.errorbars.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.errorbars.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.fillbetween.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.fillbetween.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.image.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.image.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.navigate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.navigate.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.pie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.pie.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.resize.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.resize.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.selection.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.selection.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.stack.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.stack.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.symbol.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.symbol.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.threshold.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.threshold.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.time.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/flot/jquery.flot.time.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fullcalendar/fullcalendar.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fullcalendar/fullcalendar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fullcalendar/fullcalendar.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fullcalendar/fullcalendar.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/fullcalendar/fullcalendar.print.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/all.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/_all.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/aero.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/aero.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/aero@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/blue.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/blue.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/blue@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/flat.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/flat.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/flat@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/green.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/green.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/green@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/grey.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/grey.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/grey@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/orange.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/orange.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/orange@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/pink.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/pink.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/pink@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/purple.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/purple.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/purple@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/red.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/red.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/red@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/yellow.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/yellow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/flat/yellow@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/futurico/futurico.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/futurico/futurico.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/futurico/futurico@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/icheck.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/icheck.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/_all.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/aero.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/blue.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/green.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/grey.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/line.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/line.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/line@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/orange.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/pink.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/purple.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/red.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/line/yellow.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/_all.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/aero.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/aero.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/aero@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/blue.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/blue.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/blue@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/green.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/green.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/green@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/grey.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/grey.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/grey@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/minimal.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/minimal.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/minimal@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/orange.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/orange.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/orange@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/pink.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/pink.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/pink@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/purple.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/purple.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/purple@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/red.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/red.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/red@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/yellow.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/yellow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/minimal/yellow@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/polaris/polaris.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/polaris/polaris.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/polaris/polaris@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/_all.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/aero.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/aero.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/aero@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/blue.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/blue.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/blue@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/green.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/green.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/green@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/grey.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/grey.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/grey@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/orange.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/orange.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/orange@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/pink.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/pink.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/pink@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/purple.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/purple.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/purple@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/red.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/red.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/red@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/square.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/square.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/square@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/yellow.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/yellow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/iCheck/square/yellow@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/input-mask/jquery.inputmask.date.extensions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/input-mask/jquery.inputmask.extensions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/input-mask/jquery.inputmask.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/input-mask/jquery.inputmask.numeric.extensions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/input-mask/jquery.inputmask.phone.extensions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/input-mask/jquery.inputmask.regex.extensions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/input-mask/phone-codes/phone-be.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/input-mask/phone-codes/phone-codes.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/input-mask/phone-codes/readme.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ionslider/img/sprite-skin-flat.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ionslider/img/sprite-skin-nice.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ionslider/ion.rangeSlider.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ionslider/ion.rangeSlider.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ionslider/ion.rangeSlider.skinFlat.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/ionslider/ion.rangeSlider.skinNice.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jQueryUI/jquery-ui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jQueryUI/jquery-ui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jqgrid/grid.locale-cn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jqgrid/jqgrid.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jqgrid/jqgrid.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jqgrid/jqgrid.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/cors/postmessage.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/cors/result.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/css/demo-ie8.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/css/demo.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/css/jquery.fileupload-noscript.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/css/jquery.fileupload-ui-noscript.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/css/jquery.fileupload.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/img/loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/qnx/static/content/plugins/jquery-file-upload/img/progressbar.gif" />
+    <list default="true" id="72a32227-7db6-4734-8ae2-1a9cb5ac2fb3" name="Default" comment="q">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/connectionus.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fh/common/util/ChuangLanSmsSend.java" afterPath="$PROJECT_DIR$/src/main/java/com/fh/common/util/ChuangLanSmsSend.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fh/common/util/SerializeUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/fh/common/util/SerializeUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fh/common/util/WebUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/fh/common/util/WebUtil.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fh/fh/controller/BannerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/fh/fh/controller/BannerController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/aboutus.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/aboutus.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/footer.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/footer.html" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/java/com/fh/cm/action/" />
     <ignored path="$PROJECT_DIR$/src/main/java/com/fh/common/cache/" />
@@ -744,72 +31,25 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SettingService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/service/SettingService.java">
+    <leaf>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="352">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/service/AdminService.java">
+      <file leaf-file-name="connectionus.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/connectionus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChuangLanSmsSend.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/ChuangLanSmsSend.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="32" column="46" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aboutus.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/aboutus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Consts.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/constants/Consts.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="14" column="87" lean-forward="false" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sys/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="142">
+              <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -819,12 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>changeCgyId</find>
-      <find>cgyT</find>
-      <find>changeCgyIdT</find>
-      <find>selectSchoolList</find>
-      <find>show_hide_nav_home</find>
-      <find>showLevel2</find>
       <find>applyForm</find>
       <find>druid</find>
       <find>category-con</find>
@@ -849,9 +83,16 @@
       <find>category-nav</find>
       <find>nav_top_menu</find>
       <find>showLevel1</find>
+      <find>ctxPath</find>
+      <find>图片</find>
+      <find>formc</find>
+      <find>url</find>
+      <find>img-container</find>
+      <find>format_ymd_by_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -862,13 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/bean/AuthParams.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/bean/Handler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/bean/ResultVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/listener/StartupListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/support/ClassTemplate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/tools/BasicTypeGetter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/util/ClassHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/util/ClassScanner.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/util/ClassUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fh/common/core/HandlerHelper.java" />
@@ -900,7 +134,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/IDUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/MatrixToImageWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/PropertiesLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/SerializeUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/ServletUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/SortUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fh/sys/mapper/MenuMapper.java" />
@@ -911,8 +144,16 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/suggest.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/header-footer.min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/ChuangLanSmsSend.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fh/common/constants/Consts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fh/sys/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/SerializeUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fh/teacher/teacherForm.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fh/fh/controller/BannerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/ChuangLanSmsSend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fh/common/util/WebUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/aboutus.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/connectus.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/footer.html" />
       </list>
     </option>
   </component>
@@ -953,9 +194,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="379" />
-    <option name="y" value="120" />
-    <option name="width" value="1932" />
+    <option name="x" value="646" />
+    <option name="y" value="156" />
+    <option name="width" value="1213" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -974,16 +215,242 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
               <item name="qnx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="thymeleaf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="thymeleaf" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="thymeleaf" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="thymeleaf" type="462c0819:PsiDirectoryNode" />
+              <item name="school" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="fh" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="thymeleaf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qnx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="qnx" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="thymeleaf" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -994,15 +461,15 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15575916" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="H:\Program Files\nodejs\node.exe" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
-    <property name="SearchEverywhereHistoryKey" value="adminPath&#9;null&#9;null&#10;ChuangLanSmsSend&#9;RUN_CONFIGURATION&#9;ChuangLanSmsSend&#10;fh/franchisee/franchiseeForm&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/webapp/WEB-INF/views/fh/franchisee/franchiseeForm.jsp&#10;train&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/webapp/WEB-INF/views/fh/type/trainingTypeList.jsp&#10;trainingType&#9;PSI&#9;JAVA://com.fh.fh.service.TrainingTypeService&#10;nav-list&#9;null&#9;null&#10;cate&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/webapp/static/content/plugins/flot/jquery.flot.categories.js&#10;乐器&#9;null&#9;null&#10;category&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/lf5/viewer/categoryexplorer" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="SearchEverywhereHistoryKey" value="log4j&#9;PSI&#9;JAVA://org.apache.ibatis.logging.log4j2.Log4j2Impl&#10;basepackage&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_161/jre/lib/rt.jar!/com/sun/org/omg/SendingContext/CodeBasePackage&#10;domain&#9;null&#9;null&#10;option&#9;null&#9;null&#10;datalist&#9;null&#9;null&#10;uplo&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/webapp/static/content/plugins/webuploader/webuploader.html5only.js&#10;upload&#9;null&#9;null&#10;images&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/webapp/static/content/plugins/webuploader/images&#10;resource&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/resources&#10;courseForm&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/webapp/WEB-INF/views/fh/course/courseForm.jsp&#10;ctxPath&#9;null&#9;null&#10;adminPath&#9;PSI&#9;JAVA://com.fh.common.base.web.BaseController#adminPath&#10;ChuangLanSmsSend&#9;RUN_CONFIGURATION&#9;ChuangLanSmsSend&#10;fh/franchisee/franchiseeForm&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/webapp/WEB-INF/views/fh/franchisee/franchiseeForm.jsp&#10;train&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/webapp/WEB-INF/views/fh/type/trainingTypeList.jsp&#10;trainingType&#9;PSI&#9;JAVA://com.fh.fh.service.TrainingTypeService&#10;nav-list&#9;null&#9;null&#10;cate&#9;FILE&#9;file://D:/Workspaces/IDEA/qnx/src/main/webapp/static/content/plugins/flot/jquery.flot.categories.js&#10;乐器&#9;null&#9;null&#10;category&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/lf5/viewer/categoryexplorer" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1010,11 +477,11 @@
       <recent name="com.fh.sys.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Workspaces\IDEA\qnx\src\main\webapp\WEB-INF\thymeleaf\common" />
       <recent name="H:\工作文件夹\飞狐\去哪儿学官网\源码\qnx\src\main\java\com\fh\sys\model" />
       <recent name="H:\工作文件夹\飞狐\去哪儿学官网\源码\qnx\src\main\java\com\fh\sys\service" />
       <recent name="H:\工作文件夹\飞狐\去哪儿学官网\源码\qnx\src\main\java\com\fh\framework\util" />
       <recent name="H:\工作文件夹\飞狐\去哪儿学官网\源码\qnx\src\main\resources\config" />
-      <recent name="F:\IdeaProjects\qnx\src\main\webapp\static\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1029,7 +496,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChuangLanSmsSend">
+  <component name="RunManager" selected="Tomcat Server.tomcat">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -1045,6 +512,25 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.fh.common.util.ChuangLanSmsSend" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="qnx" />
+      <envs />
+    </configuration>
+    <configuration name="SerializeUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.fh.common.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.fh.common.util.SerializeUtils" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1529,13 +1015,15 @@
       <arguments />
       <envs />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
       <item index="1" class="java.lang.String" itemvalue="Application.ChuangLanSmsSend" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SerializeUtils" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.ChuangLanSmsSend" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.SerializeUtils" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ChuangLanSmsSend" />
       </list>
     </recent_temporary>
   </component>
@@ -1582,87 +1070,63 @@
       <workItem from="1520817315728" duration="198000" />
       <workItem from="1520917188785" duration="210000" />
       <workItem from="1520925012109" duration="30000" />
-      <workItem from="1520925154862" duration="55000" />
+      <workItem from="1520925154862" duration="6601000" />
+      <workItem from="1520987793529" duration="20602000" />
+      <workItem from="1521075487185" duration="10553000" />
+      <workItem from="1521160759924" duration="1029000" />
+      <workItem from="1521178523775" duration="4558000" />
     </task>
+    <task id="LOCAL-00001" summary="q">
+      <created>1520925239820</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1520925239820</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150195000" />
+    <option name="totallyTimeSpent" value="193483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53348213" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18710022" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28874025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1484375" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22630993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23081024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18080357" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2782516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27986348" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28896472" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27986348" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0705347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21794872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1674,10 +1138,12 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="q" />
+    <option name="LAST_COMMIT_MESSAGE" value="q" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1686,170 +1152,91 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/StringUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/DateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="88">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/StreamUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/DateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4218">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="110">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/StreamUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/FileTypeUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5148">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/HttpClientUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/action/CourseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
           <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/JsonMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/model/Apply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/controller/TypeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/action/SchoolAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/service/ApplyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/service/BannerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/service/BusinessCircleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/service/CourseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/service/SuggestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-226">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/service/UserSmsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-182">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/mapper/ApplyMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/ChuangLanSmsSend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/mapperEx/UserMapperEx.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/sms/SmsSendRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="132">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/mapperEx/TeacherMapperEx.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/sms/SmsSendResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="22">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/mapperEx/SchoolMapperEx.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/mapperEx/CourseMapperEx.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/model/TrainingTypeExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="282">
+          <caret line="46" column="20" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/mapperEx/BannerMapperEx.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/model/ApplyExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/mapperEx/ApplyMapperEx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="88">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/modelEx/ApplyEx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/modelEx/BannerEx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/modelEx/SchoolEx.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -1863,6 +1250,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/modelEx/SchoolEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/modelEx/CourseEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/modelEx/BannerEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/model/BannerExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/model/Banner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/service/BannerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/modelEx/TeacherEx.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1870,67 +1299,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/framework/bean/Token.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sys/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-182">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/controller/ApplyController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fh/banner/bannerForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="2944">
+          <caret line="153" column="52" lean-forward="true" selection-start-line="153" selection-start-column="52" selection-end-line="153" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1617">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/fragscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511366229354" expanded="true" signature="3263:3277" ph="..." />
+            <marker date="1511366229354" expanded="true" signature="11017:11077" ph="..." />
+            <marker date="1511366229354" expanded="true" signature="11143:11158" ph="..." />
+            <marker date="1511366229354" expanded="true" signature="11236:11254" ph="..." />
+            <marker date="1511366229354" expanded="true" signature="11297:11309" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/mapper/SettingMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/course/courseList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/mapper/RoleMenuMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/course/courseDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/mapper/RoleMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/suggest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="-968">
+          <caret line="1" column="45" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/mapper/MenuMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/form_common.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="-679">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/mapper/GroupMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fh/apply/applyList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/mapper/AdminMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="-462">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1938,27 +1379,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/base/web/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/global.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1988,7 +1409,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1056">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1996,64 +1417,134 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-thymeleaf.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1031">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/service/SettingService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/controller/TeacherController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="132">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/service/AdminService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/action/CommonAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="-66">
+          <caret line="63" column="74" lean-forward="false" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/sys/controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/model/BusinessCircleExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="-2030">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sys/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/controller/TypeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/constants/Consts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="87" lean-forward="false" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/common/util/ChuangLanSmsSend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="32" column="46" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+        <state relative-caret-position="-833">
+          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/aboutus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        <state relative-caret-position="484">
+          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf/3.0.9.RELEASE/thymeleaf-3.0.9.RELEASE.jar!/org/thymeleaf/templateparser/markup/AbstractMarkupTemplateParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="238" column="14" lean-forward="true" selection-start-line="238" selection-start-column="14" selection-end-line="238" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/headerTwo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-385">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fh/fh/controller/BannerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="84" column="37" lean-forward="true" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2706">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/common/connectionus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -2064,7 +1555,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>qnx:war</last-edited>
+          <last-edited>qnx:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -31,7 +31,7 @@ public class ChuangLanSmsSend {
     public static void main(String[] args) throws UnsupportedEncodingException {
         String smsSingleRequestServerUrl = "http://smssh1.253.com/msg/send/json";
         String msg = Consts.REG_TEMPLATE_CODE;
-        String phone = "18012178021";
+        String phone = "18451114801";
         String report= "true";
         SmsSendRequest smsSingleRequest = new SmsSendRequest(account, pswd, msg, phone,report);
         String requestJson = JSON.toJSONString(smsSingleRequest);
