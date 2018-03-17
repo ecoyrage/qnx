@@ -143,9 +143,9 @@ public class CommonAction extends BaseController{
         ModelAndView modelAndView = new ModelAndView("common/aboutus");
         return modelAndView;
     }
-    @RequestMapping("contentus.th")
+    @RequestMapping("connectionus.th")
     public ModelAndView contentus(){
-        ModelAndView modelAndView = new ModelAndView("common/contentus");
+        ModelAndView modelAndView = new ModelAndView("common/connectionus");
         return modelAndView;
     }
     @RequestMapping("suggest.th")
